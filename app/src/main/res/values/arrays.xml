@@ -2,6 +2,7 @@
 <resources>
 
     <string-array name= "ward">
+        <item>행정구역 선택</item>
         <item>강남구</item>
         <item>강동구</item>
         <item>강서구</item>

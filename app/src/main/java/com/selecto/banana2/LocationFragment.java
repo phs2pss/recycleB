@@ -8,29 +8,42 @@ import android.location.Geocoder;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
 
 public class LocationFragment extends Fragment {
-
     View view;
     private Button btnShowLocation;
     private TextView txtAds;
-    private TextView txtTitle;
     private boolean isPermission = false;
     Geocoder geocoder;
     List<Address> addresses = null;
     private GpsInfo gps;
+    TextView close;
+    Animation translateUp;
+    Spinner spinner;
+    String fulladdr;
+    ArrayList<String> guList;
+    String gu;
+    String[] arrString;
+    TextView location;
+    double latitude;
+    double longitude;
 
     private final int PERMISSIONS_ACCESS_FINE_LOCATION = 1000;
     private final int PERMISSIONS_ACCESS_COARSE_LOCATION = 1001;
@@ -42,6 +55,23 @@ public class LocationFragment extends Fragment {
         // Required empty public constructor
     }
 
+    class SlidingAnimationListener implements Animation.AnimationListener {
+        @Override
+        public void onAnimationStart(Animation animation) {
+        }
+
+        @Override
+        public void onAnimationEnd(Animation animation) {
+            view.setVisibility(View.GONE);
+        }
+
+        @Override
+        public void onAnimationRepeat(Animation animation) {
+
+        }
+    }
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState){
@@ -52,14 +82,26 @@ public class LocationFragment extends Fragment {
             view = inflater.inflate(R.layout.fragment_location, null);
         }
 
-        btnShowLocation = (Button) view.findViewById(R.id.button3);
-        txtTitle = (TextView) view.findViewById(R.id.textView5);
-        txtAds = (TextView) view.findViewById(R.id.textView6);
-        Spinner s = (Spinner) view.findViewById(R.id.spinner2);
+        btnShowLocation = view.findViewById(R.id.button3);
+        txtAds = view.findViewById(R.id.textView6);
+        spinner = view.findViewById(R.id.spinner2);
+        location = getActivity().findViewById(R.id.textView);
+
+        translateUp = AnimationUtils.loadAnimation(getActivity(), R.anim.translate_up);
+        SlidingAnimationListener listener = new SlidingAnimationListener();
+        translateUp.setAnimationListener(listener);
+
+        close = view.findViewById(R.id.textView8);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View childview) {
+                view.startAnimation(translateUp);
+            }
+        });
 
         geocoder = new Geocoder(getActivity(), Locale.KOREAN);
 
-        s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
@@ -70,37 +112,52 @@ public class LocationFragment extends Fragment {
 
         btnShowLocation.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
+                txtAds.setText("현 위치 찾는 중...");
                 if (!isPermission) {
                     callPermission();
-                    return;
                 }
-
                 gps = new GpsInfo(getActivity());
-
                 // GPS 사용유무 가져오기
                 if (gps.isGetLocation()) {
-
-                    double latitude = gps.getLatitude();
-                    double longitude = gps.getLongitude();
-
+                    latitude = gps.getLatitude();
+                    longitude = gps.getLongitude();
+                    //latitude = 37.57026;
+                    //longitude = 126.97980;
+                    Log.d("gpstest", "latitude : " + latitude);
+                    Log.d("gpstest", "longitude : " + longitude);
                     try {
                         addresses = geocoder.getFromLocation(latitude, longitude, 1);
+                        Log.d("gpstest", "addresses : " + addresses);
+                        if(addresses == null || addresses.size() == 0) {
+                            Toast.makeText(getActivity(), "주소 없음", Toast.LENGTH_SHORT).show();
+                        } else {
+                            fulladdr = addresses.get(0).getAddressLine(0);
+                            txtAds.setText(fulladdr);
+                            Log.d("gpstest", "fulladdr : " + fulladdr);
+                            String[] words = fulladdr.split("\\s");
+                            Log.d("gpstest", "words -> " + words[2]);
+                            gu = words[2];
+                            Log.d("gpstest", "gu -> " + gu);
+                            location.setText("행정구역 : " + gu);
+                            arrString = getResources().getStringArray(R.array.ward);
+                            guList = new ArrayList<String>();
+
+                            for (String s : arrString) {
+                                guList.add(s);
+                            }
+
+                            if (guList.contains(gu)) {
+                                spinner.setSelection(guList.indexOf(gu));
+                            } else {
+                                spinner.setSelection(0);
+                            }
+                        }
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-
-                    if(addresses == null || addresses.size() == 0){
-                        Toast.makeText(getActivity(), "주소없음", Toast.LENGTH_SHORT).show();
-                    }else{
-                        txtAds.setText("주소 = " + addresses.get(0).getAddressLine(0).toString());
-                    }
-
-                    Toast.makeText(
-                            getActivity(),
-                            "당신의 위치 - \n위도: " + latitude + "\n경도: " + longitude,
-                            Toast.LENGTH_LONG).show();
                 } else {
                     // GPS 를 사용할수 없으므로
+                    txtAds.setText("GPS를 사용할 수 없습니다.");
                     gps.showSettingsAlert();
                 }
             }

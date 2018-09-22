@@ -1,28 +1,21 @@
 package com.selecto.banana2;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.CheckBox;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,7 +24,6 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity  {
-    private static int PAGE_NUMBER = 4;
     TextView textView;
     TabLayout mTabLayout;
     CustomViewPager mViewPager;
@@ -44,8 +36,8 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTabLayout = (TabLayout) findViewById(R.id.tabs);
-        mViewPager = (CustomViewPager) findViewById(R.id.viewpager);
+        mTabLayout = findViewById(R.id.tabs);
+        mViewPager = findViewById(R.id.viewpager);
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(R.drawable.likeicon,"실천 10계명", new PageFourFragment());
@@ -81,23 +73,25 @@ public class MainActivity extends AppCompatActivity  {
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
 
-        DisplayMetrics dm = getApplicationContext().getResources().getDisplayMetrics();
-
         noticeDialog = new noticeDialog(this);
 
+
+
+
         textView = findViewById(R.id.textView);
+
+
+
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "우리 동네 설정", Toast.LENGTH_LONG).show();
-                FragmentManager fm = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fm.beginTransaction();
-                fragmentTransaction.replace(R.id.fragmentBorC, new LocationFragment());
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+
             }
         });
     }
+
+
+
 
     public String loadJSONFromAsset(String jsonName) {
         String json = null;
