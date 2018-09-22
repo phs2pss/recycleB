@@ -17,6 +17,8 @@
         android:textColor="@color/forest_green"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@color/white"
+        android:fontFamily="@font/hangang"
+        android:padding="10dp"
         />
 
     <android.support.design.widget.TabLayout
