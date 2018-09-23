@@ -48,14 +48,16 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
     MapView mapView;
     Button button;
     StringBuilder sb;
-    double latitude = 37.499278;
-    double longitude = 126.951933;
+    double latitude;
+    double longitude;
     String NM = null, ADDR_OLD = null, ADDR = null, TEL = null, XCODE = null, YCODE = null;
     Marker mypos;
     CameraPosition cp;
+    private GpsInfo gps;
 
 
     public PageThreeFragment() {
+
         // Required empty public constructor
     }
 
@@ -68,51 +70,15 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
             view = inflater.inflate(R.layout.fragment_page_three, null);
         }
 
+        gps = new GpsInfo(getActivity());
+
+        this.latitude = gps.getLatitude();
+        this.longitude = gps.getLongitude();
+
         mapView = (MapView) view.findViewById(R.id.map);
         mapView.onCreate(savedInstanceState);
 
         mapView.getMapAsync(this);
-
-        Spinner wardSpinner = (Spinner) view.findViewById(R.id.spinner_ward);
-        wardSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                refreshMap(position);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-        ArrayAdapter wardAdapter = ArrayAdapter.createFromResource(getActivity(),
-                R.array.ward, android.R.layout.simple_spinner_item);
-        wardAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        wardSpinner.setAdapter(wardAdapter);
-
-
-        Spinner streetSpinner = (Spinner) view.findViewById(R.id.spinner_street);
-        streetSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-        ArrayAdapter streetAdapter = ArrayAdapter.createFromResource(getActivity(),
-                R.array.street, android.R.layout.simple_spinner_item);
-        streetAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        streetSpinner.setAdapter(streetAdapter);
-
-        /*
-        FragmentManager fragmentManager = getFragmentManager();
-        SupportMapFragment mapFragment = (SupportMapFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
-        */
 
         button = (Button) view.findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -171,7 +137,15 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
 
                         markerOptions.title(NM);
                         markerOptions.position(new LatLng(gp.y, gp.x));
+                        if((ADDR_OLD == "null")&&(ADDR == "null"))
+                            markerOptions.snippet("주소정보없음");
+                        else if(ADDR_OLD == "null")
+                            markerOptions.snippet(ADDR);
+                        else
+                            markerOptions.snippet(ADDR_OLD);
+
                         mMap.addMarker(markerOptions);
+                        //                  mMap.setOnInfoWindowClickListener(infoWindowClickListener);
                     }
                 }
             }
@@ -182,6 +156,16 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
             e.printStackTrace();
         }
     }
+
+    /*
+    GoogleMap.OnInfoWindowClickListener infoWindowClickListener = new GoogleMap.OnInfoWindowClickListener() {
+        @Override
+        public void onInfoWindowClick(Marker marker) {
+            String markerId = marker.getId();
+            Toast.makeText(getContext(), "정보창 클릭 Marker ID : "+markerId, Toast.LENGTH_SHORT).show();
+        }
+    };
+    */
 
     @Override
     public void onResume() {
@@ -200,6 +184,7 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
         super.onLowMemory();
         mapView.onLowMemory();
     }
+
 
     @Override
     public void onMapReady(final GoogleMap googleMap)
@@ -220,7 +205,7 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
         Bitmap smallMarker = Bitmap.createScaledBitmap(b, 100, 100, false);
 
         mypos = mMap.addMarker(new MarkerOptions().position(latLng).title("사용자 지정위치")
-                .snippet("위도 : " + String.valueOf(latLng.latitude) + "\n경도 : " + String.valueOf(latLng.longitude))
+                //.snippet("위도 : " + String.valueOf(latLng.latitude) + "\n경도 : " + String.valueOf(latLng.longitude))
                 .icon(BitmapDescriptorFactory.fromBitmap(smallMarker)));
 
         try {
@@ -249,7 +234,7 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
         Bitmap smallMarker = Bitmap.createScaledBitmap(b, 100, 100, false);
 
         mypos = mMap.addMarker(new MarkerOptions().position(latLng).title("사용자 지정위치")
-                .snippet("위도 : " + String.valueOf(latLng.latitude) + "\n경도 : " + String.valueOf(latLng.longitude))
+                //  .snippet("위도 : " + String.valueOf(latLng.latitude) + "\n경도 : " + String.valueOf(latLng.longitude))
                 .icon(BitmapDescriptorFactory.fromBitmap(smallMarker)));
         mMap.addCircle(new CircleOptions().center(latLng).radius(1000).strokeColor(Color.parseColor("#884169e1")).fillColor(Color.parseColor("#5587cefa")));
 
@@ -289,7 +274,7 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
     private double rad2deg(double rad){
         return (double)(rad * (double)180d / Math.PI);
     }
-
+/*
     public void refreshMap(int position1)
     {
         //강남구
@@ -442,6 +427,16 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
             latitude = 37.598168;
             longitude = 127.093304;
         }
+    }
+
+*/
+
+    public static PageThreeFragment newInstance() {
+        Bundle args = new Bundle();
+
+        PageThreeFragment fragment = new PageThreeFragment();
+        fragment.setArguments(args);
+        return fragment;
     }
 
 }

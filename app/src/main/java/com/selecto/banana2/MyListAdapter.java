@@ -98,6 +98,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
         ImageView recycleIcon = view.findViewById(R.id.recycleIcon);
 
         final String groupName = continent.getName();
+        /*
         recycleIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -137,6 +138,7 @@ public class MyListAdapter extends BaseExpandableListAdapter {
                 fragmentTransaction.commit();
             }
         });
+        */
 
         if (continent.getName().equals("음식물류")) {
             view.setBackgroundColor(0xffffdf5e);

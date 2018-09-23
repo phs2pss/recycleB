@@ -60,6 +60,12 @@ public class PageTwoFragment extends Fragment {
     double latitude;
     double longitude;
 
+    LayoutInflater mInflater;
+    LinearLayout mRootLinear ;
+    LinearLayout gangnam;
+    LinearLayout gangdong;
+
+
     private final int PERMISSIONS_ACCESS_FINE_LOCATION = 1000;
     private final int PERMISSIONS_ACCESS_COARSE_LOCATION = 1001;
     private boolean isAccessFineLocation = false;
@@ -114,15 +120,6 @@ public class PageTwoFragment extends Fragment {
 
         geocoder = new Geocoder(getActivity(), Locale.KOREAN);
 
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view,
-                                       int position, long id) {
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
-        });
-
         btnShowLocation.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
                 txtAds.setText("현 위치 찾는 중...");
@@ -176,13 +173,24 @@ public class PageTwoFragment extends Fragment {
             }
         });
 
+        mInflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mRootLinear = view.findViewById(R.id.linear_root);
+        gangdong = (LinearLayout) mInflater.inflate(R.layout.gangdong, mRootLinear, false);
+        gangnam = (LinearLayout) mInflater.inflate(R.layout.gangnam, mRootLinear, false);
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
                 Log.d("spinner_test", adapterView.getItemAtPosition(position).toString());
                 String spinner_selected_gu = adapterView.getItemAtPosition(position).toString();
                 button_gps.setText(spinner_selected_gu);
-                //txtAds.setText(spinner_selected_gu);
+                mRootLinear.removeAllViews();
+                if (spinner_selected_gu.equals("강남구")) {
+                    mRootLinear.addView(gangdong);
+                } else if (spinner_selected_gu.equals("강동구")) {
+                    mRootLinear.addView(gangnam);
+                }
+
             }
 
             @Override
@@ -190,6 +198,9 @@ public class PageTwoFragment extends Fragment {
 
             }
         });
+
+
+
 
         return view;
     }
