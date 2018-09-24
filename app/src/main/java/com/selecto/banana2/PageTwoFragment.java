@@ -1,18 +1,23 @@
 package com.selecto.banana2;
 
-
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemClock;
+import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.text.method.ScrollingMovementMethod;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,14 +32,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-
-import static android.view.View.GONE;
-import static android.view.View.VISIBLE;
-
 
 public class PageTwoFragment extends Fragment {
     View view;
@@ -43,13 +45,10 @@ public class PageTwoFragment extends Fragment {
     LinearLayout page_gps;
     LinearLayout page_info;
     ArrayAdapter spinnerAdapter;
-
-    private Button btnShowLocation;
-    private TextView txtAds;
-    private boolean isPermission = false;
+    Button btnShowLocation;
+    TextView txtAds;
     Geocoder geocoder;
     List<Address> addresses = null;
-    private GpsInfo gps;
     TextView close;
     Animation translateUp;
     Spinner spinner;
@@ -65,15 +64,26 @@ public class PageTwoFragment extends Fragment {
     LinearLayout gangnam;
     LinearLayout gangdong;
 
+    LocationManager locationManager;
+    LocationListener locationListener;
+    Location currentLocation;
+
 
     private final int PERMISSIONS_ACCESS_FINE_LOCATION = 1000;
     private final int PERMISSIONS_ACCESS_COARSE_LOCATION = 1001;
     private boolean isAccessFineLocation = false;
     private boolean isAccessCoarseLocation = false;
+    private boolean isPermission = false;
+
+    private GpsInfo gps;
+
 
     public PageTwoFragment() {
         // Required empty public constructor
     }
+
+
+
 
     @Nullable
     @Override
@@ -86,7 +96,6 @@ public class PageTwoFragment extends Fragment {
 
         SlidingAnimationListener listener = new SlidingAnimationListener();
         translateDown = AnimationUtils.loadAnimation(getActivity(), R.anim.translate_down);
-
         page_gps = view.findViewById(R.id.view_gps);
         page_info = view.findViewById(R.id.view_info);
         button_gps = view.findViewById(R.id.button_gps);
@@ -94,22 +103,19 @@ public class PageTwoFragment extends Fragment {
         spinnerAdapter = new ArrayAdapter(getActivity(), R.layout.spinner_item, getResources().getStringArray(R.array.ward));
         spinnerAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
         spinner.setAdapter(spinnerAdapter);
-
         button_gps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View b_view) {
                 page_gps.setVisibility(View.VISIBLE);
                 page_gps.startAnimation(translateDown);
+
             }
         });
 
         btnShowLocation = view.findViewById(R.id.button3);
         txtAds = view.findViewById(R.id.textView6);
-
-
         translateUp = AnimationUtils.loadAnimation(getActivity(), R.anim.translate_up);
         translateUp.setAnimationListener(listener);
-
         close = view.findViewById(R.id.textView8);
         close.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,108 +124,50 @@ public class PageTwoFragment extends Fragment {
             }
         });
 
-        geocoder = new Geocoder(getActivity(), Locale.KOREAN);
-
         btnShowLocation.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                txtAds.setText("현 위치 찾는 중...");
+                txtAds.setText("기기를 살짝 이동 후 버튼을 다시 눌러주세요.");
                 if (!isPermission) {
                     callPermission();
+                    return;
                 }
                 gps = new GpsInfo(getActivity());
-                // GPS 사용유무 가져오기
-                if (gps.isGetLocation()) {
+
+                if (gps.isGetLocation) {
                     latitude = gps.getLatitude();
                     longitude = gps.getLongitude();
-                    //latitude = 37.57026;
-                    //longitude = 126.97980;
-                    Log.d("gpstest", "latitude : " + latitude);
-                    Log.d("gpstest", "longitude : " + longitude);
-                    try {
-                        addresses = geocoder.getFromLocation(latitude, longitude, 1);
-                        Log.d("gpstest", "addresses : " + addresses);
-                        if(addresses == null || addresses.size() == 0) {
-                            Toast.makeText(getActivity(), "주소 없음", Toast.LENGTH_SHORT).show();
-                        } else {
-                            fulladdr = addresses.get(0).getAddressLine(0);
-                            txtAds.setText(fulladdr);
-                            Log.d("gpstest", "fulladdr : " + fulladdr);
-                            String[] words = fulladdr.split("\\s");
-                            Log.d("gpstest", "words -> " + words[2]);
-                            gu = words[2];
-                            Log.d("gpstest", "gu -> " + gu);
-                            button_gps.setText(gu);
-                            arrString = getResources().getStringArray(R.array.ward);
-                            guList = new ArrayList<String>();
-
-                            for (String s : arrString) {
-                                guList.add(s);
-                            }
-
-                            if (guList.contains(gu)) {
-                                spinner.setSelection(guList.indexOf(gu));
-                            } else {
-                                spinner.setSelection(0);
-                            }
-                        }
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                    setAddresses();
                 } else {
-                    // GPS 를 사용할수 없으므로
-                    txtAds.setText("GPS를 사용할 수 없습니다.");
                     gps.showSettingsAlert();
                 }
+                gps.stopUsingGPS();
             }
         });
-
-        mInflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mRootLinear = view.findViewById(R.id.linear_root);
-        gangdong = (LinearLayout) mInflater.inflate(R.layout.gangdong, mRootLinear, false);
-        gangnam = (LinearLayout) mInflater.inflate(R.layout.gangnam, mRootLinear, false);
+        callPermission();
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+            public void onItemSelected(AdapterView<?> adapterView, View s_view, int position, long l) {
+                mInflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                mRootLinear = view.findViewById(R.id.linear_root);
                 Log.d("spinner_test", adapterView.getItemAtPosition(position).toString());
                 String spinner_selected_gu = adapterView.getItemAtPosition(position).toString();
-                button_gps.setText(spinner_selected_gu);
+                button_gps.setText(spinner_selected_gu + " 배출 정보");
                 mRootLinear.removeAllViews();
                 if (spinner_selected_gu.equals("강남구")) {
+                    gangdong = (LinearLayout) mInflater.inflate(R.layout.gangdong, mRootLinear, false);
                     mRootLinear.addView(gangdong);
                 } else if (spinner_selected_gu.equals("강동구")) {
+                    gangnam = (LinearLayout) mInflater.inflate(R.layout.gangnam, mRootLinear, false);
                     mRootLinear.addView(gangnam);
                 }
-
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
         });
-
-
-
-
         return view;
-    }
-
-    class SlidingAnimationListener implements Animation.AnimationListener {
-        @Override
-        public void onAnimationStart(Animation animation) {
-        }
-
-        @Override
-        public void onAnimationEnd(Animation animation) {
-            page_gps.setVisibility(View.INVISIBLE);
-
-        }
-
-        @Override
-        public void onAnimationRepeat(Animation animation) {
-
-        }
     }
 
     @Override
@@ -240,6 +188,8 @@ public class PageTwoFragment extends Fragment {
             isPermission = true;
         }
     }
+
+    // 전화번호 권한 요청
     private void callPermission() {
         // Check the SDK version and whether the permission is already granted or not.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
@@ -261,5 +211,58 @@ public class PageTwoFragment extends Fragment {
             isPermission = true;
         }
     }
+
+
+    public void setAddresses() {
+        geocoder = new Geocoder(getActivity(), Locale.KOREAN);
+        Log.d("gpstest", "lat2 ->" + latitude);
+        Log.d("gpstest", "lng2 ->" + longitude);
+        try {
+            addresses = geocoder.getFromLocation(latitude, longitude, 1);
+            if(addresses == null || addresses.size() == 0) {
+                txtAds.setText("기기를 살짝 이동 후 버튼을 다시 눌러주세요.");
+            } else {
+                fulladdr = addresses.get(0).getAddressLine(0);
+                txtAds.setText(fulladdr);
+                Log.d("gpstest", "fulladdr : " + fulladdr);
+                String[] words = fulladdr.split("\\s");
+                Log.d("gpstest", "words -> " + words[2]);
+                gu = words[2];
+                Log.d("gpstest", "gu -> " + gu);
+                button_gps.setText(gu + " 배출 정보");
+                arrString = getResources().getStringArray(R.array.ward);
+                guList = new ArrayList<String>();
+                for (String s : arrString) {
+                    guList.add(s);
+                }
+                if (guList.contains(gu)) {
+                    spinner.setSelection(guList.indexOf(gu));
+                } else {
+                    spinner.setSelection(0);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    class SlidingAnimationListener implements Animation.AnimationListener {
+        @Override
+        public void onAnimationStart(Animation animation) {
+        }
+
+        @Override
+        public void onAnimationEnd(Animation animation) {
+            page_gps.setVisibility(View.INVISIBLE);
+
+        }
+
+        @Override
+        public void onAnimationRepeat(Animation animation) {
+
+        }
+    }
+
+
 
 }

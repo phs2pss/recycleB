@@ -1,15 +1,19 @@
 package com.selecto.banana2;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -43,7 +47,7 @@ public class MainActivity extends AppCompatActivity  {
         pref = getSharedPreferences("pref", Activity.MODE_PRIVATE);
         time_noitce = pref.getLong("check_time", 0);
 
-        if ((System.currentTimeMillis() - time_noitce) >= 86400 || time_noitce == 0) {
+        if ((System.currentTimeMillis() - time_noitce) >= 86400000 || time_noitce == 0) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.MyAlertDialogStyle);
             TextView title = new TextView(this);
             title.setText("세계 제일의 재활용도시 서울");
@@ -75,7 +79,7 @@ public class MainActivity extends AppCompatActivity  {
         adapter.addFragment(R.drawable.likeicon,"실천 10계명", new PageFourFragment());
         adapter.addFragment(R.drawable.recycleicon,"분리배출 요령", new PageOneFragment());
         adapter.addFragment(R.drawable.infoicon,"배출 정보", new PageTwoFragment());
-        adapter.addFragment(R.drawable.mapicon,"봉투 판매소", new PageThreeFragment());
+        //adapter.addFragment(R.drawable.mapicon,"봉투 판매소", new PageThreeFragment());
         mViewPager.setAdapter(adapter);
         mTabLayout.setupWithViewPager(mViewPager);
 
