@@ -1,9 +1,12 @@
 package com.selecto.banana2;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -22,16 +25,21 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import com.github.chrisbanes.photoview.PhotoView;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -61,12 +69,11 @@ public class PageTwoFragment extends Fragment {
 
     LayoutInflater mInflater;
     LinearLayout mRootLinear ;
-    LinearLayout gangnam;
-    LinearLayout gangdong;
+    ScrollView gangnam;
+    ScrollView gangdong;
 
-    LocationManager locationManager;
-    LocationListener locationListener;
-    Location currentLocation;
+    PhotoView photoView;
+    Dialog dialog;
 
 
     private final int PERMISSIONS_ACCESS_FINE_LOCATION = 1000;
@@ -152,14 +159,96 @@ public class PageTwoFragment extends Fragment {
                 mRootLinear = view.findViewById(R.id.linear_root);
                 Log.d("spinner_test", adapterView.getItemAtPosition(position).toString());
                 String spinner_selected_gu = adapterView.getItemAtPosition(position).toString();
-                button_gps.setText(spinner_selected_gu + " 배출 정보");
+                if (!spinner_selected_gu.equals("행정구역 선택")) {
+                    button_gps.setText(spinner_selected_gu + " 배출 정보");
+                }
                 mRootLinear.removeAllViews();
+
+                dialog = new Dialog(getActivity());
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.setContentView(R.layout.custom_dialog);
+                photoView = dialog.findViewById(R.id.childImage);
+                photoView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+
                 if (spinner_selected_gu.equals("강남구")) {
-                    gangdong = (LinearLayout) mInflater.inflate(R.layout.gangdong, mRootLinear, false);
-                    mRootLinear.addView(gangdong);
-                } else if (spinner_selected_gu.equals("강동구")) {
-                    gangnam = (LinearLayout) mInflater.inflate(R.layout.gangnam, mRootLinear, false);
+                    gangnam = (ScrollView) mInflater.inflate(R.layout.gangnam, mRootLinear, false);
                     mRootLinear.addView(gangnam);
+                    Button furniture = (Button) gangnam.findViewById(R.id.button6);
+                    Button appliance = (Button) gangnam.findViewById(R.id.button5);
+                    Button etc = (Button) gangnam.findViewById(R.id.button4);
+                    Button  agent = (Button) gangnam.findViewById(R.id.button7);
+
+                    furniture.setOnClickListener(new View.OnClickListener(){
+                        @Override
+                        public void onClick(View v) {
+                            photoView.setImageResource(R.drawable.furniture);
+                            dialog.show();
+                        }
+                    });
+
+                    appliance.setOnClickListener(new View.OnClickListener(){
+                        @Override
+                        public void onClick(View v) {
+                            photoView.setImageResource(R.drawable.appliance);
+                            dialog.show();
+                        }
+                    });
+
+                    etc.setOnClickListener(new View.OnClickListener(){
+                        @Override
+                        public void onClick(View v) {
+                            photoView.setImageResource(R.drawable.etc);
+                            dialog.show();
+                        }
+                    });
+
+                    agent.setOnClickListener(new View.OnClickListener(){
+                        @Override
+                        public void onClick(View v) {
+                            photoView.setImageResource(R.drawable.agent);
+                            dialog.show();
+                        }
+                    });
+                } else if (spinner_selected_gu.equals("강동구")) {
+                    gangdong = (ScrollView) mInflater.inflate(R.layout.gangdong, mRootLinear, false);
+                    mRootLinear.addView(gangdong);
+                    Button furniture = gangdong.findViewById(R.id.button_gandong1);
+                    Button appliance = gangdong.findViewById(R.id.button_gandong2);
+                    Button etc = gangdong.findViewById(R.id.button_gandong3);
+                    Button free = gangdong.findViewById(R.id.button_gandong4);
+
+                    furniture.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            photoView.setImageResource(R.drawable.gangdong1);
+                            dialog.show();
+                        }
+                    });
+
+                    appliance.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            photoView.setImageResource(R.drawable.gangdong2);
+                            dialog.show();
+                        }
+                    });
+
+                    etc.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            photoView.setImageResource(R.drawable.gangdong3);
+                            dialog.show();
+                        }
+                    });
+
+                    free.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            photoView.setImageResource(R.drawable.gangdong4);
+                            dialog.show();
+                        }
+                    });
                 }
             }
             @Override
