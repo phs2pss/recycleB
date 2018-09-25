@@ -10,14 +10,15 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -54,7 +55,9 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
     Marker mypos;
     CameraPosition cp;
     private GpsInfo gps;
-
+    ArrayList<Shoplistitem> data;
+    ImageView btn_refresh;
+    int tg_mapReady = 0;
 
     public PageThreeFragment() {
 
@@ -84,12 +87,45 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if(data.isEmpty()) {
+                    Toast.makeText(getContext().getApplicationContext(), "검색된 주변 판매소가 없습니다.", Toast.LENGTH_LONG).show();
+                }
+
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fm.beginTransaction();
                 fragmentTransaction.hide(PageThreeFragment.this);
                 fragmentTransaction.add(R.id.fragment_shop_list, new ShopListFragment());
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+            }
+        });
+
+        btn_refresh = (ImageView)view.findViewById(R.id.refresh);
+        btn_refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gps = new GpsInfo(getActivity());
+
+                if(!gps.isGetLocation)
+                {
+                    tg_mapReady = 0;
+                    gps.showSettingsAlert();
+                    Toast.makeText(getContext().getApplicationContext(), "GPS 설정후 '내 위치' 버튼을 누르세요.", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    latitude = gps.getLatitude();
+                    longitude = gps.getLongitude();
+                    LatLng latLng = new LatLng(latitude, longitude);
+                    if(tg_mapReady == 1) {
+                        onMapClick(latLng);
+                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
+                    }
+                    else{
+                        onMapReady(mMap);
+                        onMapClick(latLng);
+                    }
+                }
             }
         });
 
@@ -105,7 +141,7 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
         String str = ((MainActivity)getActivity()).loadJSONFromAsset("Shoplist.json");
         JSONObject dataObj = new JSONObject(str);
         MarkerOptions markerOptions = new MarkerOptions();
-        ArrayList<Shoplistitem> data = new ArrayList<>();
+        data = new ArrayList<>();
         Shoplistitem shoplistitem;
 
         try {
@@ -118,7 +154,6 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
                 YCODE = jsonObject.getString("ycode");
 
                 if (("".equals(XCODE))||("".equals(YCODE))||(XCODE == "null")||(YCODE == "null")){
-                    //Toast.makeText(getContext(), "걸러냈다.", Toast.LENGTH_LONG).show();
                     continue;
                 }
                 else {
@@ -157,16 +192,6 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
         }
     }
 
-    /*
-    GoogleMap.OnInfoWindowClickListener infoWindowClickListener = new GoogleMap.OnInfoWindowClickListener() {
-        @Override
-        public void onInfoWindowClick(Marker marker) {
-            String markerId = marker.getId();
-            Toast.makeText(getContext(), "정보창 클릭 Marker ID : "+markerId, Toast.LENGTH_SHORT).show();
-        }
-    };
-    */
-
     @Override
     public void onResume() {
         mapView.onResume();
@@ -193,10 +218,20 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
         MapsInitializer.initialize(this.getActivity());
         mMap = googleMap;
 
+        if(!gps.isGetLocation) {
+            gps.showSettingsAlert();
+            Toast.makeText(getContext().getApplicationContext(), "GPS 설정후 '내 위치' 버튼을 누르세요._MapReady", Toast.LENGTH_LONG).show();
+            tg_mapReady = 0;    //GPS 기능 꺼짐
+        }
+        else{
+            tg_mapReady = 1;    //GPS 기능과 함께 onMapReady실행
+        }
+
         /*카메라 초기위치*/
         latLng = new LatLng(latitude, longitude);   //기준좌표
-        cp = new CameraPosition.Builder().target(latLng).zoom(15).build();
-        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cp));
+        //cp = new CameraPosition.Builder().target(latLng).zoom(15).build();
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
+        // mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cp));
         mMap.addCircle(new CircleOptions().center(latLng).radius(1000).strokeColor(Color.parseColor("#884169e1")).fillColor(Color.parseColor("#5587cefa")));
         mMap.setOnMapClickListener(this);
 
@@ -205,7 +240,6 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
         Bitmap smallMarker = Bitmap.createScaledBitmap(b, 100, 100, false);
 
         mypos = mMap.addMarker(new MarkerOptions().position(latLng).title("사용자 지정위치")
-                //.snippet("위도 : " + String.valueOf(latLng.latitude) + "\n경도 : " + String.valueOf(latLng.longitude))
                 .icon(BitmapDescriptorFactory.fromBitmap(smallMarker)));
 
         try {
@@ -218,14 +252,7 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
 
     @Override
     public void onMapClick(LatLng latLng) {
-        /*
-        Point screenPt = mMap.getProjection().
-                toScreenLocation(latLng);
 
-        // 현재 화면에 찍힌 포인트로 부터 위도와 경도를 알려준다.
-        LatLng point = mMap.getProjection().
-                fromScreenLocation(screenPt);
-*/
         mMap.clear();
         mypos.remove();
 
@@ -234,7 +261,6 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
         Bitmap smallMarker = Bitmap.createScaledBitmap(b, 100, 100, false);
 
         mypos = mMap.addMarker(new MarkerOptions().position(latLng).title("사용자 지정위치")
-                //  .snippet("위도 : " + String.valueOf(latLng.latitude) + "\n경도 : " + String.valueOf(latLng.longitude))
                 .icon(BitmapDescriptorFactory.fromBitmap(smallMarker)));
         mMap.addCircle(new CircleOptions().center(latLng).radius(1000).strokeColor(Color.parseColor("#884169e1")).fillColor(Color.parseColor("#5587cefa")));
 
@@ -274,162 +300,6 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
     private double rad2deg(double rad){
         return (double)(rad * (double)180d / Math.PI);
     }
-/*
-    public void refreshMap(int position1)
-    {
-        //강남구
-        if(position1 == 0)
-        {
-            latitude = 37.4959854;
-            longitude = 127.0664091;
-        }
-        //강동구
-        else if(position1 == 1)
-        {
-            latitude = 37.5492077;
-            longitude = 127.1464824;
-        }
-        //강북구
-        else if(position1 == 2)
-        {
-            latitude = 37.6469954;
-            longitude = 127.0147158;
-        }
-        //강서구
-        else if(position1 == 3)
-        {
-            latitude = 37.5657617;
-            longitude = 126.8226561;
-        }
-        //관악구
-        else if(position1 == 4)
-        {
-            latitude = 37.494394;
-            longitude = 126.854607;
-        }
-        //광진구
-        else if(position1 == 5)
-        {
-            latitude = 37.468031;
-            longitude = 126.944764;
-        }
-        //구로구
-        else if(position1 == 6)
-        {
-            latitude = 37.545717;
-            longitude = 127.085870;
-        }
-        //금천구
-        else if(position1 == 7)
-        {
-            latitude = 37.460388;
-            longitude = 126.900752;
-        }
-        //노원구
-        else if(position1 == 8)
-        {
-            latitude = 37.653068;
-            longitude = 127.075595;
-        }
-        //도봉구
-        else if(position1 == 9)
-        {
-            latitude = 37.668396;
-            longitude = 127.032449;
-        }
-        //동대문구
-        else if(position1 == 10)
-        {
-            latitude = 37.582068;
-            longitude = 127.053985;
-        }
-        //동작구
-        else if(position1 == 11)
-        {
-            latitude = 37.499278;
-            longitude = 126.951933;
-        }
-        //마포구
-        else if(position1 == 12)
-        {
-            latitude = 37.559000;
-            longitude = 126.909157;
-        }
-        //서대문구
-        else if(position1 == 13)
-        {
-            latitude = 37.577995;
-            longitude = 126.938404;
-        }
-        //서초구
-        else if(position1 == 14)
-        {
-            latitude = 37.472991;
-            longitude = 127.030332;
-        }
-        //성동구
-        else if(position1 == 15)
-        {
-            latitude = 37.551193;
-            longitude = 127.040889;
-        }
-        //성북구
-        else if(position1 == 16)
-        {
-            latitude = 37.605993;
-            longitude = 127.016482;
-        }
-        //송파구
-        else if(position1 == 17)
-        {
-            latitude = 37.504971;
-            longitude = 127.116525;
-        }
-        //양천구
-        else if(position1 == 18)
-        {
-            latitude = 37.524699;
-            longitude = 126.855190;
-        }
-        //영등포구
-        else if(position1 == 19)
-        {
-            latitude = 37.522187;
-            longitude = 126.909035;
-        }
-        //용산구
-        else if(position1 == 20)
-        {
-            latitude = 37.531600;
-            longitude = 126.980453;
-        }
-        //은평구
-        else if(position1 == 21)
-        {
-            latitude = 37.618556;
-            longitude = 126.926634;
-        }
-        //종로구
-        else if(position1 == 22)
-        {
-            latitude = 37.594646;
-            longitude = 126.977228;
-        }
-        //중구
-        else if(position1 == 23)
-        {
-            latitude = 37.559977;
-            longitude = 126.995883;
-        }
-        //중랑구
-        else if(position1 == 24)
-        {
-            latitude = 37.598168;
-            longitude = 127.093304;
-        }
-    }
-
-*/
 
     public static PageThreeFragment newInstance() {
         Bundle args = new Bundle();

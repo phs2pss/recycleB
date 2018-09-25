@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingLeft="10dp"
+            android:paddingTop="5dp"
             android:text="◎ 배출요일"
             android:textColor="@android:color/black"
             android:textColorLink="@android:color/black"
@@ -131,7 +132,8 @@
                     android:background="@android:color/darker_gray"
                     android:gravity="center"
                     android:singleLine="false"
-                    android:text="1 L" />
+                    android:text="1 L"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textView23"
@@ -140,7 +142,8 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/darker_gray"
                     android:gravity="center"
-                    android:text="2 L" />
+                    android:text="2 L"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textView24"
@@ -149,7 +152,8 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/darker_gray"
                     android:gravity="center"
-                    android:text="3 L" />
+                    android:text="3 L"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textView25"
@@ -158,7 +162,8 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/darker_gray"
                     android:gravity="center"
-                    android:text="5 L" />
+                    android:text="5 L"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textView26"
@@ -167,7 +172,8 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/darker_gray"
                     android:gravity="center"
-                    android:text="10  L" />
+                    android:text="10  L"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textView27"
@@ -176,7 +182,8 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/darker_gray"
                     android:gravity="center"
-                    android:text="20 L" />
+                    android:text="20 L"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textView28"
@@ -185,7 +192,8 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/darker_gray"
                     android:gravity="center"
-                    android:text="30 L" />
+                    android:text="30 L"
+                    android:textColor="@android:color/black" />
 
             </TableRow>
 
@@ -199,10 +207,11 @@
                     android:id="@+id/textView37"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/background_light"
                     android:layout_margin="1dp"
+                    android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="80원" />
+                    android:text="80원"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textView36"
@@ -211,7 +220,8 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="160원" />
+                    android:text="160원"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textView35"
@@ -220,7 +230,8 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="240원" />
+                    android:text="240원"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textView34"
@@ -229,7 +240,8 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="400원" />
+                    android:text="400원"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textView33"
@@ -238,7 +250,8 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="800원" />
+                    android:text="800원"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textView32"
@@ -247,7 +260,8 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="1,600원" />
+                    android:text="1,600원"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textView31"
@@ -256,7 +270,8 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="2,400원" />
+                    android:text="2,400원"
+                    android:textColor="@android:color/black" />
             </TableRow>
 
         </TableLayout>
@@ -292,7 +307,8 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/darker_gray"
                     android:gravity="center"
-                    android:text="60 L" />
+                    android:text="60 L"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textView17"
@@ -301,7 +317,8 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/darker_gray"
                     android:gravity="center"
-                    android:text="120 L" />
+                    android:text="120 L"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textView18"
@@ -310,7 +327,8 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/darker_gray"
                     android:gravity="center"
-                    android:text="비고" />
+                    android:text="비고"
+                    android:textColor="@android:color/black" />
             </TableRow>
 
             <TableRow
@@ -325,7 +343,8 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="3,600원" />
+                    android:text="3,600원"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textView19"
@@ -334,7 +353,8 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="7,200원" />
+                    android:text="7,200원"
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/textView21"
@@ -342,7 +362,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
-                    android:gravity="center" />
+                    android:gravity="center"
+                    android:textColor="@android:color/black" />
             </TableRow>
 
         </TableLayout>
@@ -627,7 +648,7 @@
             android:paddingBottom="5dp"
             android:paddingLeft="37dp"
             android:paddingTop="2dp"
-            android:text="서울시 수집운반\n(1599-0903)"
+            android:text="서울시 수집운반\n(☎ 599-0903)"
             android:textColor="@android:color/black"
             android:textColorHint="?attr/colorError"
             android:textColorLink="?attr/actionModeSplitBackground"
@@ -727,7 +748,7 @@
             android:paddingBottom="5dp"
             android:paddingLeft="20dp"
             android:paddingTop="5dp"
-            android:text="※ 출처 \nhttp://www.gangnam.go.kr/board/waste/list.do?mid=FM011109"
+            android:text="※ 출처 \nhttp://www.gangnam.go.kr"
             android:textColor="@android:color/black"
             android:textColorHint="?attr/colorError"
             android:textColorLink="?attr/actionModeSplitBackground"

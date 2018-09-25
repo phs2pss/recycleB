@@ -12,6 +12,18 @@ android {
         multiDexEnabled true
     }
     buildTypes {
+        /*
+debug {
+
+// 개발용 KEY
+    resValue "string", "google_maps_api_key", "AIzaSyBDOp_My3TH7nNe2qH1KfRALNqI58Ksy2A"
+}
+
+release {
+// 배포용 KEY
+    resValue "string", "google_maps_api_key", "AIzaSyBdacuxZq3R_y8szmvgt_nLoFBUFEVJl_s"
+}
+*/
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'

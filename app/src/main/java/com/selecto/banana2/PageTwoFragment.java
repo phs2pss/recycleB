@@ -21,6 +21,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,6 +46,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.regex.Pattern;
 
 public class PageTwoFragment extends Fragment {
     View view;
@@ -71,7 +73,7 @@ public class PageTwoFragment extends Fragment {
     LinearLayout mRootLinear ;
     ScrollView gangnam;
     ScrollView gangdong;
-    ScrollView gangbook;
+    ScrollView gangbuk;
     ScrollView gangseo;
     ScrollView gwanak;
     ScrollView gwangjin;
@@ -251,15 +253,80 @@ public class PageTwoFragment extends Fragment {
                             dialog.show();
                         }
                     });
-                } else if (spinner_selected_gu.equals("구로구")) {
-                    guro = (ScrollView) mInflater.inflate(R.layout.guro, mRootLinear, false);
-                    mRootLinear.addView(guro);
+                } else if(spinner_selected_gu.equals("강북구")){
+                    gangbuk = (ScrollView) mInflater.inflate(R.layout.gangbuk, mRootLinear, false);
+                    mRootLinear.addView(gangbuk);
+                } else if (spinner_selected_gu.equals("강서구")) {
+                    gangseo = (ScrollView) mInflater.inflate(R.layout.gangseo, mRootLinear, false);
+                    mRootLinear.addView(gangseo);
+                    TextView tvLinkify = gangseo.findViewById(R.id.textView143);
+                    Button gangseo1 = gangseo.findViewById(R.id.button6);
+                    Button gangseo2 = gangseo.findViewById(R.id.button16);
+                    Button gangseo3 = gangseo.findViewById(R.id.button15);
+                    Button gangseo4 = gangseo.findViewById(R.id.button5);
+                    Button gangseo5 = gangseo.findViewById(R.id.button4);
+
+                    Pattern pattern1 = Pattern.compile("[대형폐기물 인터넷처리]");
+                    Linkify.addLinks(tvLinkify, pattern1, "http://m.gangseo.seoul.kr/sub0302.html");
+
+                    gangseo1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            photoView.setImageResource(R.drawable.gangseo1);
+                            dialog.show();
+                        }
+                    });
+                    gangseo2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            photoView.setImageResource(R.drawable.gangseo2);
+                            dialog.show();
+                        }
+                    });
+                    gangseo3.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            photoView.setImageResource(R.drawable.gangseo3);
+                            dialog.show();
+                        }
+                    });
+                    gangseo4.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            photoView.setImageResource(R.drawable.gangseo4);
+                            dialog.show();
+                        }
+                    });
+                    gangseo5.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            photoView.setImageResource(R.drawable.gangseo5);
+                            dialog.show();
+                        }
+                    });
                 } else if (spinner_selected_gu.equals("관악구")) {
                     gwanak = (ScrollView) mInflater.inflate(R.layout.gwanak, mRootLinear, false);
                     mRootLinear.addView(gwanak);
                 } else if (spinner_selected_gu.equals("광진구")) {
                     gwangjin = (ScrollView) mInflater.inflate(R.layout.gwangjin, mRootLinear, false);
                     mRootLinear.addView(gwangjin);
+                } else if (spinner_selected_gu.equals("구로구")) {
+                    guro = (ScrollView) mInflater.inflate(R.layout.guro, mRootLinear, false);
+                    mRootLinear.addView(guro);
+                } else if(spinner_selected_gu.equals("금천구")) {
+                    geumcheon = (ScrollView) mInflater.inflate(R.layout.geumcheon, mRootLinear, false);
+                    mRootLinear.addView(geumcheon);
+
+                    TextView tvLinkify = (TextView) geumcheon.findViewById(R.id.textView135) ;
+                    Pattern pattern1 = Pattern.compile("[지역별 지정된 요일 보기]");
+                    Linkify.addLinks(tvLinkify, pattern1, "http://www.geumcheon.go.kr/html/001/001003005001003001.html");
+
+                    TextView tvLinkify2 = (TextView) geumcheon.findViewById(R.id.textView239) ;
+                    Pattern pattern2 = Pattern.compile("[대형폐기물 신청하러가기]");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.geumcheon.go.kr/html/001/001003005004.html");
+                } else if(spinner_selected_gu.equals("노원구")){
+                    nowon = (ScrollView) mInflater.inflate(R.layout.nowon, mRootLinear, false);
+                    mRootLinear.addView(nowon);
                 } else if (spinner_selected_gu.equals("도봉구")) {
                     dobong = (ScrollView) mInflater.inflate(R.layout.dobong, mRootLinear, false);
                     mRootLinear.addView(dobong);
