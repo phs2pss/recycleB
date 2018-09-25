@@ -19,7 +19,6 @@
         android:background="@color/white"
         android:fontFamily="@font/hangang"
         android:padding="10dp"
-        android:backgroundTint="@color/snow"
         />
 
     <android.support.design.widget.TabLayout

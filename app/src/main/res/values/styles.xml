@@ -31,7 +31,7 @@
         <item name="tabTextAppearance">@style/MyCustomTabText</item>
         <item name="tabSelectedTextColor">@color/forest_green</item>
         <item name="tabIndicatorColor">@color/forest_green</item>
-        <item name="tabBackground">@color/snow</item>
+        <item name="tabBackground">@color/white</item>
     </style>
 
     <style name="MyCustomTabText" parent="TextAppearance.AppCompat.Button">

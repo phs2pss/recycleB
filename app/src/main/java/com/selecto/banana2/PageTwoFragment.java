@@ -71,8 +71,14 @@ public class PageTwoFragment extends Fragment {
     LinearLayout mRootLinear ;
     ScrollView gangnam;
     ScrollView gangdong;
-    ScrollView guro;
+    ScrollView gangbook;
+    ScrollView gangseo;
     ScrollView gwanak;
+    ScrollView gwangjin;
+    ScrollView guro;
+    ScrollView geumcheon;
+    ScrollView nowon;
+    ScrollView dobong;
 
     PhotoView photoView;
     Dialog dialog;
@@ -251,6 +257,12 @@ public class PageTwoFragment extends Fragment {
                 } else if (spinner_selected_gu.equals("관악구")) {
                     gwanak = (ScrollView) mInflater.inflate(R.layout.gwanak, mRootLinear, false);
                     mRootLinear.addView(gwanak);
+                } else if (spinner_selected_gu.equals("광진구")) {
+                    gwangjin = (ScrollView) mInflater.inflate(R.layout.gwangjin, mRootLinear, false);
+                    mRootLinear.addView(gwangjin);
+                } else if (spinner_selected_gu.equals("도봉구")) {
+                    dobong = (ScrollView) mInflater.inflate(R.layout.dobong, mRootLinear, false);
+                    mRootLinear.addView(dobong);
                 }
             }
             @Override

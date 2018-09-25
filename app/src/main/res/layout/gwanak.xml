@@ -1628,5 +1628,16 @@
             android:layout_marginLeft="15dp"
             android:autoLink="all"
             android:textColorLink="@color/blue"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="출처\n( http://www.gwanak.go.kr/site/gwanak/07/10703010100002016051206.jsp )"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:autoLink="all"
+            android:textColorLink="@color/blue"/>
     </LinearLayout>
 </ScrollView>
