@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity  {
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(R.drawable.likeicon,"실천 10계명", new PageFourFragment());
-        adapter.addFragment(R.drawable.recycleicon,"분리배출 요령", new PageOneFragment());
+        adapter.addFragment(R.drawable.recycleicon,"배출 요령", new PageOneFragment());
         adapter.addFragment(R.drawable.infoicon,"배출 정보", new PageTwoFragment());
         //adapter.addFragment(R.drawable.mapicon,"봉투 판매소", new PageThreeFragment());
         mViewPager.setAdapter(adapter);

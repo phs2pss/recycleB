@@ -71,6 +71,8 @@ public class PageTwoFragment extends Fragment {
     LinearLayout mRootLinear ;
     ScrollView gangnam;
     ScrollView gangdong;
+    ScrollView guro;
+    ScrollView gwanak;
 
     PhotoView photoView;
     Dialog dialog;
@@ -186,7 +188,6 @@ public class PageTwoFragment extends Fragment {
                             dialog.show();
                         }
                     });
-
                     appliance.setOnClickListener(new View.OnClickListener(){
                         @Override
                         public void onClick(View v) {
@@ -194,7 +195,6 @@ public class PageTwoFragment extends Fragment {
                             dialog.show();
                         }
                     });
-
                     etc.setOnClickListener(new View.OnClickListener(){
                         @Override
                         public void onClick(View v) {
@@ -202,7 +202,6 @@ public class PageTwoFragment extends Fragment {
                             dialog.show();
                         }
                     });
-
                     agent.setOnClickListener(new View.OnClickListener(){
                         @Override
                         public void onClick(View v) {
@@ -225,7 +224,6 @@ public class PageTwoFragment extends Fragment {
                             dialog.show();
                         }
                     });
-
                     appliance.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -233,7 +231,6 @@ public class PageTwoFragment extends Fragment {
                             dialog.show();
                         }
                     });
-
                     etc.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -241,7 +238,6 @@ public class PageTwoFragment extends Fragment {
                             dialog.show();
                         }
                     });
-
                     free.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -249,6 +245,12 @@ public class PageTwoFragment extends Fragment {
                             dialog.show();
                         }
                     });
+                } else if (spinner_selected_gu.equals("구로구")) {
+                    guro = (ScrollView) mInflater.inflate(R.layout.guro, mRootLinear, false);
+                    mRootLinear.addView(guro);
+                } else if (spinner_selected_gu.equals("관악구")) {
+                    gwanak = (ScrollView) mInflater.inflate(R.layout.gwanak, mRootLinear, false);
+                    mRootLinear.addView(gwanak);
                 }
             }
             @Override

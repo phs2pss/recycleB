@@ -1063,7 +1063,17 @@
             android:lineSpacingExtra="5dp"
             />
 
-
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="※ 출처\n(http://www.gangdong.go.kr/web/ko_0/app/uiList.do?ap=B1089)"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:padding="5dp"
+            android:layout_marginLeft="18dp"
+            android:lineSpacingExtra="5dp"
+            android:autoLink="web"
+            android:textColorLink="@color/blue"
+            />
     </LinearLayout>
 </ScrollView>
