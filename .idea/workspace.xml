@@ -12,24 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e788ea1-de65-4203-9b91-45a73f73c2fb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/guro1.PNG" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/guro.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/gwanak.xml" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageTwoFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageTwoFragment.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/gangdong.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/gangdong.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -2571,7 +2554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537878957223</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="gwanak add">
+      <created>1537893761479</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1537893761479</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2630,7 +2620,8 @@
     <MESSAGE value="gps fix" />
     <MESSAGE value="gangnam add" />
     <MESSAGE value="gangdong add" />
-    <option name="LAST_COMMIT_MESSAGE" value="gangdong add" />
+    <MESSAGE value="gwanak add" />
+    <option name="LAST_COMMIT_MESSAGE" value="gwanak add" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
