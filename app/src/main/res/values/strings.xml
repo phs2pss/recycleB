@@ -15,4 +15,16 @@
         재활용 분리배출은 시민들의 솔선참여가 꼭 필요합니다. 본 '서울시 분리배출 길라잡이'는 재활용품 분리배출 기준에 대해 궁금했던 부분을 검색하여 분리배출 방법을 쉽게 알 수 있도록 제작되었습니다.
         본 어플이 재활용품 분리배출에 대한 통일성 있는 기준으로 시민들이 분리배출을 실천하는 데에 조금이나마 기여하기를 기대합니다.</string>
 
+    <string name="songpa_txt">
+        https://www.songpa.go.kr/user.kdf?a=songpa.menu.MenuApp\u0026c=1001\u0026cate_id=AA0605002000
+    </string>
+
+    <string name="ydp_txt">
+        https://www.ydp.go.kr/waste/apply/main.do?op=section\u0026mCode=b010000000\u0026target=self\u0026class1=01
+    </string>
+
+    <string name="jongno">
+        http://www.jongno.go.kr/portal/garbage/selectWasteEmissionsList.do?menuId=110339\u0026menuNo=110339
+    </string>
+
 </resources>

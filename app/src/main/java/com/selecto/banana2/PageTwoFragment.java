@@ -69,6 +69,22 @@ public class PageTwoFragment extends Fragment {
     ScrollView geumcheon;
     ScrollView nowon;
     ScrollView dobong;
+    ScrollView dongdaemun;
+    ScrollView dongjak;
+    ScrollView mapo;
+    ScrollView seodaemun;
+    ScrollView seocho;
+    ScrollView seongdong;
+    ScrollView seongbuk;
+    ScrollView songpa;
+    ScrollView yangcheon;
+    ScrollView yeongdeungpo;
+    ScrollView yongsan;
+    ScrollView eunpyeong;
+    ScrollView jongno;
+    ScrollView jung;
+    ScrollView jungnang;
+
 
     PhotoView photoView;
     Dialog dialog;
@@ -315,6 +331,136 @@ public class PageTwoFragment extends Fragment {
                 } else if (spinner_selected_gu.equals("도봉구")) {
                     dobong = (ScrollView) mInflater.inflate(R.layout.dobong, mRootLinear, false);
                     mRootLinear.addView(dobong);
+                } else if (spinner_selected_gu.equals("동대문구")) {
+                    dongdaemun = (ScrollView) mInflater.inflate(R.layout.dongdaemun, mRootLinear, false);
+                    mRootLinear.addView(dongdaemun);
+
+                    TextView tvLinkify = (TextView) dongdaemun.findViewById(R.id.textView277) ;
+                    Pattern pattern1 = Pattern.compile("[품목별 수수료 보기]");
+                    Linkify.addLinks(tvLinkify, pattern1, "http://www.ddm.go.kr/civil/trashFee.jsp");
+
+                    TextView tvLinkify2 = (TextView)  dongdaemun.findViewById(R.id.textView275) ;
+                    Pattern pattern2 = Pattern.compile("[동대문구 대형폐기물 처리 신청하기]");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.ddm.go.kr/civil/trashInfo.jsp");
+                } else if (spinner_selected_gu.equals("동작구")) {
+                    dongjak = (ScrollView) mInflater.inflate(R.layout.dongjak, mRootLinear, false);
+                    mRootLinear.addView(dongjak);
+                    TextView tvLinkify = (TextView) dongjak.findViewById(R.id.textView325) ;
+                    Pattern pattern1 = Pattern.compile("[품목별 수거기준 및 비용 보기]");
+                    Linkify.addLinks(tvLinkify, pattern1, "https://www.dongjak.go.kr/portal/wste/wsteInfo/list.do?menuNo=200737");
+                } else if (spinner_selected_gu.equals("마포구")) {
+                    mapo = (ScrollView) mInflater.inflate(R.layout.mapo, mRootLinear, false);
+                    mRootLinear.addView(mapo);
+                } else if (spinner_selected_gu.equals("서대문구")) {
+                    seodaemun = (ScrollView) mInflater.inflate(R.layout.seodaemoon, mRootLinear, false);
+                    mRootLinear.addView(seodaemun);
+                    TextView tvLinkify = (TextView) seodaemun.findViewById(R.id.textView350) ;
+                    Pattern pattern1 = Pattern.compile("[대형 폐기물 신청 바로가기]");
+                    Linkify.addLinks(tvLinkify, pattern1, "https://www.sdm.go.kr/civil/print/waste/reg.do");
+                    TextView tvLinkify2 = (TextView) seodaemun.findViewById(R.id.textView351) ;
+                    Pattern pattern2 = Pattern.compile("[품목별 수수료 보기]");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.sdm.go.kr/civil/print/waste/standards.do");
+                } else if (spinner_selected_gu.equals("서초구")) {
+                    seocho = (ScrollView) mInflater.inflate(R.layout.seocho, mRootLinear, false);
+                    mRootLinear.addView(seocho);
+                    TextView tvLinkify = (TextView) seocho.findViewById(R.id.textView350) ;
+                    Pattern pattern1 = Pattern.compile("[대형 폐기물 신청 바로가기]");
+                    Linkify.addLinks(tvLinkify, pattern1, "http://www.seocho.go.kr/site/seocho/ex/bigWaste/BigWasteUserFStart.do");
+                    TextView tvLinkify2 = (TextView) seocho.findViewById(R.id.textView351) ;
+                    Pattern pattern2 = Pattern.compile("[품목별 수수료 다운로드]");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.seocho.go.kr/common/files/Download.do?cfIdx=CF00001672&cfGroup=COMMON&cfRename=e6d64168-4db3-4bbb-9f72-eab4933530a5.hwp");
+                } else if (spinner_selected_gu.equals("성동구")) {
+                    seongdong = (ScrollView) mInflater.inflate(R.layout.seongdong, mRootLinear, false);
+                    mRootLinear.addView(seongdong);
+                } else if (spinner_selected_gu.equals("성북구")) {
+                    seongbuk = (ScrollView) mInflater.inflate(R.layout.seongbuk, mRootLinear, false);
+                    mRootLinear.addView(seongbuk);
+                    TextView tvLinkify = (TextView) seongbuk.findViewById(R.id.textView350) ;
+                    Pattern pattern1 = Pattern.compile("[대형 폐기물 신청 바로가기]");
+                    Linkify.addLinks(tvLinkify, pattern1, "www.doori114.com");
+                    TextView tvLinkify2 = (TextView) seongbuk.findViewById(R.id.textView351) ;
+                    Pattern pattern2 = Pattern.compile("[품목별 수수료 보기]");
+                    Linkify.addLinks(tvLinkify2, pattern2, "https://www.seongbuk.go.kr/PageLink.do");
+                } else if (spinner_selected_gu.equals("송파구")) {
+                    songpa = (ScrollView) mInflater.inflate(R.layout.songpa, mRootLinear, false);
+                    mRootLinear.addView(songpa);
+                } else if (spinner_selected_gu.equals("양천구")) {
+                    yangcheon = (ScrollView) mInflater.inflate(R.layout.yangcheon, mRootLinear, false);
+                    mRootLinear.addView(yangcheon);
+
+                    TextView tvLinkify = (TextView) yangcheon.findViewById(R.id.textView350) ;
+                    Pattern pattern1 = Pattern.compile("[대형 폐기물 신청 바로가기]");
+                    Linkify.addLinks(tvLinkify, pattern1, "https://www.yangcheon.go.kr/site/yangcheon/05/10504010100002016081013.jsp");
+
+                    TextView tvLinkify2 = (TextView) yangcheon.findViewById(R.id.textView351) ;
+                    Pattern pattern2 = Pattern.compile("[품목별 수수료 보기]");
+                    Linkify.addLinks(tvLinkify2, pattern2, "https://www.yangcheon.go.kr/site/yangcheon/05/10504010200002016081013.jsp");
+
+                    TextView tvLinkify3 = (TextView) yangcheon.findViewById(R.id.textView446) ;
+                    Pattern pattern3 = Pattern.compile("[품목 다운로드]");
+                    Linkify.addLinks(tvLinkify3, pattern3, "https://www.yangcheon.go.kr/common/files/Download.do?cfIdx=CF00003808&cfGroup=COMMON&cfRename=2dc2dce8-68d4-4631-9ecc-9c8507872026.hwp");
+                } else if (spinner_selected_gu.equals("영등포구")) {
+                    yeongdeungpo = (ScrollView) mInflater.inflate(R.layout.yeongdeungpo, mRootLinear, false);
+                    mRootLinear.addView(yeongdeungpo);
+                } else if (spinner_selected_gu.equals("용산구")) {
+                    yongsan = (ScrollView) mInflater.inflate(R.layout.yongsan, mRootLinear, false);
+                    mRootLinear.addView(yongsan);
+
+                    TextView tvLinkify = (TextView) yongsan.findViewById(R.id.textView350) ;
+                    Pattern pattern1 = Pattern.compile("[대형 폐기물 신청 바로가기]");
+                    Linkify.addLinks(tvLinkify, pattern1, "http://clean.yongsan.go.kr/index");
+
+                    TextView tvLinkify2 = (TextView) yongsan.findViewById(R.id.textView351) ;
+                    Pattern pattern2 = Pattern.compile("[품목별 수수료 보기]");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://clean.yongsan.go.kr/cost");
+
+                } else if (spinner_selected_gu.equals("은평구")) {
+                    eunpyeong = (ScrollView) mInflater.inflate(R.layout.eunpyeong, mRootLinear, false);
+                    mRootLinear.addView(eunpyeong);
+
+                    TextView tvLinkify = (TextView) eunpyeong.findViewById(R.id.textView350) ;
+                    Pattern pattern1 = Pattern.compile("[대형 폐기물 신청 바로가기]");
+                    Linkify.addLinks(tvLinkify, pattern1, "https://ai-waste.ep.go.kr/");
+
+                    TextView tvLinkify2 = (TextView) eunpyeong.findViewById(R.id.textView351) ;
+                    Pattern pattern2 = Pattern.compile("[품목별 수수료 보기]");
+                    Linkify.addLinks(tvLinkify2, pattern2, "https://safecity.ep.go.kr/CmsWeb/viewPage.req?idx=PG0000003991&page=121");
+
+                } else if (spinner_selected_gu.equals("종로구")) {
+                    jongno = (ScrollView) mInflater.inflate(R.layout.jongno, mRootLinear, false);
+                    mRootLinear.addView(jongno);
+
+                    TextView tvLinkify = (TextView) jongno.findViewById(R.id.textView350) ;
+                    Pattern pattern1 = Pattern.compile("[대형 폐기물 신청 바로가기]");
+                    Linkify.addLinks(tvLinkify, pattern1, "http://www.jongno.go.kr/bigclean/");
+
+                    TextView tvLinkify2 = (TextView) jongno.findViewById(R.id.textView351) ;
+                    Pattern pattern2 = Pattern.compile("[품목별 수수료 보기]");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.jongno.go.kr/bigclean/bcExpense/bcExpense.jsp");
+
+                } else if (spinner_selected_gu.equals("중구")) {
+                    jung = (ScrollView) mInflater.inflate(R.layout.jung, mRootLinear, false);
+                    mRootLinear.addView(jung);
+
+                    TextView tvLinkify = (TextView) jung.findViewById(R.id.textView350) ;
+                    Pattern pattern1 = Pattern.compile("[대형 폐기물 신청 바로가기]");
+                    Linkify.addLinks(tvLinkify, pattern1, "http://www.junggu.seoul.kr/content.do?cmsid=11774");
+
+                    TextView tvLinkify2 = (TextView) jung.findViewById(R.id.textView351) ;
+                    Pattern pattern2 = Pattern.compile("[품목별 수수료 보기]");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.junggu.seoul.kr/content.do?cmsid=11772");
+
+                } else if (spinner_selected_gu.equals("중랑구")) {
+                    jungnang = (ScrollView) mInflater.inflate(R.layout.jungnang, mRootLinear, false);
+                    mRootLinear.addView(jungnang);
+
+                    TextView tvLinkify = (TextView) jungnang.findViewById(R.id.textView350) ;
+                    Pattern pattern1 = Pattern.compile("[대형 폐기물 신청 바로가기]");
+                    Linkify.addLinks(tvLinkify, pattern1, "http://www.clean114.org/web/");
+
+                    TextView tvLinkify2 = (TextView) jungnang.findViewById(R.id.textView351) ;
+                    Pattern pattern2 = Pattern.compile("[품목별 수수료 보기]");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.clean114.org/web/price.php");
                 }
             }
 
@@ -347,7 +493,6 @@ public class PageTwoFragment extends Fragment {
         }
     }
 
-    // 전화번호 권한 요청
     private void callPermission() {
         // Check the SDK version and whether the permission is already granted or not.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M

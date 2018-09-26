@@ -83,249 +83,353 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
                 PhotoView photoView = dialog.findViewById(R.id.childImage);
                 photoView.setScaleType(ImageView.ScaleType.FIT_CENTER);
 
-                if (
-                    nameMsg.equals("· 썩은 채소류") ||
-                    nameMsg.equals("· 채소류 뿌리 또는 껍질") ||
-                    nameMsg.equals("· 파 뿌리") ||
-                    nameMsg.equals("· 미나리 뿌리") ||
-                    nameMsg.equals("· 마늘 껍질") ||
-                    nameMsg.equals("· 양파 껍질") ||
-                    nameMsg.equals("· 고추 씨") ||
-                    nameMsg.equals("· 고추대(대량)") ||
-                    nameMsg.equals("· 옥수수대")) {
-                        photoView.setImageResource(R.drawable.pa);
-                } else if (
-                    nameMsg.equals("· 과일류 껍질") ||
-                    nameMsg.equals("· 코코넛 껍질") ||
-                    nameMsg.equals("· 파인애플 껍질") ||
-                    nameMsg.equals("· 핵과류의 씨") ||
-                    nameMsg.equals("· 복숭아 씨") ||
-                    nameMsg.equals("· 감 씨") ||
-                    nameMsg.equals("· 체리 씨") ||
-                    nameMsg.equals("· 망고 씨") ||
-                    nameMsg.equals("· 견과류 껍질") ||
-                    nameMsg.equals("· 호두 껍질") ||
-                    nameMsg.equals("· 밤 껍질") ||
-                    nameMsg.equals("· 땅콩 껍질") ||
-                    nameMsg.equals("· 곡류 껍질") ||
-                    nameMsg.equals("· 보리 겨(껍질)") ||
-                    nameMsg.equals("· 쌀 겨(껍질)") ||
-                    nameMsg.equals("· 콩 겨(껍질)")) {
-                        photoView.setImageResource(R.drawable.fruit);
-                } else if (
-                    nameMsg.equals("· 육류 뼈") ||
-                    nameMsg.equals("· 육류 비계") ||
-                    nameMsg.equals("· 육류 내장") ||
-                    nameMsg.equals("· 소 뼈") ||
-                    nameMsg.equals("· 돼지 뼈") ||
-                    nameMsg.equals("· 닭 뼈") ||
-                    nameMsg.equals("· 어패류 껍데기") ||
-                    nameMsg.equals("· 조개 껍데기") ||
-                    nameMsg.equals("· 소라 껍데기") ||
-                    nameMsg.equals("· 전복 껍데기") ||
-                    nameMsg.equals("· 꼬막 껍데기") ||
-                    nameMsg.equals("· 굴 껍데기") ||
-                    nameMsg.equals("· 게 껍데기") ||
-                    nameMsg.equals("· 가재 껍데기") ||
-                    nameMsg.contains("· 생선 통가시") ||
-                    nameMsg.contains("· 복어 내장")) {
-                        photoView.setImageResource(R.drawable.meat);
-                } else if (
-                    nameMsg.equals("· 알 껍데기") ||
-                    nameMsg.equals("· 계란 껍데기") ||
-                    nameMsg.equals("· 메추리알 껍데기") ||
-                    nameMsg.equals("· 차 찌꺼기") ||
-                    nameMsg.equals("· 녹차 티백 찌꺼기") ||
-                    nameMsg.equals("· 보리차 티백 찌꺼기") ||
-                    nameMsg.equals("· 한약재 찌꺼기")) {
-                        photoView.setImageResource(R.drawable.otherfood);
-                } else if (
-                    nameMsg.equals("· 통짜 큰 과일") ||
-                    nameMsg.equals("· 통짜 큰 채소") ||
-                    nameMsg.equals("· 통 수박") ||
-                    nameMsg.equals("· 통 무") ||
-                    nameMsg.equals("· 통 호박") ||
-                    nameMsg.equals("· 통 배추") ||
-                    nameMsg.equals("· 장류") ||
-                    nameMsg.equals("· 된장") ||
-                    nameMsg.equals("· 고추장") ||
-                    nameMsg.equals("· 간장") ||
-                    nameMsg.equals("· 양념된 음식") ||
-                    nameMsg.equals("· 김치") ||
-                    nameMsg.equals("· 젓갈")) {
-                        photoView.setImageResource(R.drawable.tong);
-                } else if (
-                    nameMsg.equals("· 깐 마늘") ||
-                    nameMsg.equals("· 깐 양파") ||
-                    nameMsg.equals("· 고구마 껍질") ||
-                    nameMsg.equals("· 감자 껍질") ||
-                    nameMsg.equals("· 자른 수박 껍질") ||
-                    nameMsg.equals("· 귤 껍질") ||
-                    nameMsg.equals("· 바나나 껍질") ||
-                    nameMsg.equals("· 물로 헹군 젓갈") ||
-                    nameMsg.equals("· 물로 헹군 김치")) {
-                        photoView.setImageResource(R.drawable.foodtrash);
+                if (nameMsg.equals("· 썩은 채소류")) {
+                    photoView.setImageResource(R.drawable.a01);
+                } else if (nameMsg.equals("· 채소류 뿌리 또는 껍질")) {
+                    photoView.setImageResource(R.drawable.a02);
+                } else if (nameMsg.equals("· 파 뿌리")) {
+                    photoView.setImageResource(R.drawable.a03);
+                } else if (nameMsg.equals("· 미나리 뿌리")) {
+                    photoView.setImageResource(R.drawable.a04);
+                } else if (nameMsg.equals("· 마늘 껍질")) {
+                    photoView.setImageResource(R.drawable.a05);
+                } else if (nameMsg.equals("· 양파 껍질")) {
+                    photoView.setImageResource(R.drawable.a06);
+                } else if (nameMsg.equals("· 고추 씨")) {
+                    photoView.setImageResource(R.drawable.a07);
+                } else if (nameMsg.equals("· 고추대(대량)")) {
+                    photoView.setImageResource(R.drawable.a08);
+                } else if (nameMsg.equals("· 옥수수대")) {
+                    photoView.setImageResource(R.drawable.a09);
+                } else if (nameMsg.equals("· 과일류 껍질")) {
+                    photoView.setImageResource(R.drawable.a10);
+                } else if (nameMsg.equals("· 코코넛 껍질")) {
+                    photoView.setImageResource(R.drawable.a11);
+                } else if (nameMsg.equals("· 파인애플 껍질")) {
+                    photoView.setImageResource(R.drawable.a12);
+                } else if (nameMsg.equals("· 핵과류의 씨")) {
+                    photoView.setImageResource(R.drawable.a13);
+                } else if (nameMsg.equals("· 복숭아 씨")) {
+                    photoView.setImageResource(R.drawable.a14);
+                } else if (nameMsg.equals("· 감 씨")) {
+                    photoView.setImageResource(R.drawable.a15);
+                } else if (nameMsg.equals("· 체리 씨")) {
+                    photoView.setImageResource(R.drawable.a16);
+                } else if (nameMsg.equals("· 망고 씨")) {
+                    photoView.setImageResource(R.drawable.a17);
+                } else if (nameMsg.equals("· 견과류 껍질")) {
+                    photoView.setImageResource(R.drawable.a18);
+                } else if (nameMsg.equals("· 호두 껍질")) {
+                    photoView.setImageResource(R.drawable.a19);
+                } else if (nameMsg.equals("· 밤 껍질")) {
+                    photoView.setImageResource(R.drawable.a20);
+                } else if (nameMsg.equals("· 땅콩 껍질")) {
+                    photoView.setImageResource(R.drawable.a21);
+                } else if (nameMsg.equals("· 곡류 껍질")) {
+                    photoView.setImageResource(R.drawable.a22);
+                } else if (nameMsg.equals("· 보리 겨(껍질)")) {
+                    photoView.setImageResource(R.drawable.a23);
+                } else if (nameMsg.equals("· 쌀 겨(껍질)")) {
+                    photoView.setImageResource(R.drawable.a24);
+                } else if (nameMsg.equals("· 콩 겨(껍질)")) {
+                    photoView.setImageResource(R.drawable.a25);
+                } else if (nameMsg.equals("· 육류 뼈")) {
+                    photoView.setImageResource(R.drawable.a26);
+                } else if (nameMsg.equals("· 육류 비계")) {
+                    photoView.setImageResource(R.drawable.a27);
+                } else if (nameMsg.equals("· 육류 내장")) {
+                    photoView.setImageResource(R.drawable.a28);
+                } else if (nameMsg.equals("· 소 뼈")) {
+                    photoView.setImageResource(R.drawable.a29);
+                } else if (nameMsg.equals("· 돼지 뼈")) {
+                    photoView.setImageResource(R.drawable.a30);
+                } else if (nameMsg.equals("· 닭 뼈")) {
+                    photoView.setImageResource(R.drawable.a31);
+                } else if (nameMsg.equals("· 어패류 껍데기")) {
+                    photoView.setImageResource(R.drawable.a32);
+                } else if (nameMsg.equals("· 조개 껍데기")) {
+                    photoView.setImageResource(R.drawable.a33);
+                } else if (nameMsg.equals("· 소라 껍데기")) {
+                    photoView.setImageResource(R.drawable.a34);
+                } else if (nameMsg.equals("· 전복 껍데기")) {
+                    photoView.setImageResource(R.drawable.a35);
+                } else if (nameMsg.equals("· 꼬막 껍데기")) {
+                    photoView.setImageResource(R.drawable.a36);
+                } else if (nameMsg.equals("· 굴 껍데기")) {
+                    photoView.setImageResource(R.drawable.a37);
+                } else if (nameMsg.equals("· 게 껍데기")) {
+                    photoView.setImageResource(R.drawable.a38);
+                } else if (nameMsg.equals("· 가재 껍데기")) {
+                    photoView.setImageResource(R.drawable.a39);
+                } else if (nameMsg.contains("· 생선 통가시")) {
+                    photoView.setImageResource(R.drawable.a40);
+                } else if (nameMsg.contains("· 복어 내장")) {
+                    photoView.setImageResource(R.drawable.a41);
+                } else if (nameMsg.equals("· 알 껍데기")) {
+                    photoView.setImageResource(R.drawable.a42);
+                } else if (nameMsg.equals("· 계란 껍데기")) {
+                    photoView.setImageResource(R.drawable.a43);
+                } else if (nameMsg.equals("· 메추리알 껍데기")) {
+                    photoView.setImageResource(R.drawable.a44);
+                } else if (nameMsg.equals("· 차 찌꺼기")) {
+                    photoView.setImageResource(R.drawable.a45);
+                } else if (nameMsg.equals("· 녹차 티백 찌꺼기")) {
+                    photoView.setImageResource(R.drawable.a46);
+                } else if (nameMsg.equals("· 보리차 티백 찌꺼기")) {
+                    photoView.setImageResource(R.drawable.a47);
+                } else if (nameMsg.equals("· 한약재 찌꺼기")) {
+                    photoView.setImageResource(R.drawable.a48);
+                } else if (nameMsg.equals("· 통짜 큰 과일")) {
+                    photoView.setImageResource(R.drawable.a49);
+                } else if (nameMsg.equals("· 통짜 큰 채소")) {
+                    photoView.setImageResource(R.drawable.a50);
+                } else if (nameMsg.equals("· 통 수박")) {
+                    photoView.setImageResource(R.drawable.a51);
+                } else if (nameMsg.equals("· 통 무")) {
+                    photoView.setImageResource(R.drawable.a52);
+                } else if (nameMsg.equals("· 통 호박")) {
+                    photoView.setImageResource(R.drawable.a53);
+                } else if (nameMsg.equals("· 통 배추")) {
+                    photoView.setImageResource(R.drawable.a54);
+                } else if (nameMsg.equals("· 장류")) {
+                    photoView.setImageResource(R.drawable.a55);
+                } else if (nameMsg.equals("· 된장")) {
+                    photoView.setImageResource(R.drawable.a56);
+                } else if (nameMsg.equals("· 고추장")) {
+                    photoView.setImageResource(R.drawable.a57);
+                } else if (nameMsg.equals("· 간장")) {
+                    photoView.setImageResource(R.drawable.a58);
+                } else if (nameMsg.equals("· 양념된 음식")) {
+                    photoView.setImageResource(R.drawable.a59);
+                } else if (nameMsg.equals("· 김치")) {
+                    photoView.setImageResource(R.drawable.a60);
+                } else if (nameMsg.equals("· 젓갈")) {
+                    photoView.setImageResource(R.drawable.a61);
+                } else if (nameMsg.equals("· 깐 마늘")) {
+                    photoView.setImageResource(R.drawable.a62);
+                } else if (nameMsg.equals("· 깐 양파")) {
+                    photoView.setImageResource(R.drawable.a63);
+                } else if (nameMsg.equals("· 고구마 껍질")) {
+                    photoView.setImageResource(R.drawable.a64);
+                } else if (nameMsg.equals("· 감자 껍질")) {
+                    photoView.setImageResource(R.drawable.a65);
+                } else if (nameMsg.equals("· 자른 수박 껍질")) {
+                    photoView.setImageResource(R.drawable.a66);
+                } else if (nameMsg.equals("· 귤 껍질")) {
+                    photoView.setImageResource(R.drawable.a67);
+                } else if (nameMsg.equals("· 바나나 껍질")) {
+                    photoView.setImageResource(R.drawable.a68);
+                } else if (nameMsg.equals("· 물로 헹군 젓갈")) {
+                    photoView.setImageResource(R.drawable.a69);
+                } else if (nameMsg.equals("· 물로 헹군 김치")) {
+                    photoView.setImageResource(R.drawable.a70);
                 } else if (nameMsg.equals("· 신문지")) {
-                        photoView.setImageResource(R.drawable.newspaper);
-                } else if (
-                    nameMsg.equals("· 책자") ||
-                    nameMsg.equals("· 노트") ||
-                    nameMsg.equals("· 전단지") ||
-                    nameMsg.equals("· 쇼핑백") ||
-                    nameMsg.equals("· 달력") ||
-                    nameMsg.equals("· 포장지")) {
-                        photoView.setImageResource(R.drawable.note);
-                } else if (
-                    nameMsg.equals("· 상자") ||
-                    nameMsg.equals("· 골판지 상자")) {
-                        photoView.setImageResource(R.drawable.box);
-                } else if (
-                    nameMsg.equals("· 종이 조각") ||
-                    nameMsg.equals("· 영수증") ||
-                    nameMsg.equals("· 고지서")) {
-                        photoView.setImageResource(R.drawable.bill);
+                    photoView.setImageResource(R.drawable.b01);
+                } else if (nameMsg.equals("· 책자")) {
+                    photoView.setImageResource(R.drawable.b02);
+                } else if (nameMsg.equals("· 노트")) {
+                    photoView.setImageResource(R.drawable.b03);
+                } else if (nameMsg.equals("· 전단지")) {
+                    photoView.setImageResource(R.drawable.b04);
+                } else if (nameMsg.equals("· 쇼핑백")) {
+                    photoView.setImageResource(R.drawable.b05);
+                } else if (nameMsg.equals("· 달력")) {
+                    photoView.setImageResource(R.drawable.b06);
+                } else if (nameMsg.equals("· 포장지")) {
+                    photoView.setImageResource(R.drawable.b07);
+                } else if (nameMsg.equals("· 상자")) {
+                    photoView.setImageResource(R.drawable.b08);
+                } else if (nameMsg.equals("· 골판지 상자")) {
+                    photoView.setImageResource(R.drawable.b09);
+                } else if (nameMsg.equals("· 종이 조각")) {
+                    photoView.setImageResource(R.drawable.b10);
+                } else if (nameMsg.equals("· 영수증")) {
+                    photoView.setImageResource(R.drawable.b11);
+                } else if (nameMsg.equals("· 고지서")) {
+                    photoView.setImageResource(R.drawable.b12);
                 } else if (nameMsg.equals("· 핸드타월")) {
-                    photoView.setImageResource(R.drawable.hand);
+                    photoView.setImageResource(R.drawable.b13);
                 } else if (nameMsg.equals("· 휴지")) {
-                    photoView.setImageResource(R.drawable.tissue);
-                } else if (
-                    nameMsg.equals("· 광고지") ||
-                    nameMsg.equals("· 사진") ||
-                    nameMsg.equals("· 코팅된 종이")) {
-                        photoView.setImageResource(R.drawable.coting);
+                    photoView.setImageResource(R.drawable.b14);
+                } else if (nameMsg.equals("· 광고지")) {
+                    photoView.setImageResource(R.drawable.b15);
+                } else if (nameMsg.equals("· 사진")) {
+                    photoView.setImageResource(R.drawable.b16);
+                } else if (nameMsg.equals("· 코팅된 종이")) {
+                    photoView.setImageResource(R.drawable.b17);
                 } else if (nameMsg.equals("· 스프링 제본된 책자류")) {
-                    photoView.setImageResource(R.drawable.spring);
+                    photoView.setImageResource(R.drawable.b18);
                 } else if (nameMsg.equals("· 종이컵")) {
-                    photoView.setImageResource(R.drawable.papercup);
+                    photoView.setImageResource(R.drawable.c1);
                 } else if (nameMsg.equals("· 종이팩")) {
-                    photoView.setImageResource(R.drawable.paperpack);
-                } else if (nameMsg.equals("· 철 캔") || nameMsg.equals("· 알루미늄 캔")) {
-                    photoView.setImageResource(R.drawable.fecan);
+                    photoView.setImageResource(R.drawable.c2);
+                } else if (nameMsg.equals("· 철 캔")) {
+                    photoView.setImageResource(R.drawable.d1);
+                } else if (nameMsg.equals("· 알루미늄 캔")) {
+                    photoView.setImageResource(R.drawable.d2);
                 } else if (nameMsg.equals("· 살충제 용기")) {
-                    photoView.setImageResource(R.drawable.othercan);
-                }  else if (nameMsg.equals("· 부탄가스 용기")) {
-                    photoView.setImageResource(R.drawable.butan);
-                } else if (nameMsg.equals("· 공구류") ||
-                        nameMsg.equals("· 철사") ||
-                        nameMsg.equals("· 못") ||
-                        nameMsg.equals("· 전선") ||
-                        nameMsg.equals("· 알루미늄 고철") ||
-                        nameMsg.equals("· 스텐 고철")) {
-                    photoView.setImageResource(R.drawable.fe);
+                    photoView.setImageResource(R.drawable.d3);
+                } else if (nameMsg.equals("· 부탄가스 용기")) {
+                    photoView.setImageResource(R.drawable.d4);
+                } else if (nameMsg.equals("· 공구류")) {
+                    photoView.setImageResource(R.drawable.d5);
+                } else if (nameMsg.equals("· 철사")) {
+                    photoView.setImageResource(R.drawable.d6);
+                } else if (nameMsg.equals("· 못")) {
+                    photoView.setImageResource(R.drawable.d7);
+                } else if (nameMsg.equals("· 전선")) {
+                    photoView.setImageResource(R.drawable.d8);
+                } else if (nameMsg.equals("· 알루미늄 고철")) {
+                    photoView.setImageResource(R.drawable.d9);
+                } else if (nameMsg.equals("· 스텐 고철")) {
+                    photoView.setImageResource(R.drawable.d10);
                 } else if (nameMsg.equals("· 우산")) {
-                    photoView.setImageResource(R.drawable.umb);
-                } else if (nameMsg.equals("· 음료수 병") ||
-                        nameMsg.equals("· 소주 병") ||
-                        nameMsg.equals("· 맥주 병") ||
-                        nameMsg.equals("· 기타 병류")) {
-                    photoView.setImageResource(R.drawable.bottle);
+                    photoView.setImageResource(R.drawable.d11);
+                } else if (nameMsg.equals("· 음료수 병")) {
+                    photoView.setImageResource(R.drawable.e1);
+                } else if (nameMsg.equals("· 소주 병")) {
+                    photoView.setImageResource(R.drawable.e2);
+                } else if (nameMsg.equals("· 맥주 병")) {
+                    photoView.setImageResource(R.drawable.e3);
+                } else if (nameMsg.equals("· 기타 병류")) {
+                    photoView.setImageResource(R.drawable.e4);
                 } else if (nameMsg.equals("· 깨진 유리")) {
-                    photoView.setImageResource(R.drawable.crackedglass);
-                } else if (nameMsg.equals("· 유리잔") ||
-                        nameMsg.equals("· 맥주컵") ||
-                        nameMsg.equals("· 맥주컵") ||
-                        nameMsg.equals("· 내열 유리 용기(밀폐 용기)") ||
-                        nameMsg.equals("· 내열 유리 냄비")) {
-                    photoView.setImageResource(R.drawable.otherglass);
-                } else if (nameMsg.equals("· 페트병") ||
-                        nameMsg.equals("· 플라스틱 용기류")) {
-                    photoView.setImageResource(R.drawable.petbottle);
+                    photoView.setImageResource(R.drawable.e5);
+                } else if (nameMsg.equals("· 유리잔")) {
+                    photoView.setImageResource(R.drawable.e6);
+                } else if (nameMsg.equals("· 맥주컵")) {
+                    photoView.setImageResource(R.drawable.e7);
+                } else if (nameMsg.equals("· 내열 유리 용기(밀폐 용기)")) {
+                    photoView.setImageResource(R.drawable.e8);
+                } else if (nameMsg.equals("· 내열 유리 냄비")) {
+                    photoView.setImageResource(R.drawable.e9);
+                } else if (nameMsg.equals("· 페트병")) {
+                    photoView.setImageResource(R.drawable.f1);
+                } else if (nameMsg.equals("· 플라스틱 용기류")) {
+                    photoView.setImageResource(R.drawable.f2);
                 } else if (nameMsg.equals("· 폐스티로폼")) {
-                    photoView.setImageResource(R.drawable.stiro);
+                    photoView.setImageResource(R.drawable.f3);
                 } else if (nameMsg.equals("· 고무대야")) {
-                    photoView.setImageResource(R.drawable.gomu);
+                    photoView.setImageResource(R.drawable.f4);
                 } else if (nameMsg.equals("· CD(콤팩트 디스크)")) {
-                    photoView.setImageResource(R.drawable.cd);
-                } else if (nameMsg.equals("· 비디오 테이프") ||
-                        nameMsg.equals("· 오디오 테이프")) {
-                    photoView.setImageResource(R.drawable.video);
+                    photoView.setImageResource(R.drawable.f5);
+                } else if (nameMsg.equals("· 비디오 테이프")) {
+                    photoView.setImageResource(R.drawable.f6);
+                } else if (nameMsg.equals("· 오디오 테이프")) {
+                    photoView.setImageResource(R.drawable.f7);
                 } else if (nameMsg.equals("· 화분")) {
-                    photoView.setImageResource(R.drawable.flowerbottle);
+                    photoView.setImageResource(R.drawable.f8);
                 } else if (nameMsg.equals("· 유아용 볼풀공")) {
-                    photoView.setImageResource(R.drawable.bollpull);
-                } else if (nameMsg.equals("· 완구류") ||
-                        nameMsg.equals("· 유모차") ||
-                        nameMsg.equals("· 유아용 그네") ||
-                        nameMsg.equals("· 유아용 자동차") ||
-                        nameMsg.equals("· 유아용 목마")) {
-                    photoView.setImageResource(R.drawable.toy);
+                    photoView.setImageResource(R.drawable.f9);
+                } else if (nameMsg.equals("· 완구류")) {
+                    photoView.setImageResource(R.drawable.f10);
+                } else if (nameMsg.equals("· 유모차")) {
+                    photoView.setImageResource(R.drawable.f11);
+                } else if (nameMsg.equals("· 유아용 그네")) {
+                    photoView.setImageResource(R.drawable.f12);
+                } else if (nameMsg.equals("· 유아용 자동차")) {
+                    photoView.setImageResource(R.drawable.f13);
+                } else if (nameMsg.equals("· 유아용 목마")) {
+                    photoView.setImageResource(R.drawable.f14);
                 } else if (nameMsg.equals("· 송곳")) {
-                    photoView.setImageResource(R.drawable.songgot);
+                    photoView.setImageResource(R.drawable.f15);
                 } else if (nameMsg.equals("· 노끈")) {
-                    photoView.setImageResource(R.drawable.noggen);
+                    photoView.setImageResource(R.drawable.f16);
                 } else if (nameMsg.equals("· 알약 포장재")) {
-                    photoView.setImageResource(R.drawable.pill);
+                    photoView.setImageResource(R.drawable.f17);
                 } else if (nameMsg.equals("· 부서진 스티로폼 조각")) {
-                    photoView.setImageResource(R.drawable.crackedstiro);
+                    photoView.setImageResource(R.drawable.f18);
                 } else if (nameMsg.equals("· 1회용 그릇")) {
-                    photoView.setImageResource(R.drawable.oneplate);
-                } else if (nameMsg.equals("· 과자 봉지") ||
-                        nameMsg.equals("· 라면 봉지") ||
-                        nameMsg.equals("· 빵 봉지") ||
-                        nameMsg.equals("· 1회용 비닐 봉투") ||
-                        nameMsg.equals("· 각종 비닐류")) {
-                    photoView.setImageResource(R.drawable.bong);
+                    photoView.setImageResource(R.drawable.f19);
+                } else if (nameMsg.equals("· 과자 봉지")) {
+                    photoView.setImageResource(R.drawable.g1);
+                } else if (nameMsg.equals("· 라면 봉지")) {
+                    photoView.setImageResource(R.drawable.g2);
+                } else if (nameMsg.equals("· 빵 봉지")) {
+                    photoView.setImageResource(R.drawable.g3);
+                } else if (nameMsg.equals("· 1회용 비닐 봉투")) {
+                    photoView.setImageResource(R.drawable.g4);
+                } else if (nameMsg.equals("· 각종 비닐류")) {
+                    photoView.setImageResource(R.drawable.g5);
                 } else if (nameMsg.contains("· 뽁뽁이")) {
-                    photoView.setImageResource(R.drawable.aircapp);
+                    photoView.setImageResource(R.drawable.g6);
                 } else if (nameMsg.equals("· 형광등")) {
-                    photoView.setImageResource(R.drawable.lmapp);
+                    photoView.setImageResource(R.drawable.h1);
                 } else if (nameMsg.equals("· 깨진 형광등")) {
-                    photoView.setImageResource(R.drawable.crackedlamp);
+                    photoView.setImageResource(R.drawable.h2);
                 } else if (nameMsg.equals("· 백열전구")) {
-                    photoView.setImageResource(R.drawable.back);
+                    photoView.setImageResource(R.drawable.h3);
                 } else if (nameMsg.equals("· LED 전구")) {
-                    photoView.setImageResource(R.drawable.led);
-                } else if (nameMsg.equals("· 건전지") ||
-                        nameMsg.equals("· 충전용 전지")) {
-                    photoView.setImageResource(R.drawable.batteryy);
-                } else if (nameMsg.equals("· 헌옷") ||
-                        nameMsg.equals("· 신발") ||
-                        nameMsg.equals("· 가방") ||
-                        nameMsg.equals("· 담요") ||
-                        nameMsg.equals("· 누비 이불") ||
-                        nameMsg.equals("· 커튼") ||
-                        nameMsg.equals("· 카페트") ||
-                        nameMsg.equals("· 여행용 가방") ||
-                        nameMsg.equals("· 베개") ||
-                        nameMsg.equals("· 방석")) {
-                    photoView.setImageResource(R.drawable.clothee);
+                    photoView.setImageResource(R.drawable.h4);
+                } else if (nameMsg.equals("· 건전지")) {
+                    photoView.setImageResource(R.drawable.i1);
+                } else if (nameMsg.equals("· 충전용 전지")) {
+                    photoView.setImageResource(R.drawable.i2);
+                } else if (nameMsg.equals("· 헌옷")) {
+                    photoView.setImageResource(R.drawable.j1);
+                } else if (nameMsg.equals("· 신발")) {
+                    photoView.setImageResource(R.drawable.j2);
+                } else if (nameMsg.equals("· 가방")) {
+                    photoView.setImageResource(R.drawable.j3);
+                } else if (nameMsg.equals("· 담요")) {
+                    photoView.setImageResource(R.drawable.j4);
+                } else if (nameMsg.equals("· 누비 이불")) {
+                    photoView.setImageResource(R.drawable.j5);
+                } else if (nameMsg.equals("· 커튼")) {
+                    photoView.setImageResource(R.drawable.j6);
+                } else if (nameMsg.equals("· 카페트")) {
+                    photoView.setImageResource(R.drawable.j7);
+                } else if (nameMsg.equals("· 여행용 가방")) {
+                    photoView.setImageResource(R.drawable.j8);
+                } else if (nameMsg.equals("· 베개")) {
+                    photoView.setImageResource(R.drawable.j10);
+                } else if (nameMsg.equals("· 방석")) {
+                    photoView.setImageResource(R.drawable.j11);
                 } else if (nameMsg.equals("· 솜이불")) {
-                    photoView.setImageResource(R.drawable.som);
-                } else if (nameMsg.equals("· 걸레") ||
-                        nameMsg.equals("· 수건")) {
-                    photoView.setImageResource(R.drawable.towel);
-                } else if (nameMsg.contains("· 소형 폐가전") ||
-                        nameMsg.equals("· 컴퓨터") ||
-                        nameMsg.equals("· 전기 밥솥") ||
-                        nameMsg.equals("· 선풍기")) {
-                    photoView.setImageResource(R.drawable.smallplug);
-                } else if (nameMsg.contains("· 대형 폐가전") ||
-                        nameMsg.equals("· 세탁기") ||
-                        nameMsg.equals("· 에어컨") ||
-                        nameMsg.equals("· 냉장고") ||
-                        nameMsg.equals("· TV")) {
-                    photoView.setImageResource(R.drawable.bigplug);
-                } else if (nameMsg.equals("· 전기 담요") ||
-                        nameMsg.equals("· 전기 방석")) {
-                    photoView.setImageResource(R.drawable.elecdam);
+                    photoView.setImageResource(R.drawable.j9);
+                } else if (nameMsg.equals("· 걸레")) {
+                    photoView.setImageResource(R.drawable.j12);
+                } else if (nameMsg.equals("· 수건")) {
+                    photoView.setImageResource(R.drawable.j13);
+                } else if (nameMsg.contains("· 소형 폐가전")) {
+                    photoView.setImageResource(R.drawable.k1);
+                } else if (nameMsg.equals("· 컴퓨터")) {
+                    photoView.setImageResource(R.drawable.k2);
+                } else if (nameMsg.equals("· 전기 밥솥")) {
+                    photoView.setImageResource(R.drawable.k3);
+                } else if (nameMsg.equals("· 선풍기")) {
+                    photoView.setImageResource(R.drawable.k4);
+                } else if (nameMsg.contains("· 대형 폐가전")) {
+                    photoView.setImageResource(R.drawable.k5);
+                } else if (nameMsg.equals("· 세탁기")) {
+                    photoView.setImageResource(R.drawable.k6);
+                } else if (nameMsg.equals("· 에어컨")) {
+                    photoView.setImageResource(R.drawable.k7);
+                } else if (nameMsg.equals("· 냉장고")) {
+                    photoView.setImageResource(R.drawable.k8);
+                } else if (nameMsg.equals("· TV")) {
+                    photoView.setImageResource(R.drawable.k9);
+                } else if (nameMsg.equals("· 전기 담요")) {
+                    photoView.setImageResource(R.drawable.k10);
+                } else if (nameMsg.equals("· 전기 방석")) {
+                    photoView.setImageResource(R.drawable.k11);
                 } else if (nameMsg.equals("· 폐식용유")) {
-                    photoView.setImageResource(R.drawable.pyeoil);
+                    photoView.setImageResource(R.drawable.l1);
                 } else if (nameMsg.equals("· 폐목재류")) {
-                    photoView.setImageResource(R.drawable.a1);
+                    photoView.setImageResource(R.drawable.m1);
                 } else if (nameMsg.equals("· 아이스팩")) {
-                    photoView.setImageResource(R.drawable.a2);
+                    photoView.setImageResource(R.drawable.m2);
                 } else if (nameMsg.equals("· 연탄재")) {
-                    photoView.setImageResource(R.drawable.a3);
+                    photoView.setImageResource(R.drawable.m3);
                 } else if (nameMsg.equals("· 페인트통")) {
-                    photoView.setImageResource(R.drawable.a1t);
+                    photoView.setImageResource(R.drawable.m4);
                 } else if (nameMsg.equals("· 양초")) {
-                    photoView.setImageResource(R.drawable.a2t);
+                    photoView.setImageResource(R.drawable.m5);
                 } else if (nameMsg.equals("· 스펀지")) {
-                    photoView.setImageResource(R.drawable.a3t);
+                    photoView.setImageResource(R.drawable.m6);
                 } else if (nameMsg.equals("· 폐의약품")) {
-                    photoView.setImageResource(R.drawable.pyepill);
+                    photoView.setImageResource(R.drawable.m7);
                 }
-
                 dialog.show();
                 Display display = getActivity().getWindowManager().getDefaultDisplay();
                 Point size = new Point();
@@ -412,7 +516,7 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         countryList.add(country);
         country = new Country("일반종량제봉투", "· 옥수수대", "");
         countryList.add(country);
-        country = new Country("일반종량제봉투", "· 과일류 껍질", "");
+        country = new Country("음식물쓰레기/일반종량제봉투", "· 과일류 껍질", "");
         countryList.add(country);
         country = new Country("일반종량제봉투", "· 코코넛 껍질", "");
         countryList.add(country);
@@ -529,10 +633,6 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         country = new Country("음식물쓰레기", "· 귤 껍질", "");
         countryList.add(country);
         country = new Country("음식물쓰레기", "· 바나나 껍질", "");
-        countryList.add(country);
-        country = new Country("음식물쓰레기", "· 물로 헹군 젓갈", "");
-        countryList.add(country);
-        country = new Country("음식물쓰레기", "· 물로 헹군 김치", "");
         countryList.add(country);
         continent = new Continent("음식물류", "", countryList);
         continentList.add(continent);
