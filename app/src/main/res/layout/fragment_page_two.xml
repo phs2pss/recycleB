@@ -60,11 +60,6 @@
             android:id="@+id/spinner2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|center_horizontal"
-            android:layout_margin="10dp"
-            android:entries="@array/ward"
-            android:foregroundGravity="center_vertical|center_horizontal"
-            android:gravity="center_vertical|center_horizontal"
             />
 
         <TextView

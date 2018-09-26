@@ -3,24 +3,15 @@ package com.selecto.banana2;
 import android.Manifest;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.location.Address;
 import android.location.Geocoder;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.SystemClock;
-import android.provider.Settings;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
 import android.text.util.Linkify;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -37,9 +28,6 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-
-
 import com.github.chrisbanes.photoview.PhotoView;
 
 import java.io.IOException;
@@ -54,7 +42,7 @@ public class PageTwoFragment extends Fragment {
     Animation translateDown;
     LinearLayout page_gps;
     LinearLayout page_info;
-    ArrayAdapter spinnerAdapter;
+    ArrayAdapter<String> spinnerAdapter;
     Button btnShowLocation;
     TextView txtAds;
     Geocoder geocoder;
@@ -85,7 +73,6 @@ public class PageTwoFragment extends Fragment {
     PhotoView photoView;
     Dialog dialog;
 
-
     private final int PERMISSIONS_ACCESS_FINE_LOCATION = 1000;
     private final int PERMISSIONS_ACCESS_COARSE_LOCATION = 1001;
     private boolean isAccessFineLocation = false;
@@ -98,8 +85,6 @@ public class PageTwoFragment extends Fragment {
     public PageTwoFragment() {
         // Required empty public constructor
     }
-
-
 
 
     @Nullable
@@ -117,7 +102,7 @@ public class PageTwoFragment extends Fragment {
         page_info = view.findViewById(R.id.view_info);
         button_gps = view.findViewById(R.id.button_gps);
         spinner = view.findViewById(R.id.spinner2);
-        spinnerAdapter = new ArrayAdapter(getActivity(), R.layout.spinner_item, getResources().getStringArray(R.array.ward));
+        spinnerAdapter = new ArrayAdapter<String>(getActivity(), R.layout.spinner_item, getResources().getStringArray(R.array.ward));
         spinnerAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
         spinner.setAdapter(spinnerAdapter);
         button_gps.setOnClickListener(new View.OnClickListener() {
@@ -164,11 +149,11 @@ public class PageTwoFragment extends Fragment {
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View s_view, int position, long l) {
+            public void onItemSelected(AdapterView<?> adapterView, View s_view, int i, long l) {
                 mInflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 mRootLinear = view.findViewById(R.id.linear_root);
-                Log.d("spinner_test", adapterView.getItemAtPosition(position).toString());
-                String spinner_selected_gu = adapterView.getItemAtPosition(position).toString();
+                Log.d("spinner_test", adapterView.getItemAtPosition(i).toString());
+                String spinner_selected_gu = adapterView.getItemAtPosition(i).toString();
                 if (!spinner_selected_gu.equals("행정구역 선택")) {
                     button_gps.setText(spinner_selected_gu + " 배출 정보");
                 }
@@ -184,10 +169,10 @@ public class PageTwoFragment extends Fragment {
                 if (spinner_selected_gu.equals("강남구")) {
                     gangnam = (ScrollView) mInflater.inflate(R.layout.gangnam, mRootLinear, false);
                     mRootLinear.addView(gangnam);
-                    Button furniture = (Button) gangnam.findViewById(R.id.button6);
-                    Button appliance = (Button) gangnam.findViewById(R.id.button5);
-                    Button etc = (Button) gangnam.findViewById(R.id.button4);
-                    Button  agent = (Button) gangnam.findViewById(R.id.button7);
+                    Button furniture = gangnam.findViewById(R.id.button6);
+                    Button appliance = gangnam.findViewById(R.id.button5);
+                    Button etc = gangnam.findViewById(R.id.button4);
+                    Button  agent = gangnam.findViewById(R.id.button7);
 
                     furniture.setOnClickListener(new View.OnClickListener(){
                         @Override
@@ -332,11 +317,14 @@ public class PageTwoFragment extends Fragment {
                     mRootLinear.addView(dobong);
                 }
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
             }
         });
+
+
+
         return view;
     }
 
