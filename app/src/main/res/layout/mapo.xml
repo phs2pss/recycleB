@@ -1082,7 +1082,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="· 예약방법 : www.edtd.co.kr 또는 콜센터 1599-0903"
+            android:text="· 예약방법\n ·인터넷 : www.edtd.co.kr\n ·콜센터 1599-0903"
             android:textColor="@color/black"
             android:textSize="21sp"
             android:padding="5dp"
@@ -1318,14 +1318,14 @@
             android:src="@drawable/mapo10"/>
 
         <TextView
+            android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="※ 출처\n( http://www.mapo.go.kr/CmsWeb/viewPage.req?idx=PG0000002183 )"
+            android:text="※ 출처\n [마포구청 홈페이지 바로가기]"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textSize="16sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"
-            android:autoLink="all"
             android:textColorLink="@color/blue"/>
     </LinearLayout>
 </ScrollView>

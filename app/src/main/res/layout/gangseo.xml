@@ -222,7 +222,7 @@
                         android:autoLink="all"
                         android:background="@android:color/background_light"
                         android:gravity="center_vertical|center_horizontal"
-                        android:text="강서산업\n☏2604-6215"
+                        android:text="강서산업\n(02-2604-6215)"
                         android:textColor="@android:color/black"
                         android:textColorLink="@color/blue" />
                 </LinearLayout>
@@ -370,7 +370,7 @@
                         android:autoLink="all"
                         android:background="@android:color/background_light"
                         android:gravity="center_vertical|center_horizontal"
-                        android:text="경우실업\n☏2663-6000"
+                        android:text="경우실업\n(02-2663-6000)"
                         android:textColor="@android:color/black"
                         android:textColorLink="@color/blue" />
                 </LinearLayout>
@@ -481,7 +481,7 @@
                         android:autoLink="all"
                         android:background="@android:color/background_light"
                         android:gravity="center_vertical|center_horizontal"
-                        android:text="경청환경\n☏3661-6182"
+                        android:text="경청환경\n(02-3661-6182)"
                         android:textColor="@android:color/black"
                         android:textColorLink="@color/blue" />
                 </LinearLayout>
@@ -628,7 +628,7 @@
                         android:autoLink="all"
                         android:background="@android:color/background_light"
                         android:gravity="center_vertical|center_horizontal"
-                        android:text="신원그린\n☏2659-1470"
+                        android:text="신원그린\n(02-2659-1470)"
                         android:textColor="@android:color/black"
                         android:textColorLink="@color/blue" />
                 </LinearLayout>
@@ -756,7 +756,7 @@
                         android:autoLink="all"
                         android:background="@android:color/background_light"
                         android:gravity="center_vertical|center_horizontal"
-                        android:text="청해물산\n☏3663-6220"
+                        android:text="청해물산\n(02-3663-6220)"
                         android:textColor="@android:color/black"
                         android:textColorLink="@color/blue" />
                 </LinearLayout>
@@ -949,7 +949,7 @@
             android:autoLink="all"
             android:paddingLeft="55dp"
             android:paddingTop="4dp"
-            android:text="(☎ 2600 - 4080)"
+            android:text="(☎ 02 - 2600 - 4080)"
             android:textColor="@android:color/black"
             android:textColorLink="@color/blue" />
 
@@ -967,7 +967,7 @@
                 android:paddingBottom="5dp"
                 android:paddingLeft="37dp"
                 android:paddingTop="2dp"
-                android:text="※ 대형폐기물 배출 수수료 보기"
+                android:text="※ [ 대형폐기물 인터넷처리 바로가기 ]"
                 android:textColor="@android:color/black" />
 
             <LinearLayout
@@ -1046,7 +1046,7 @@
                 android:paddingBottom="10dp"
                 android:paddingLeft="40dp"
                 android:paddingTop="10dp"
-                android:text="[대형폐기물 인터넷 처리]"
+                android:text="※ [대형폐기물 인터넷 처리 바로가기]"
                 android:textColor="@android:color/black"
                 android:textColorLink="@color/blue" />
 
@@ -1084,7 +1084,7 @@
             android:paddingBottom="2dp"
             android:paddingLeft="37dp"
             android:paddingTop="2dp"
-            android:text="▶ 신고 방법\n쓰레기 무단투기 현장을 목격한 후 증거물(투기사진, 동영상 등)을 확보하고 있는 시민이 전화(☎2600-4064) 등으로 신고할 수 있습니다."
+            android:text="▶ 신고 방법\n쓰레기 무단투기 현장을 목격한 후 증거물(투기사진, 동영상 등)을 확보하고 있는 시민이 전화(☎02-2600-4064) 등으로 신고할 수 있습니다."
             android:textColor="@android:color/black"
             android:textColorLink="@color/blue" />
 
@@ -1093,11 +1093,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:autoLink="web"
             android:paddingBottom="5dp"
             android:paddingLeft="20dp"
             android:paddingTop="5dp"
-            android:text="※ 출처 \nhttp://www.gangseo.seoul.kr"
+            android:text="※ 출처 \n  [ 강서구청 홈페이지 바로가기 ]"
             android:textColor="@android:color/black"
             android:textColorHint="?attr/colorError"
             android:textColorLink="?attr/actionModeSplitBackground"

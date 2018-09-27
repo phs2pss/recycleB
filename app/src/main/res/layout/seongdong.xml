@@ -606,6 +606,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.3"
             android:text="각 동별로 정해진 배출일에 거주지역 청소대행업체의 종량제 봉투를 사용하여 각 가정(영업장)에 비치된 음식물 수거 전용용기에 담은 후 저녁 8시 ~ 12시에 각 가정 대문앞에 배출"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -642,6 +643,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.3"
             android:text="수거 대행업체에서 납부필증을 구입하여 업소용 음식물수거 전용용기에 부착 후 각 동별 정해진 배출요일 저녁 8시 ~ 12시에 내 점포 앞에 배출 (2016.6.1.~ 납부필증 종량제 시행)"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -651,6 +653,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.3"
             android:text="· 다량배출사업장(매장면적 200㎡이상)"
             android:textColor="@color/black"
             android:textSize="21sp"
@@ -877,14 +880,14 @@
             android:padding="10dp"/>
 
         <TextView
+            android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="( http://www.sd.go.kr/jsp/pop/pop_waste.jsp )"
+            android:text="※ [ 배출품목 보기 ]"
             android:textColor="@color/black"
             android:textSize="21sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"
-            android:autoLink="web"
             android:textColorLink="@color/blue"/>
 
         <TextView
@@ -898,7 +901,18 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="☏ 1599-0903 ( http://www.sd.go.kr/jsp/pop/pop_waste.jsp )"
+            android:text="전화문의 : ☏ 1599-0903"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:autoLink="all"
+            android:textColorLink="@color/blue"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="인터넷 문의 : http://www.sd.go.kr/jsp/pop/pop_waste.jsp"
             android:textColor="@color/black"
             android:textSize="21sp"
             android:padding="5dp"
@@ -1110,5 +1124,18 @@
             android:textSize="21sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:text="※ 출처 \n[성동구청 홈페이지 바로가기]"
+            android:textColor="@android:color/black"
+            android:textColorLink="@color/blue"
+            android:textSize="16sp" />
     </LinearLayout>
 </ScrollView>

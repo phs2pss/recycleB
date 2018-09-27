@@ -1022,7 +1022,8 @@
                     android:background="@android:color/background_light"
                     android:gravity="center"
                     android:text="☎02-812-5143"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textColorLink="@color/blue" />
 
             </TableRow>
 
@@ -1034,7 +1035,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
@@ -1043,7 +1044,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
@@ -1058,7 +1059,8 @@
                     android:background="@android:color/background_light"
                     android:gravity="center"
                     android:text="☎02-812-5143\n☎02-812-7569"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textColorLink="@color/blue" />
 
             </TableRow>
 
@@ -1094,7 +1096,8 @@
                     android:background="@android:color/background_light"
                     android:gravity="center"
                     android:text="☎02-826-6776"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textColorLink="@color/blue" />
 
             </TableRow>
 
@@ -1130,7 +1133,8 @@
                     android:background="@android:color/background_light"
                     android:gravity="center"
                     android:text="☎02-525-4145"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textColorLink="@color/blue" />
 
             </TableRow>
 
@@ -1166,7 +1170,8 @@
                     android:background="@android:color/background_light"
                     android:gravity="center"
                     android:text="☎02-835-9933"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textColorLink="@color/blue" />
 
             </TableRow>
 
@@ -1177,15 +1182,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:autoLink="all"
             android:lineSpacingMultiplier="1.3"
             android:paddingBottom="2dp"
             android:paddingLeft="37dp"
             android:paddingTop="5dp"
-            android:text="※ 대형폐기물처리 신청 바로가기( https://www.dongjak.go.kr/portal/wste/wsteInfo/info.do?menuNo=200735 )"
+            android:text="※ [ 대형폐기물처리 신청 바로가기 ]"
             android:textColor="@android:color/black"
             android:textColorLink="@color/blue"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textView325"
@@ -1196,10 +1200,10 @@
             android:paddingBottom="2dp"
             android:paddingLeft="37dp"
             android:paddingTop="5dp"
-            android:text="[ 품목별 수거기준 및 비용 보기]"
+            android:text="※ [ 품목별 수거기준 및 비용 보기 ]"
             android:textColor="@android:color/black"
             android:textColorLink="@color/blue"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textView309"
@@ -1305,9 +1309,10 @@
             android:lineSpacingMultiplier="1.3"
             android:paddingBottom="10dp"
             android:paddingLeft="55dp"
-            android:paddingTop="2dp"
+            android:paddingTop="5dp"
             android:text="※ 문의 : 동작구청 청소행정과( ☎02-820-9759)"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textColorLink="@color/blue" />
 
         <TextView
             android:id="@+id/textView318"
@@ -1379,14 +1384,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:autoLink="web"
             android:paddingBottom="5dp"
             android:paddingLeft="20dp"
             android:paddingTop="5dp"
-            android:text="※ 출처 \nhttps://www.dongjak.go.kr/portal/main/main.do"
+            android:text="※ 출처 \n [동작구청 홈페이지 바로가기]"
             android:textColor="@android:color/black"
             android:textColorLink="@color/blue"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 </ScrollView>

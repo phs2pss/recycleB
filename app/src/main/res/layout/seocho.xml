@@ -138,7 +138,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
@@ -155,7 +155,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
@@ -190,7 +190,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
@@ -229,7 +229,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="1dp"
                     android:background="@android:color/darker_gray"
                     android:gravity="center"
@@ -255,7 +255,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
@@ -307,7 +307,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
@@ -333,7 +333,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
@@ -729,7 +729,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:autoLink="all"
                 android:gravity="center"
                 android:lineSpacingMultiplier="1.3"
                 android:paddingBottom="10dp"
@@ -743,7 +742,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:autoLink="all"
                 android:gravity="center"
                 android:lineSpacingMultiplier="1.3"
                 android:paddingBottom="10dp"
@@ -776,7 +774,7 @@
             android:paddingBottom="2dp"
             android:paddingLeft="55dp"
             android:paddingTop="2dp"
-            android:text="- 4대 가전(TV, 냉장고, 세탁기, 에어컨) 및 공기청정기, 전자렌지 등\n- 배출 예약 : ☎ 1599-0903 ( www.edtd.co.kr )"
+            android:text="- 4대 가전(TV, 냉장고, 세탁기, 에어컨) 및 공기청정기, 전자렌지 등\n- 배출 예약 : ☎ 1599-0903\n( www.edtd.co.kr )"
             android:textColor="@android:color/black"
             android:textColorLink="@color/blue"
             android:textSize="16sp" />
@@ -814,14 +812,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:autoLink="web"
             android:paddingBottom="5dp"
             android:paddingLeft="20dp"
             android:paddingTop="5dp"
-            android:text="※ 출처 \nhttp://www.seocho.go.kr"
+            android:text="※ 출처 \n[서초구청 홈페이지 바로가기]"
             android:textColor="@android:color/black"
             android:textColorLink="@color/blue"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 </ScrollView>

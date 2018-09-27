@@ -570,7 +570,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="900-3294"
+                    android:text="02-900-3294"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -609,7 +609,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="991-2816"
+                    android:text="02-991-2816"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -1437,7 +1437,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="3778-4007"
+                    android:text="02-3778-4007"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -1466,7 +1466,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="3778-4055"
+                    android:text="02-3778-4055"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -1496,7 +1496,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="3778-4112"
+                    android:text="02-3778-4112"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -1526,7 +1526,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="3778-4153"
+                    android:text="02-3778-4153"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -1555,7 +1555,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="3778-4205"
+                    android:text="02-3778-4205"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -1584,7 +1584,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="3778-4255"
+                    android:text="02-3778-4255"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -1613,7 +1613,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="3778-4304"
+                    android:text="02-3778-4304"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -1642,7 +1642,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="3778-4356"
+                    android:text="02-3778-4356"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -1665,13 +1665,13 @@
 
                 <TextView
                     android:id="@+id/textView114"
-                    android:layout_width="wrap_content"
+                    android:layout_width="162dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="1dp"
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="3778-4455"
+                    android:text="02-3778-4455"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -1699,7 +1699,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="3778-4706"
+                    android:text="02-3778-4706"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -1726,7 +1726,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="3778-4753"
+                    android:text="02-3778-4753"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -1753,7 +1753,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="3778-4905"
+                    android:text="02-3778-4905"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -1780,7 +1780,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="3778-4955"
+                    android:text="02-3778-4955"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -1788,35 +1788,40 @@
 
         </TableLayout>
 
-        <TextView
-            android:id="@+id/textView205"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:autoLink="all"
-            android:lineSpacingMultiplier="1.3"
-            android:paddingBottom="2dp"
-            android:paddingLeft="37dp"
-            android:paddingTop="5dp"
-            android:text="※ 대형폐기물처리 신청 바로가기( http://www.gangbuk.go.kr/www/contents.do?key=727 )"
-            android:textColor="@android:color/black"
-            android:textColorLink="@color/blue"
-            android:textSize="14sp" />
+            android:gravity="center"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView228"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:autoLink="all"
-            android:lineSpacingMultiplier="1.3"
-            android:paddingBottom="2dp"
-            android:paddingLeft="37dp"
-            android:paddingTop="5dp"
-            android:text="※ 대형폐기물처리 수수료 보기( http://www.gangbuk.go.kr/merge/contents.do?key=8137 )"
-            android:textColor="@android:color/black"
-            android:textColorLink="@color/blue"
-            android:textSize="14sp" />
+            <TextView
+                android:id="@+id/textView350"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.3"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="[대형 폐기물 신청 바로가기]"
+                android:textColor="@android:color/black"
+                android:textColorLink="@color/blue" />
+
+            <TextView
+                android:id="@+id/textView351"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.3"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="[품목별 수수료 보기]"
+                android:textColor="@android:color/black"
+                android:textColorLink="@color/blue" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView207"
@@ -2065,14 +2070,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:autoLink="web"
             android:paddingBottom="5dp"
             android:paddingLeft="20dp"
             android:paddingTop="5dp"
-            android:text="※ 출처 \nhttp://www.gangbuk.go.kr"
+            android:text="※ 출처 \n  [ 강북구청 홈페이지 바로가기 ]"
             android:textColor="@android:color/black"
-            android:textColorHint="?attr/colorError"
-            android:textColorLink="?attr/actionModeSplitBackground"
+            android:textColorLink="@color/blue"
             android:textSize="14sp" />
 
     </LinearLayout>

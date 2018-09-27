@@ -355,14 +355,14 @@
             android:layout_marginLeft="15dp"/>
 
         <TextView
+            android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="※ 가정용 전용용기 판매소\n( http://www.dobong.go.kr/subsite/waste/contents.asp?code=10007376 )"
+            android:text="※ [가정용 전용용기 판매소 바로가기]"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"
-            android:autoLink="web"
             android:textColorLink="@color/blue"/>
 
         <TextView
@@ -571,15 +571,15 @@
             android:padding="10dp"/>
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="( http://www.dobong.go.kr/subsite/waste/Contents.asp?code=10007356 )"
+            android:text=" ※ [종량제 봉투 판매소 현황 바로가기]"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"
-            android:textColorLink="@color/blue"
-            android:autoLink="web"/>
+            android:textColorLink="@color/blue" />
 
         <TextView
             android:layout_width="match_parent"
@@ -682,7 +682,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="· 도봉구청 청소행정과 (☎ 2091-3266)로 취소요청"
+            android:text="· 도봉구청 청소행정과 (☎ 02-2091-3266)로 취소요청"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:padding="5dp"
@@ -776,14 +776,14 @@
             android:layout_marginLeft="15dp"/>
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="( http://www.dobong.go.kr/WDB_DEV/WASTE/item_list.asp )"
+            android:text=" ※ [품목 및 수수료 확인 바로가기]"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"
-            android:autoLink="web"
             android:textColorLink="@color/blue"/>
 
         <TextView
@@ -796,25 +796,25 @@
             android:layout_marginLeft="15dp"/>
 
         <TextView
+            android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="( http://www.dobong.go.kr/WDB_DEV/waste/write.asp )"
+            android:text="※ [대형폐기물 배출 신청 바로가기]"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"
-            android:autoLink="web"
             android:textColorLink="@color/blue"/>
 
         <TextView
+            android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="※ 출처 ( http://www.dobong.go.kr/subsite/waste )"
+            android:text="※ 출처\n  [도봉구청 홈페이지 바로가기]"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"
-            android:autoLink="web"
             android:textColorLink="@color/blue"/>
     </LinearLayout>
 </ScrollView>

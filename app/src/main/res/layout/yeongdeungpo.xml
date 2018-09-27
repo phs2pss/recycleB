@@ -445,7 +445,17 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="재활용센터(신관) 서울시 영등포구 당산동 3가 407번지 ☏ 02-2675-7289, FAX: 02-2671-7289"
+            android:text="재활용센터(신관) 서울시 영등포구 당산동 3가 407번지"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:padding="5dp"
+            android:layout_marginLeft="25dp"
+            android:textColorLink="@color/blue"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="☏ 02-2675-7289,\n  FAX: 02-2671-7289"
             android:textColor="@color/black"
             android:textSize="21sp"
             android:padding="5dp"
@@ -456,7 +466,17 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="재활용센터(제2관) 서울시 영등포구 신길6동 3937-10 ☏ 836-7289, FAX: 845-7282"
+            android:text="재활용센터(제2관) 서울시 영등포구 신길6동 3937-10"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:padding="5dp"
+            android:layout_marginLeft="25dp"
+            android:textColorLink="@color/blue"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="☏ 836-7289, FAX: 845-7282"
             android:textColor="@color/black"
             android:textSize="21sp"
             android:padding="5dp"
@@ -503,7 +523,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="청소과 자원재활용팀(☏ 02-2670-3488)로 문의"
+            android:text="청소과 자원재활용팀\n(☏ 02-2670-3488)로 문의"
             android:textColor="@color/black"
             android:textSize="21sp"
             android:padding="5dp"
@@ -555,25 +575,25 @@
             android:padding="10dp"/>
 
         <TextView
+            android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/ydp_txt"
+            android:text="※ [ 수거 비용 검색 바로가기 ]"
             android:textColor="@color/black"
             android:textSize="21sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"
-            android:textColorLink="@color/blue"
-            android:autoLink="all"/>
+            android:textColorLink="@color/blue" />
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="※ 출처 ( http://www.ydp.go.kr/main/page.do?mCode=A030050020 )"
+            android:text="※ 출처\n [ 영등포구청 홈페이지 바로가기 ]"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:padding="5dp"
             android:layout_marginLeft="25dp"
-            android:textColorLink="@color/blue"
-            android:autoLink="all"/>
+            android:textColorLink="@color/blue" />
     </LinearLayout>
 </ScrollView>

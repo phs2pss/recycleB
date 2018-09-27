@@ -457,7 +457,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="※ 대형생활폐기물 월 ~ 토 07:00 ~ 16:00, 아파트 09:00 ~ 18:00"
+            android:text="※ 대형생활폐기물 \n 월 ~ 토 07:00 ~ 16:00,\n 아파트 09:00 ~ 18:00"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:padding="5dp"
@@ -532,7 +532,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="※ 재활용이 가능한 것일 경우 (재활용센터(452-8272)로 연락하면 무상 수거) "
+            android:text="※ 재활용이 가능한 것일 경우 (재활용센터(02-452-8272)로 연락하면 무상 수거) "
             android:textColor="@color/black"
             android:textSize="15sp"
             android:padding="5dp"
@@ -552,7 +552,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="※ 기타 문의사항 : 광진구청 청소과(☏450-1375)로 문의"
+            android:text="※ 기타 문의사항 : 광진구청 청소과(☏02-450-1375)로 문의"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:padding="5dp"
@@ -1921,14 +1921,14 @@
         </TableLayout>
 
         <TextView
+            android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="※ 출처\n( http://www.gwangjin.go.kr )"
+            android:text="※ 출처\n [광진구청 홈페이지 바로가기]"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"
-            android:autoLink="all"
             android:textColorLink="@color/blue"/>
     </LinearLayout>
 </ScrollView>

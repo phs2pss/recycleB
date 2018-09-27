@@ -1153,7 +1153,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="· 재활용이 가능한 것일 경우\n관악구 재활용센터(886-9113)로 연락, 재활용 가능여부에 따라 무상수거"
+            android:text="· 재활용이 가능한 것일 경우\n관악구 재활용센터(02-886-9113)로 연락, 재활용 가능여부에 따라 무상수거"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:padding="5dp"
@@ -1180,14 +1180,14 @@
             android:layout_marginLeft="15dp"/>
 
         <TextView
+            android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="· 온라인 신청 메뉴 클릭\n(http://www.gwanak.go.kr/site/gwanak/foffice/ex/bigWaste/doBigWasteApplyForm.do )"
+            android:text="※ [대형폐기물 인터넷처리 바로가기]"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"
-            android:autoLink="web"
             android:textColorLink="@color/blue"/>
 
         <TextView
@@ -1291,7 +1291,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="· 인터넷 접수건 : 청소행정과(☎879-6207) 유선통화 후 환불 신청"
+            android:text="· 인터넷 접수건 : 청소행정과(☎02-879-6207) 유선통화 후 환불 신청"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:padding="5dp"
@@ -1317,14 +1317,14 @@
             android:padding="10dp"/>
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="▶ 보러가기\n(http://www.gwanak.go.kr/site/gwanak/04/10402020300002016071302.jsp )"
+            android:text="※ [품목별 수수료 보기]"
             android:textColor="@color/black"
             android:textSize="21sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"
-            android:autoLink="web"
             android:textColorLink="@color/blue"/>
 
         <TextView
@@ -1601,13 +1601,24 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="· 관악구 남부순환로 1663 (은천동) (☎883-0858)"
+            android:text="· 관악구 남부순환로 1663 (은천동)"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"
-            android:autoLink="all"
             android:textColorLink="@color/blue"/>
+
+        <TextView
+            android:id="@+id/textView205"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:autoLink="all"
+            android:padding="5dp"
+            android:text="·   (☎02-883-0858)"
+            android:textColor="@color/black"
+            android:textColorLink="@color/blue"
+            android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -1621,7 +1632,17 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="· 관악구 남부순환로 1494 (미성동) (☎842-8425)"
+            android:text="· 관악구 남부순환로 1494 (미성동)"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:textColorLink="@color/blue"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="·   (☎02-842-8425)"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:padding="5dp"
@@ -1630,14 +1651,14 @@
             android:textColorLink="@color/blue"/>
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="출처\n( http://www.gwanak.go.kr/site/gwanak/07/10703010100002016051206.jsp )"
+            android:text="※ [관악구청 홈페이지 바로가기]"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"
-            android:autoLink="all"
             android:textColorLink="@color/blue"/>
     </LinearLayout>
 </ScrollView>

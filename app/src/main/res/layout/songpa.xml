@@ -1049,7 +1049,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="문의 : ☏ 409-9859"
+            android:text="문의 : ☏ 02-409-9859"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:padding="5dp"
@@ -1118,7 +1118,7 @@
             android:textSize="18sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"
-            android:autoLink="web"
+            android:autoLink="all"
             android:textColorLink="@color/blue"/>
 
         <TextView
@@ -1277,14 +1277,14 @@
 
 
         <TextView
+            android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="( http://www.sd.go.kr/jsp/pop/pop_waste.jsp )"
+            android:text="※ [ 대형폐기물 품목별 수수료 보기 ]"
             android:textColor="@color/black"
             android:textSize="21sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"
-            android:autoLink="web"
             android:textColorLink="@color/blue"/>
 
         <TextView
@@ -1298,7 +1298,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="☏ 1599-0903 ( http://www.sd.go.kr/jsp/pop/pop_waste.jsp )"
+            android:text="- 전화 문의 : ☏ 1599-0903\n- 인터넷 문의 : http://www.sd.go.kr/jsp/pop/pop_waste.jsp"
             android:textColor="@color/black"
             android:textSize="21sp"
             android:padding="5dp"
@@ -1371,7 +1371,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="동 주민센터나 청소행정과(02-2286-5545)로 연락주시면 빠른처리가 가능합니다"
+            android:text="동 주민센터나 청소행정과(☏ 02-2286-5545)로 연락주시면 빠른처리가 가능합니다"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:padding="5dp"
@@ -1520,25 +1520,25 @@
             android:padding="10dp"/>
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/songpa_txt"
+            android:text="※ [ 품목별 수거기준 및 비용 보기 ]"
             android:textColor="@color/black"
             android:textSize="21sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"
-            android:autoLink="web"
             android:textColorLink="@color/blue"/>
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="출처 ( https://www.songpa.go.kr )"
+            android:text="※ 출처\n [ 송파구청 홈페이지 바로가기 ]"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:padding="5dp"
             android:layout_marginLeft="15dp"
-            android:textColorLink="@color/blue"
-            android:autoLink="web"/>
+            android:textColorLink="@color/blue" />
     </LinearLayout>
 </ScrollView>

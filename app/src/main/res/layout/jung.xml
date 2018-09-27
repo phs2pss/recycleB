@@ -113,7 +113,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="1dp"
                     android:background="@android:color/darker_gray"
                     android:gravity="center"
@@ -315,7 +315,7 @@
             android:paddingLeft="37dp"
             android:paddingTop="5dp"
             android:text="※ 문의 : 청송행정과 폐기물관리팀 ☎02-3396-5482"
-            android:textColor="@android:color/black" />
+            android:textColorLink="@color/blue" />
 
         <TextView
             android:id="@+id/textView520"
@@ -543,7 +543,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:autoLink="all"
                 android:gravity="center"
                 android:lineSpacingMultiplier="1.3"
                 android:paddingBottom="10dp"
@@ -557,7 +556,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:autoLink="all"
                 android:gravity="center"
                 android:lineSpacingMultiplier="1.3"
                 android:paddingBottom="10dp"
@@ -573,14 +571,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:autoLink="web"
             android:paddingBottom="5dp"
             android:paddingLeft="20dp"
             android:paddingTop="5dp"
-            android:text="※ 출처 \nhttp://www.junggu.seoul.kr"
+            android:text="※ 출처 \n[ 중구 홈페이지 바로가기 ]"
             android:textColor="@android:color/black"
             android:textColorLink="@color/blue"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 </ScrollView>

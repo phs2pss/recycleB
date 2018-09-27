@@ -107,7 +107,7 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
                     photoView.setImageResource(R.drawable.a11);
                 } else if (nameMsg.equals("· 파인애플 껍질")) {
                     photoView.setImageResource(R.drawable.a12);
-                } else if (nameMsg.equals("· 핵과류의 씨")) {
+                } else if (nameMsg.equals("· 핵과류의 씨(과일 씨)")) {
                     photoView.setImageResource(R.drawable.a13);
                 } else if (nameMsg.equals("· 복숭아 씨")) {
                     photoView.setImageResource(R.drawable.a14);
@@ -219,10 +219,34 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
                     photoView.setImageResource(R.drawable.a67);
                 } else if (nameMsg.equals("· 바나나 껍질")) {
                     photoView.setImageResource(R.drawable.a68);
-                } else if (nameMsg.equals("· 물로 헹군 젓갈")) {
-                    photoView.setImageResource(R.drawable.a69);
-                } else if (nameMsg.equals("· 물로 헹군 김치")) {
+                } else if (nameMsg.equals("· 사과 껍질")) {
                     photoView.setImageResource(R.drawable.a70);
+                } else if (nameMsg.equals("· 배 껍질")) {
+                    photoView.setImageResource(R.drawable.a71);
+                } else if (nameMsg.equals("· 오렌지 껍질")) {
+                    photoView.setImageResource(R.drawable.a72);
+                } else if (nameMsg.equals("· 레몬 껍질")) {
+                    photoView.setImageResource(R.drawable.a73);
+                } else if (nameMsg.equals("· 한라봉 껍질")) {
+                    photoView.setImageResource(R.drawable.a74);
+                } else if (nameMsg.equals("· 복숭아 껍질")) {
+                    photoView.setImageResource(R.drawable.a75);
+                } else if (nameMsg.equals("· 감 껍질")) {
+                    photoView.setImageResource(R.drawable.a76);
+                } else if (nameMsg.equals("· 키위 껍질")) {
+                    photoView.setImageResource(R.drawable.a77);
+                } else if (nameMsg.equals("· 포도 껍질")) {
+                    photoView.setImageResource(R.drawable.a78);
+                } else if (nameMsg.equals("· 당근 껍질")) {
+                    photoView.setImageResource(R.drawable.a79);
+                } else if (nameMsg.equals("· 참외 껍질")) {
+                    photoView.setImageResource(R.drawable.a80);
+                } else if (nameMsg.equals("· 사과 씨")) {
+                    photoView.setImageResource(R.drawable.a81);
+                } else if (nameMsg.equals("· 배 씨")) {
+                    photoView.setImageResource(R.drawable.a82);
+                } else if (nameMsg.equals("· 포도 씨")) {
+                    photoView.setImageResource(R.drawable.a83);
                 } else if (nameMsg.equals("· 신문지")) {
                     photoView.setImageResource(R.drawable.b01);
                 } else if (nameMsg.equals("· 책자")) {
@@ -267,9 +291,9 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
                     photoView.setImageResource(R.drawable.d1);
                 } else if (nameMsg.equals("· 알루미늄 캔")) {
                     photoView.setImageResource(R.drawable.d2);
-                } else if (nameMsg.equals("· 살충제 용기")) {
-                    photoView.setImageResource(R.drawable.d3);
                 } else if (nameMsg.equals("· 부탄가스 용기")) {
+                    photoView.setImageResource(R.drawable.d3);
+                } else if (nameMsg.equals("· 살충제 용기")) {
                     photoView.setImageResource(R.drawable.d4);
                 } else if (nameMsg.equals("· 공구류")) {
                     photoView.setImageResource(R.drawable.d5);
@@ -341,6 +365,14 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
                     photoView.setImageResource(R.drawable.f18);
                 } else if (nameMsg.equals("· 1회용 그릇")) {
                     photoView.setImageResource(R.drawable.f19);
+                } else if (nameMsg.equals("· 면도기")) {
+                    photoView.setImageResource(R.drawable.f20);
+                } else if (nameMsg.equals("· 칫솔")) {
+                    photoView.setImageResource(R.drawable.f21);
+                } else if (nameMsg.equals("· 컵라면 용기")) {
+                    photoView.setImageResource(R.drawable.f22);
+                } else if (nameMsg.equals("· 1회용 그릇")) {
+                    photoView.setImageResource(R.drawable.f19);
                 } else if (nameMsg.equals("· 과자 봉지")) {
                     photoView.setImageResource(R.drawable.g1);
                 } else if (nameMsg.equals("· 라면 봉지")) {
@@ -395,6 +427,10 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
                     photoView.setImageResource(R.drawable.k1);
                 } else if (nameMsg.equals("· 컴퓨터")) {
                     photoView.setImageResource(R.drawable.k2);
+                } else if (nameMsg.equals("· 모니터")) {
+                    photoView.setImageResource(R.drawable.k12);
+                } else if (nameMsg.equals("· 노트북")) {
+                    photoView.setImageResource(R.drawable.k13);
                 } else if (nameMsg.equals("· 전기 밥솥")) {
                     photoView.setImageResource(R.drawable.k3);
                 } else if (nameMsg.equals("· 선풍기")) {
@@ -429,7 +465,36 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
                     photoView.setImageResource(R.drawable.m6);
                 } else if (nameMsg.equals("· 폐의약품")) {
                     photoView.setImageResource(R.drawable.m7);
+                } else if (nameMsg.equals("· 고무장갑")) {
+                    photoView.setImageResource(R.drawable.m8);
+                } else if (nameMsg.equals("· 슬리퍼")) {
+                    photoView.setImageResource(R.drawable.m9);
+                } else if (nameMsg.equals("· 음식물류 분리배출요령")) {
+                    photoView.setImageResource(R.drawable.a0);
+                } else if (nameMsg.equals("· 종이류 분리배출요령")) {
+                    photoView.setImageResource(R.drawable.b0);
+                } else if (nameMsg.equals("· 종이컵/종이팩 분리배출요령")) {
+                    photoView.setImageResource(R.drawable.c0);
+                } else if (nameMsg.equals("· 캔류/고철류 분리배출요령")) {
+                    photoView.setImageResource(R.drawable.d0);
+                } else if (nameMsg.equals("· 유리병류 분리배출요령")) {
+                    photoView.setImageResource(R.drawable.e0);
+                } else if (nameMsg.equals("· 플라스틱류 분리배출요령")) {
+                    photoView.setImageResource(R.drawable.f0);
+                } else if (nameMsg.equals("· 비닐류 분리배출요령")) {
+                    photoView.setImageResource(R.drawable.g0);
+                } else if (nameMsg.equals("· 형광등 분리배출요령")) {
+                    photoView.setImageResource(R.drawable.h0);
+                } else if (nameMsg.equals("· 폐전지 분리배출요령")) {
+                    photoView.setImageResource(R.drawable.i0);
+                } else if (nameMsg.equals("· 섬유류 분리배출요령")) {
+                    photoView.setImageResource(R.drawable.j0);
+                } else if (nameMsg.equals("· 폐전자제품 분리배출요령")) {
+                    photoView.setImageResource(R.drawable.k0);
+                } else if (nameMsg.equals("· 폐식용유 분리배출요령")) {
+                    photoView.setImageResource(R.drawable.l0);
                 }
+
                 dialog.show();
                 Display display = getActivity().getWindowManager().getDefaultDisplay();
                 Point size = new Point();
@@ -443,6 +508,7 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
             }
         });
         return view;
+
     }
 
     //method to expand all groups
@@ -498,6 +564,8 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         Continent continent;
 
         countryList = new ArrayList<Country>();
+        country = new Country("", "· 음식물류 분리배출요령", "");
+        countryList.add(country);
         country = new Country("일반종량제봉투", "· 썩은 채소류", "");
         countryList.add(country);
         country = new Country("일반종량제봉투", "· 채소류 뿌리 또는 껍질", "");
@@ -505,6 +573,16 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         country = new Country("일반종량제봉투", "· 파 뿌리", "");
         countryList.add(country);
         country = new Country("일반종량제봉투", "· 미나리 뿌리", "");
+        countryList.add(country);
+        country = new Country("음식물쓰레기", "· 고구마 껍질", "");
+        countryList.add(country);
+        country = new Country("음식물쓰레기", "· 감자 껍질", "");
+        countryList.add(country);
+        country = new Country("음식물쓰레기", "· 당근 껍질", "");
+        countryList.add(country);
+        country = new Country("음식물쓰레기", "· 깐 마늘", "");
+        countryList.add(country);
+        country = new Country("음식물쓰레기", "· 깐 양파", "");
         countryList.add(country);
         country = new Country("일반종량제봉투", "· 마늘 껍질", "");
         countryList.add(country);
@@ -518,11 +596,43 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         countryList.add(country);
         country = new Country("음식물쓰레기/일반종량제봉투", "· 과일류 껍질", "");
         countryList.add(country);
+        country = new Country("음식물쓰레기", "· 사과 껍질", "");
+        countryList.add(country);
+        country = new Country("음식물쓰레기", "· 배 껍질", "");
+        countryList.add(country);
+        country = new Country("음식물쓰레기", "· 오렌지 껍질", "");
+        countryList.add(country);
+        country = new Country("음식물쓰레기", "· 자른 수박 껍질", "");
+        countryList.add(country);
+        country = new Country("음식물쓰레기", "· 귤 껍질", "");
+        countryList.add(country);
+        country = new Country("음식물쓰레기", "· 바나나 껍질", "");
+        countryList.add(country);
+        country = new Country("음식물쓰레기", "· 레몬 껍질", "");
+        countryList.add(country);
+        country = new Country("음식물쓰레기", "· 한라봉 껍질", "");
+        countryList.add(country);
+        country = new Country("음식물쓰레기", "· 복숭아 껍질", "");
+        countryList.add(country);
+        country = new Country("음식물쓰레기", "· 감 껍질", "");
+        countryList.add(country);
+        country = new Country("음식물쓰레기", "· 키위 껍질", "");
+        countryList.add(country);
+        country = new Country("음식물쓰레기", "· 포도 껍질", "");
+        countryList.add(country);
+        country = new Country("음식물쓰레기", "· 참외 껍질", "");
+        countryList.add(country);
         country = new Country("일반종량제봉투", "· 코코넛 껍질", "");
         countryList.add(country);
         country = new Country("일반종량제봉투", "· 파인애플 껍질", "");
         countryList.add(country);
-        country = new Country("일반종량제봉투", "· 핵과류의 씨", "");
+        country = new Country("일반종량제봉투", "· 핵과류의 씨(과일 씨)", "");
+        countryList.add(country);
+        country = new Country("일반종량제봉투", "· 사과 씨", "");
+        countryList.add(country);
+        country = new Country("일반종량제봉투", "· 배 씨", "");
+        countryList.add(country);
+        country = new Country("일반종량제봉투", "· 포도 씨", "");
         countryList.add(country);
         country = new Country("일반종량제봉투", "· 복숭아 씨", "");
         countryList.add(country);
@@ -531,6 +641,18 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         country = new Country("일반종량제봉투", "· 체리 씨", "");
         countryList.add(country);
         country = new Country("일반종량제봉투", "· 망고 씨", "");
+        countryList.add(country);
+        country = new Country("일반종량제봉투", "· 통짜 큰 과일", "");
+        countryList.add(country);
+        country = new Country("일반종량제봉투", "· 통짜 큰 채소", "");
+        countryList.add(country);
+        country = new Country("일반종량제봉투", "· 통 수박", "");
+        countryList.add(country);
+        country = new Country("일반종량제봉투", "· 통 무", "");
+        countryList.add(country);
+        country = new Country("일반종량제봉투", "· 통 호박", "");
+        countryList.add(country);
+        country = new Country("일반종량제봉투", "· 통 배추", "");
         countryList.add(country);
         country = new Country("일반종량제봉투", "· 견과류 껍질", "");
         countryList.add(country);
@@ -594,18 +716,6 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         countryList.add(country);
         country = new Country("일반종량제봉투", "· 한약재 찌꺼기", "");
         countryList.add(country);
-        country = new Country("일반종량제봉투", "· 통짜 큰 과일", "");
-        countryList.add(country);
-        country = new Country("일반종량제봉투", "· 통짜 큰 채소", "");
-        countryList.add(country);
-        country = new Country("일반종량제봉투", "· 통 수박", "");
-        countryList.add(country);
-        country = new Country("일반종량제봉투", "· 통 무", "");
-        countryList.add(country);
-        country = new Country("일반종량제봉투", "· 통 호박", "");
-        countryList.add(country);
-        country = new Country("일반종량제봉투", "· 통 배추", "");
-        countryList.add(country);
         country = new Country("일반종량제봉투", "· 장류", "");
         countryList.add(country);
         country = new Country("일반종량제봉투", "· 된장", "");
@@ -620,24 +730,14 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         countryList.add(country);
         country = new Country("일반종량제봉투", "· 젓갈", "");
         countryList.add(country);
-        country = new Country("음식물쓰레기", "· 깐 마늘", "");
-        countryList.add(country);
-        country = new Country("음식물쓰레기", "· 깐 양파", "");
-        countryList.add(country);
-        country = new Country("음식물쓰레기", "· 고구마 껍질", "");
-        countryList.add(country);
-        country = new Country("음식물쓰레기", "· 감자 껍질", "");
-        countryList.add(country);
-        country = new Country("음식물쓰레기", "· 자른 수박 껍질", "");
-        countryList.add(country);
-        country = new Country("음식물쓰레기", "· 귤 껍질", "");
-        countryList.add(country);
-        country = new Country("음식물쓰레기", "· 바나나 껍질", "");
-        countryList.add(country);
+
+
         continent = new Continent("음식물류", "", countryList);
         continentList.add(continent);
 
         countryList = new ArrayList<Country>();
+        country = new Country("", "· 종이류 분리배출요령", "");
+        countryList.add(country);
         country = new Country("종이류","· 신문지", "");
         countryList.add(country);
         country = new Country("종이류","· 책자", "");
@@ -678,6 +778,8 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         continentList.add(continent);
 
         countryList = new ArrayList<Country>();
+        country = new Country("", "· 종이컵/종이팩 분리배출요령", "");
+        countryList.add(country);
         country = new Country("종이팩","· 종이컵", "");
         countryList.add(country);
         country = new Country("종이팩","· 종이팩", "");
@@ -686,6 +788,8 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         continentList.add(continent);
 
         countryList = new ArrayList<Country>();
+        country = new Country("", "· 캔류/고철류 분리배출요령", "");
+        countryList.add(country);
         country = new Country("캔류","· 철 캔", "");
         countryList.add(country);
         country = new Country("캔류","· 알루미늄 캔", "");
@@ -712,6 +816,8 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         continentList.add(continent);
 
         countryList = new ArrayList<Country>();
+        country = new Country("", "· 유리병류 분리배출요령", "");
+        countryList.add(country);
         country = new Country("유리병류","· 음료수 병", "");
         countryList.add(country);
         country = new Country("유리병류","· 소주 병", "");
@@ -734,6 +840,8 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         continentList.add(continent);
 
         countryList = new ArrayList<Country>();
+        country = new Country("", "· 플라스틱류 분리배출요령", "");
+        countryList.add(country);
         country = new Country("플라스틱류", "· 페트병", "");
         countryList.add(country);
         country = new Country("플라스틱류", "· 플라스틱 용기류", "");
@@ -772,10 +880,18 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         countryList.add(country);
         country = new Country("재질별배출", "· 1회용 그릇", "");
         countryList.add(country);
+        country = new Country("일반종량제봉투/플라스틱류", "· 면도기", "");
+        countryList.add(country);
+        country = new Country("일반종량제봉투/플라스틱류", "· 칫솔", "");
+        countryList.add(country);
+        country = new Country("플라스틱류", "· 컵라면 용기", "");
+        countryList.add(country);
         continent = new Continent("플라스틱류", "", countryList);
         continentList.add(continent);
 
         countryList = new ArrayList<Country>();
+        country = new Country("", "· 비닐류 분리배출요령", "");
+        countryList.add(country);
         country = new Country("비닐류", "· 과자 봉지", "");
         countryList.add(country);
         country = new Country("비닐류", "· 라면 봉지", "");
@@ -792,6 +908,8 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         continentList.add(continent);
 
         countryList = new ArrayList<Country>();
+        country = new Country("", "· 형광등 분리배출요령", "");
+        countryList.add(country);
         country = new Country("전용수거함", "· 형광등", "");
         countryList.add(country);
         country = new Country("일반종량제봉투", "· 깨진 형광등", "");
@@ -804,6 +922,8 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         continentList.add(continent);
 
         countryList = new ArrayList<Country>();
+        country = new Country("", "· 폐전지 분리배출요령", "");
+        countryList.add(country);
         country = new Country("전용수거함", "· 건전지", "");
         countryList.add(country);
         country = new Country("전용수거함", "· 충전용 전지", "");
@@ -812,6 +932,8 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         continentList.add(continent);
 
         countryList = new ArrayList<Country>();
+        country = new Country("", "· 섬유류 분리배출요령", "");
+        countryList.add(country);
         country = new Country("의류수거함", "· 헌옷", "");
         countryList.add(country);
         country = new Country("의류수거함", "· 신발", "");
@@ -842,9 +964,15 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         continentList.add(continent);
 
         countryList = new ArrayList<Country>();
+        country = new Country("", "· 폐전자제품 분리배출요령", "");
+        countryList.add(country);
         country = new Country("전용수거함", "· 소형 폐가전(1m 미만 가전 제품)", "");
         countryList.add(country);
         country = new Country("전용수거함", "· 컴퓨터", "");
+        countryList.add(country);
+        country = new Country("전용수거함", "· 모니터", "");
+        countryList.add(country);
+        country = new Country("전용수거함", "· 노트북", "");
         countryList.add(country);
         country = new Country("전용수거함", "· 전기 밥솥", "");
         countryList.add(country);
@@ -868,6 +996,8 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         continentList.add(continent);
 
         countryList = new ArrayList<Country>();
+        country = new Country("", "· 폐식용유 분리배출요령", "");
+        countryList.add(country);
         country = new Country("폐유수거함", "· 폐식용유", "");
         countryList.add(country);
         continent = new Continent("폐식용유", "", countryList);
@@ -887,6 +1017,10 @@ public class PageOneFragment extends Fragment implements SearchView.OnQueryTextL
         country = new Country("일반종량제봉투", "· 스펀지", "");
         countryList.add(country);
         country = new Country("약국수거함", "· 폐의약품", "");
+        countryList.add(country);
+        country = new Country("일반종량제봉투", "· 고무장갑", "");
+        countryList.add(country);
+        country = new Country("일반종량제봉투", "· 슬리퍼", "");
         countryList.add(country);
         continent = new Continent("기타", "", countryList);
         continentList.add(continent);

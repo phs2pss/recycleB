@@ -535,7 +535,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="905-0008"
+                    android:text="02-905-0008"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -574,7 +574,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="937-7500"
+                    android:text="02-937-7500"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -613,7 +613,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="974-0352"
+                    android:text="02-974-0352"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -623,7 +623,7 @@
                     android:layout_margin="1dp"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="공릉1동, 공릉2동, 하계2동, 상계6,7동"
+                    android:text="공릉1동, 공릉2동, 하계2동,\n 상계6,7동"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -651,7 +651,7 @@
                     android:autoLink="all"
                     android:background="@android:color/background_light"
                     android:gravity="center"
-                    android:text="933-2729"
+                    android:text="02-933-2729"
                     android:textColor="@android:color/black"
                     android:textColorLink="@color/blue" />
 
@@ -700,12 +700,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:lineSpacingMultiplier="1.3"
+            android:paddingBottom="2dp"
+            android:paddingLeft="55dp"
+            android:paddingTop="2dp"
+            android:text="1. 민원인 : [대형폐기물 처리 신청 바로가기]\n2. 구청홈페이지 화면 : 배출품목지정 수수료납부 및 스티커 출력"
+            android:textColor="@android:color/black"
+            android:textColorLink="@color/blue"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView228"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lineSpacingMultiplier="1.3"
+            android:paddingBottom="2dp"
+            android:paddingLeft="55dp"
+            android:paddingTop="2dp"
+            android:text="(※ 수수료 보기 : [ 대형폐기물 수수료 보기 ])"
+            android:textColor="@android:color/black"
+            android:textColorLink="@color/blue"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:autoLink="all"
             android:lineSpacingMultiplier="1.3"
             android:paddingBottom="2dp"
             android:paddingLeft="55dp"
             android:paddingTop="2dp"
-            android:text="1. 민원인 : 대형폐기물 처리 신청\n( http://nowon.storyweb.co.kr )\n2. 구청홈페이지 화면 : 배출품목지정 수수료납부 및 스티커 출력\n(※ 수수료 보기 : http://nowon.storyweb.co.kr/size_index.php?index=1 )\n3.민원인 : 배출품목에 스티커를 부착하여 지정요일에 배출\n4.구청 : 배출일로 부터 5일이내 수거"
+            android:text="3.민원인 : 배출품목에 스티커를 부착하여 지정요일에 배출\n4.구청 : 배출일로 부터 5일이내 수거"
             android:textColor="@android:color/black"
             android:textColorLink="@color/blue"
             android:textSize="16sp" />
@@ -811,11 +838,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:autoLink="web"
             android:paddingBottom="5dp"
             android:paddingLeft="20dp"
             android:paddingTop="5dp"
-            android:text="※ 출처 \nhttp://www.nowon.kr"
+            android:text="※ 출처 \n[노원구청 홈페이지 바로가기]"
             android:textColor="@android:color/black"
             android:textColorHint="?attr/colorError"
             android:textColorLink="?attr/actionModeSplitBackground"

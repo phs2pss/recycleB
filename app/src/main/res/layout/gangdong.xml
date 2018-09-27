@@ -777,15 +777,15 @@
             android:lineSpacingExtra="5dp"/>
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="※ 대형생활폐기물수거신청 바로가기\n(https://gangdong.storyweb.co.kr)"
+            android:text="※ [대형생활폐기물수거신청 바로가기]"
             android:textColor="@color/black"
             android:textSize="13sp"
             android:padding="5dp"
             android:layout_marginLeft="21dp"
             android:lineSpacingExtra="5dp"
-            android:autoLink="web"
             android:textColorLink="@color/blue"/>
 
         <TextView
@@ -819,45 +819,51 @@
                 android:id="@+id/button_gandong1"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
                 android:text="가구류"
                 android:textColor="@color/black"
-                android:textSize="13sp"
-                android:background="@drawable/button_background"
-                android:layout_margin="2dp"
-                />
+                android:textSize="13sp" />
 
             <Button
                 android:id="@+id/button_gandong2"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
                 android:text="가전제품류"
                 android:textColor="@color/black"
-                android:textSize="13sp"
-                android:background="@drawable/button_background"
-                android:layout_margin="2dp"
-                />
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
 
             <Button
                 android:id="@+id/button_gandong3"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
                 android:text="기타생활용품"
                 android:textColor="@color/black"
-                android:textSize="13sp"
-                android:background="@drawable/button_background"
-                android:layout_margin="2dp"
-                />
+                android:textSize="13sp" />
 
             <Button
                 android:id="@+id/button_gandong4"
                 android:layout_width="80dp"
                 android:layout_height="30dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/button_background"
                 android:text="무상수거품목"
                 android:textColor="@color/black"
-                android:textSize="13sp"
-                android:background="@drawable/button_background"
-                android:layout_margin="2dp"
-                />
+                android:textSize="13sp" />
         </LinearLayout>
 
         <TextView
@@ -1064,15 +1070,15 @@
             />
 
         <TextView
+            android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="※ 출처\n(http://www.gangdong.go.kr/web/ko_0/app/uiList.do?ap=B1089)"
+            android:text="※ [강동구청 홈페이지 바로가기]"
             android:textColor="@color/black"
-            android:textSize="10sp"
+            android:textSize="14sp"
             android:padding="5dp"
             android:layout_marginLeft="18dp"
             android:lineSpacingExtra="5dp"
-            android:autoLink="web"
             android:textColorLink="@color/blue"
             />
     </LinearLayout>
