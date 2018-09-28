@@ -717,7 +717,7 @@
             android:paddingBottom="2dp"
             android:paddingLeft="55dp"
             android:paddingTop="2dp"
-            android:text="① 재활용이 가능한 것일 경우\n  - 은평구재활용센터(☎ 372-8272)로 연락하면 무상수거"
+            android:text="① 재활용이 가능한 것일 경우\n  - 은평구재활용센터(☎ 02-372-8272)로 연락하면 무상수거"
             android:textColor="@android:color/black"
             android:textColorLink="@color/blue"
             android:textSize="16sp" />

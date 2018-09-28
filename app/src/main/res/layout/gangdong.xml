@@ -986,18 +986,6 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="모바일(스마트폰) 신청\n(www.edtd.co.kr/mobile)"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:padding="5dp"
-            android:layout_marginLeft="18dp"
-            android:lineSpacingExtra="5dp"
-            android:autoLink="web"
-            android:textColorLink="@color/blue"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="카카오톡 신청 : 아이디 weec 친구 신청\n성명, 주소, 전화번호, 배출품목, 수거신청일 입력"
             android:textColor="@color/black"
             android:textSize="15sp"

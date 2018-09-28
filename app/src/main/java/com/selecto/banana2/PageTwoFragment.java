@@ -15,6 +15,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.TextViewCompat;
 import android.support.v7.widget.AppCompatTextView;
+import android.support.v7.widget.ListPopupWindow;
 import android.text.util.Linkify;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -36,6 +37,7 @@ import android.widget.TextView;
 import com.github.chrisbanes.photoview.PhotoView;
 
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -91,6 +93,8 @@ public class PageTwoFragment extends Fragment {
     ScrollView jung;
     ScrollView jungnang;
 
+    String[] str = new String[]{"행정구역 선택", "강남구", "강동구", "강북구", "강서구", "관악구", "구로구", "금천구", "노원구", "도봉구", "동대문구", "동작구", "마포구", "서대문구", "서초구", "성동구", "성북구", "송파구", "양천구", "영등포구", "용산구", "은평구", "종로구", "중구", "중랑구"};
+
 
     PhotoView photoView;
     Dialog dialog;
@@ -126,13 +130,12 @@ public class PageTwoFragment extends Fragment {
         page_gps = view.findViewById(R.id.view_gps);
         page_info = view.findViewById(R.id.view_info);
         button_gps = view.findViewById(R.id.button_gps);
-        spinner = view.findViewById(R.id.spinner2);
-        //ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(), R.array.ward, android.R.layout.simple_spinner_item);
-        //adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
-        //spinner.setAdapter(adapter);
-        spinnerAdapter = new ArrayAdapter<String>(getActivity(), R.layout.spinner_item, getResources().getStringArray(R.array.ward));
-        spinnerAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
-        spinner.setAdapter(spinnerAdapter);
+        spinner = view.findViewById(R.id.mySpinner);
+
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(), R.array.ward, R.layout.spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
         button_gps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View b_view) {
@@ -175,38 +178,6 @@ public class PageTwoFragment extends Fragment {
         });
         callPermission();
 
-        spinner.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                Log.d("spinner_test", "change");
-            }
-        });
-
-        view.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                Log.d("spinner_test", "change2");
-            }
-        });
-
-        view.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                Log.d("spinner_test", "change3");
-                return false;
-            }
-        });
-
-        spinner.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                Log.d("spinner_test", "touch");
-                return false;
-            }
-        });
-
-
-
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -215,7 +186,6 @@ public class PageTwoFragment extends Fragment {
                 mInflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 mRootLinear = view.findViewById(R.id.linear_root);
                 Log.d("spinner_test", adapterView.getItemAtPosition(i).toString());
-                Log.d("spinner_test", "pos :: " + i);
                 String spinner_selected_gu = adapterView.getItemAtPosition(i).toString();
 
                 Linkify.TransformFilter mTransform = new Linkify.TransformFilter() {
@@ -339,7 +309,7 @@ public class PageTwoFragment extends Fragment {
 
                     TextView tvLinkify2 = gangbuk.findViewById(R.id.textView351);
                     Pattern pattern2 = Pattern.compile("품목별 수수료 보기");
-                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.gangbuk.go.kr/merge/contents.do?key=8137");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.gangbuk.go.kr/merge/contents.do?key=8137",null, mTransform);
 
                     TextView tvLinkify3 = gangbuk.findViewById(R.id.textView229);
                     Pattern pattern3 = Pattern.compile("강북구청 홈페이지 바로가기");
@@ -392,11 +362,12 @@ public class PageTwoFragment extends Fragment {
 
                     TextView tvLinkify = gangseo.findViewById(R.id.textView1);
                     Pattern pattern1 = Pattern.compile("대형폐기물 인터넷처리 바로가기");
-                    Linkify.addLinks(tvLinkify, pattern1, "http://m.gangseo.seoul.kr/sub0302.html");
+                    Linkify.addLinks(tvLinkify, pattern1, "https://m.gangseo.seoul.kr/sub0302.html",null, mTransform);
 
                     TextView tvLinkify2 = gangseo.findViewById(R.id.textView39);
                     Pattern pattern2 = Pattern.compile("강서구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.gangseo.seoul.kr");
+                    Linkify.addLinks(tvLinkify2, pattern2, "https://www.gangseo.seoul.kr",null, mTransform);
+
 
                 } else if (spinner_selected_gu.equals("관악구")) {
                     gwanak = (ScrollView) mInflater.inflate(R.layout.gwanak, mRootLinear, false);
@@ -404,22 +375,22 @@ public class PageTwoFragment extends Fragment {
 
                     TextView tvLinkify = gwanak.findViewById(R.id.textView1);
                     Pattern pattern1 = Pattern.compile("대형폐기물 인터넷처리 바로가기");
-                    Linkify.addLinks(tvLinkify, pattern1, "https://www.gwanak.go.kr/site/gwanak/07/10703010500002016051206.jsp");
+                    Linkify.addLinks(tvLinkify, pattern1, "https://www.gwanak.go.kr/site/gwanak/07/10703010500002016051206.jsp",null, mTransform);
 
                     TextView tvLinkify2 = gwanak.findViewById(R.id.textView2);
                     Pattern pattern2 = Pattern.compile("품목별 수수료 보기");
-                    Linkify.addLinks(tvLinkify2, pattern2, "https://www.gwanak.go.kr/site/gwanak/04/10402020300002016071302.jsp");
+                    Linkify.addLinks(tvLinkify2, pattern2, "https://www.gwanak.go.kr/site/gwanak/04/10402020300002016071302.jsp",null, mTransform);
 
                     TextView tvLinkify3 = gwanak.findViewById(R.id.textView3);
                     Pattern pattern3 = Pattern.compile("관악구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.gwanak.go.kr/site/gwanak/main.do");
+                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.gwanak.go.kr/site/gwanak/main.do",null, mTransform);
                 } else if (spinner_selected_gu.equals("광진구")) {
                     gwangjin = (ScrollView) mInflater.inflate(R.layout.gwangjin, mRootLinear, false);
                     mRootLinear.addView(gwangjin);
 
                     TextView tvLinkify = gwangjin.findViewById(R.id.textView1);
                     Pattern pattern = Pattern.compile("광진구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify, pattern, "http://www.gwangjin.go.kr");
+                    Linkify.addLinks(tvLinkify, pattern, "https://www.gwangjin.go.kr",null, mTransform);
 
                 } else if (spinner_selected_gu.equals("구로구")) {
                     guro = (ScrollView) mInflater.inflate(R.layout.guro, mRootLinear, false);
@@ -427,16 +398,22 @@ public class PageTwoFragment extends Fragment {
 
                     TextView tvLinkify = guro.findViewById(R.id.textView1);
                     Pattern pattern = Pattern.compile("대형생활폐기물수거신청 바로가기");
-                    Linkify.addLinks(tvLinkify, pattern, "https://clean.guro.go.kr");
+                    Linkify.addLinks(tvLinkify, pattern, "https://clean.guro.go.kr",null, mTransform);
 
                     TextView tvLinkify2 = guro.findViewById(R.id.textView2);
                     Pattern pattern2 = Pattern.compile("배출 품목 규격 및 부과금액 바로가기");
-                    Linkify.addLinks(tvLinkify2, pattern2, "http://clean.guro.go.kr/cost");
+                    Linkify.addLinks(tvLinkify2, pattern2, "https://clean.guro.go.kr/cost",null, mTransform);
+
+                    Linkify.TransformFilter mTransform1 = new Linkify.TransformFilter() {
+                        @Override
+                        public String transformUrl(Matcher matcher, String s) {
+                            return "http://www.guro.go.kr/www/NR_index.do";
+                        }
+                    };
 
                     TextView tvLinkify3 = guro.findViewById(R.id.textView3);
                     Pattern pattern3 = Pattern.compile("구로구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.guro.go.kr/www/NR_index.do");
-
+                    Linkify.addLinks(tvLinkify3, pattern3,"",null, mTransform1);
 
                 } else if(spinner_selected_gu.equals("금천구")) {
                     geumcheon = (ScrollView) mInflater.inflate(R.layout.geumcheon, mRootLinear, false);
@@ -444,15 +421,15 @@ public class PageTwoFragment extends Fragment {
 
                     TextView tvLinkify = (TextView) geumcheon.findViewById(R.id.textView135) ;
                     Pattern pattern1 = Pattern.compile("[지역별 지정된 요일 보기]");
-                    Linkify.addLinks(tvLinkify, pattern1, "http://www.geumcheon.go.kr/html/001/001003005001003001.html");
+                    Linkify.addLinks(tvLinkify, pattern1, "https://www.geumcheon.go.kr/html/001/001003005001003001.html",null, mTransform);
 
                     TextView tvLinkify2 = (TextView) geumcheon.findViewById(R.id.textView239) ;
                     Pattern pattern2 = Pattern.compile("대형폐기물 신청하러가기");
-                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.geumcheon.go.kr/html/001/001003005004.html");
+                    Linkify.addLinks(tvLinkify2, pattern2, "https://www.geumcheon.go.kr/html/001/001003005004.html",null, mTransform);
 
                     TextView tvLinkify3 = (TextView) geumcheon.findViewById(R.id.textView240) ;
                     Pattern pattern3 = Pattern.compile("금천구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify3, pattern3, "http://m.geumcheon.go.kr/html/046/046.jsp");
+                    Linkify.addLinks(tvLinkify3, pattern3, "https://m.geumcheon.go.kr/html/046/046.jsp",null, mTransform);
 
 
                 } else if(spinner_selected_gu.equals("노원구")){
@@ -461,15 +438,15 @@ public class PageTwoFragment extends Fragment {
 
                     TextView tvLinkify = (TextView) nowon.findViewById(R.id.textView254) ;
                     Pattern pattern = Pattern.compile("대형폐기물 처리 신청 바로가기");
-                    Linkify.addLinks(tvLinkify, pattern, "http://nowon.storyweb.co.kr");
+                    Linkify.addLinks(tvLinkify, pattern, "http://nowon.storyweb.co.kr",null, mTransform);
 
                     TextView tvLinkify2 = (TextView) nowon.findViewById(R.id.textView228) ;
                     Pattern pattern2 = Pattern.compile("대형폐기물 수수료 보기");
-                    Linkify.addLinks(tvLinkify2, pattern2, "http://nowon.storyweb.co.kr/size_index.php?index=1");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://nowon.storyweb.co.kr/size_index.php?index=1",null, mTransform);
 
                     TextView tvLinkify1 = (TextView) nowon.findViewById(R.id.textView262) ;
                     Pattern pattern1 = Pattern.compile("노원구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify1, pattern1, "http://nowon.storyweb.co.kr");
+                    Linkify.addLinks(tvLinkify1, pattern1, "http://mw.nowon.kr/main/index.do",null, mTransform);
 
                 } else if (spinner_selected_gu.equals("도봉구")) {
                     dobong = (ScrollView) mInflater.inflate(R.layout.dobong, mRootLinear, false);
@@ -477,55 +454,80 @@ public class PageTwoFragment extends Fragment {
 
                     TextView tvLinkify1 = (TextView) dobong.findViewById(R.id.textView1) ;
                     Pattern pattern1 = Pattern.compile("가정용 전용용기 판매소 바로가기");
-                    Linkify.addLinks(tvLinkify1, pattern1, "http://www.dobong.go.kr/subsite/waste/contents.asp?code=10007376");
+                    Linkify.addLinks(tvLinkify1, pattern1, "http://www.dobong.go.kr/subsite/waste/contents.asp?code=10007376",null, mTransform);
 
                     TextView tvLinkify2 = (TextView) dobong.findViewById(R.id.textView2) ;
                     Pattern pattern2 = Pattern.compile("종량제 봉투 판매소 현황 바로가기");
-                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.dobong.go.kr/subsite/waste/Contents.asp?code=10007356");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.dobong.go.kr/subsite/waste/Contents.asp?code=10007356",null, mTransform);
 
                     TextView tvLinkify3 = (TextView) dobong.findViewById(R.id.textView3) ;
                     Pattern pattern3 = Pattern.compile("품목 및 수수료 확인 바로가기");
-                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.dobong.go.kr/WDB_DEV/WASTE/item_list.asp");
+                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.dobong.go.kr/WDB_DEV/WASTE/item_list.asp",null, mTransform);
 
                     TextView tvLinkify4 = (TextView) dobong.findViewById(R.id.textView4) ;
                     Pattern pattern4 = Pattern.compile("대형폐기물 배출 신청 바로가기");
-                    Linkify.addLinks(tvLinkify4, pattern4, "http://www.dobong.go.kr/WDB_DEV/WASTE/item_list.asp");
+                    Linkify.addLinks(tvLinkify4, pattern4, "http://www.dobong.go.kr/WDB_DEV/WASTE/item_list.asp",null, mTransform);
 
                     TextView tvLinkify5 = (TextView) dobong.findViewById(R.id.textView5) ;
                     Pattern pattern5 = Pattern.compile("도봉구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify5, pattern5, "http://www.dobong.go.kr/subsite/waste");
+                    Linkify.addLinks(tvLinkify5, pattern5, "http://m.dobong.go.kr",null, mTransform);
 
                 } else if (spinner_selected_gu.equals("동대문구")) {
                     dongdaemun = (ScrollView) mInflater.inflate(R.layout.dongdaemun, mRootLinear, false);
                     mRootLinear.addView(dongdaemun);
 
+                    Linkify.TransformFilter mTransform1 = new Linkify.TransformFilter() {
+                        @Override
+                        public String transformUrl(Matcher matcher, String s) {
+                            return "http://www.ddm.go.kr/civil/trashFee.jsp";
+                        }
+                    };
+
                     TextView tvLinkify = (TextView) dongdaemun.findViewById(R.id.textView529) ;
                     Pattern pattern1 = Pattern.compile("[대형폐기물 품목별 수수료 보기]");
-                    Linkify.addLinks(tvLinkify, pattern1, "http://www.ddm.go.kr/civil/trashFee.jsp");
+                    Linkify.addLinks(tvLinkify, pattern1, "",null, mTransform1);
 
+                    Linkify.TransformFilter mTransform2 = new Linkify.TransformFilter() {
+                        @Override
+                        public String transformUrl(Matcher matcher, String s) {
+                            return "http://www.ddm.go.kr/civil/trashInfo.jsp";
+                        }
+                    };
                     TextView tvLinkify2 = (TextView)  dongdaemun.findViewById(R.id.textView275) ;
                     Pattern pattern2 = Pattern.compile("[동대문구 대형폐기물 처리 신청 바로가기]");
-                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.ddm.go.kr/civil/trashInfo.jsp");
+                    Linkify.addLinks(tvLinkify2, pattern2, "",null, mTransform2);
 
                     TextView tvLinkify3 = (TextView)  dongdaemun.findViewById(R.id.textView265) ;
                     Pattern pattern3 = Pattern.compile("동대문구 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.ddm.go.kr");
+                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.ddm.go.kr",null, mTransform);
 
                 } else if (spinner_selected_gu.equals("동작구")) {
                     dongjak = (ScrollView) mInflater.inflate(R.layout.dongjak, mRootLinear, false);
                     mRootLinear.addView(dongjak);
 
+                    Linkify.TransformFilter mTransform1 = new Linkify.TransformFilter() {
+                        @Override
+                        public String transformUrl(Matcher matcher, String s) {
+                            return "http://www.dongjak.go.kr/portal/wste/wsteInfo/info.do?menuNo=200735";
+                        }
+                    };
                     TextView tvLinkify = (TextView)  dongjak.findViewById(R.id.textView324) ;
                     Pattern pattern = Pattern.compile("[대형폐기물처리 신청 바로가기]");
-                    Linkify.addLinks(tvLinkify, pattern, "https://www.dongjak.go.kr/portal/wste/wsteInfo/info.do?menuNo=200735");
+                    Linkify.addLinks(tvLinkify, pattern, "",null, mTransform1);
 
+                    Linkify.TransformFilter mTransform2 = new Linkify.TransformFilter() {
+                        @Override
+                        public String transformUrl(Matcher matcher, String s) {
+                            return "http://www.dongjak.go.kr/portal/wste/wsteInfo/list.do?menuNo=200737";
+                        }
+                    };
                     TextView tvLinkify1 = (TextView) dongjak.findViewById(R.id.textView325) ;
                     Pattern pattern1 = Pattern.compile("[품목별 수거기준 및 비용 보기]");
-                    Linkify.addLinks(tvLinkify1, pattern1, "https://www.dongjak.go.kr/portal/wste/wsteInfo/list.do?menuNo=200737");
+                    Linkify.addLinks(tvLinkify1, pattern1, "",null, mTransform2);
 
                     TextView tvLinkify2 = (TextView) dongjak.findViewById(R.id.textView326) ;
                     Pattern pattern2 = Pattern.compile("동작구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify2, pattern2, "https://www.dongjak.go.kr/portal/main/main.do");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.dongjak.go.kr/portal/main/main.do",null, mTransform);
 
                 } else if (spinner_selected_gu.equals("마포구")) {
                     mapo = (ScrollView) mInflater.inflate(R.layout.mapo, mRootLinear, false);
@@ -533,7 +535,7 @@ public class PageTwoFragment extends Fragment {
 
                     TextView tvLinkify = (TextView) mapo.findViewById(R.id.textView1) ;
                     Pattern pattern = Pattern.compile("마포구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify, pattern, "http://www.mapo.go.kr/CmsWeb/viewPage.req?idx=PG0000002183");
+                    Linkify.addLinks(tvLinkify, pattern, "http://www.mapo.go.kr/CmsWeb/viewPage.req?idx=PG0000002183",null, mTransform);
 
                 } else if (spinner_selected_gu.equals("서대문구")) {
                     seodaemun = (ScrollView) mInflater.inflate(R.layout.seodaemoon, mRootLinear, false);
@@ -541,31 +543,43 @@ public class PageTwoFragment extends Fragment {
 
                     TextView tvLinkify = (TextView) seodaemun.findViewById(R.id.textView350) ;
                     Pattern pattern1 = Pattern.compile("[대형 폐기물 신청 바로가기]");
-                    Linkify.addLinks(tvLinkify, pattern1, "https://www.sdm.go.kr/civil/print/waste/reg.do");
+                    Linkify.addLinks(tvLinkify, pattern1, "http://www.sdm.go.kr/civil/print/waste/reg.do",null, mTransform);
 
                     TextView tvLinkify2 = (TextView) seodaemun.findViewById(R.id.textView351) ;
                     Pattern pattern2 = Pattern.compile("[품목별 수수료 보기]");
-                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.sdm.go.kr/civil/print/waste/standards.do");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.sdm.go.kr/civil/print/waste/standards.do",null, mTransform);
 
                     TextView tvLinkify3 = (TextView) seodaemun.findViewById(R.id.textView352) ;
                     Pattern pattern3 = Pattern.compile("서대문구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.sdm.go.kr");
+                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.sdm.go.kr",null, mTransform);
 
                 } else if (spinner_selected_gu.equals("서초구")) {
                     seocho = (ScrollView) mInflater.inflate(R.layout.seocho, mRootLinear, false);
                     mRootLinear.addView(seocho);
 
+                    Linkify.TransformFilter mTransform1 = new Linkify.TransformFilter() {
+                        @Override
+                        public String transformUrl(Matcher matcher, String s) {
+                            return "http://www.seocho.go.kr/site/seocho/ex/bigWaste/BigWasteUserFStart.do";
+                        }
+                    };
                     TextView tvLinkify = (TextView) seocho.findViewById(R.id.textView350) ;
                     Pattern pattern1 = Pattern.compile("[대형 폐기물 신청 바로가기]");
-                    Linkify.addLinks(tvLinkify, pattern1, "http://www.seocho.go.kr/site/seocho/ex/bigWaste/BigWasteUserFStart.do");
+                    Linkify.addLinks(tvLinkify, pattern1, "",null, mTransform1);
 
+                    Linkify.TransformFilter mTransform2 = new Linkify.TransformFilter() {
+                        @Override
+                        public String transformUrl(Matcher matcher, String s) {
+                            return "http://www.seocho.go.kr/common/files/Download.do?cfIdx=CF00001672&cfGroup=COMMON&cfRename=e6d64168-4db3-4bbb-9f72-eab4933530a5.hwp";
+                        }
+                    };
                     TextView tvLinkify2 = (TextView) seocho.findViewById(R.id.textView351) ;
                     Pattern pattern2 = Pattern.compile("[품목별 수수료 다운로드]");
-                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.seocho.go.kr/common/files/Download.do?cfIdx=CF00001672&cfGroup=COMMON&cfRename=e6d64168-4db3-4bbb-9f72-eab4933530a5.hwp");
+                    Linkify.addLinks(tvLinkify2, pattern2, "",null, mTransform2);
 
                     TextView tvLinkify3 = (TextView) seocho.findViewById(R.id.textView367) ;
                     Pattern pattern3 = Pattern.compile("서초구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.seocho.go.kr");
+                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.seocho.go.kr",null, mTransform);
 
                 } else if (spinner_selected_gu.equals("성동구")) {
                     seongdong = (ScrollView) mInflater.inflate(R.layout.seongdong, mRootLinear, false);
@@ -573,11 +587,11 @@ public class PageTwoFragment extends Fragment {
 
                     TextView tvLinkify1 = (TextView) seongdong.findViewById(R.id.textView1) ;
                     Pattern pattern1 = Pattern.compile("[ 배출품목 보기 ]");
-                    Linkify.addLinks(tvLinkify1, pattern1, "http://www.sd.go.kr/jsp/pop/pop_waste.jsp");
+                    Linkify.addLinks(tvLinkify1, pattern1, "http://www.sd.go.kr/jsp/pop/pop_waste.jsp",null, mTransform);
 
                     TextView tvLinkify2 = (TextView) seongdong.findViewById(R.id.textView2) ;
                     Pattern pattern2 = Pattern.compile("성동구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.sd.go.kr/");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.sd.go.kr/",null, mTransform);
 
                 } else if (spinner_selected_gu.equals("성북구")) {
                     seongbuk = (ScrollView) mInflater.inflate(R.layout.seongbuk, mRootLinear, false);
@@ -585,31 +599,49 @@ public class PageTwoFragment extends Fragment {
 
                     TextView tvLinkify = (TextView) seongbuk.findViewById(R.id.textView350) ;
                     Pattern pattern1 = Pattern.compile("[대형 폐기물 신청 바로가기]");
-                    Linkify.addLinks(tvLinkify, pattern1, "www.doori114.com");
+                    Linkify.addLinks(tvLinkify, pattern1, "http://www.doori114.com",null, mTransform);
 
+                    Linkify.TransformFilter mTransform1 = new Linkify.TransformFilter() {
+                        @Override
+                        public String transformUrl(Matcher matcher, String s) {
+                            return "http://www.seongbuk.go.kr/mobile/PageLink.do";
+                        }
+                    };
                     TextView tvLinkify2 = (TextView) seongbuk.findViewById(R.id.textView351);
                     Pattern pattern2 = Pattern.compile("[품목별 수수료 보기]");
-                    Linkify.addLinks(tvLinkify2, pattern2, "https://www.seongbuk.go.kr/PageLink.do");
+                    Linkify.addLinks(tvLinkify2, pattern2, "",null, mTransform1);
 
                     TextView tvLinkify3 = (TextView) seongbuk.findViewById(R.id.textView413);
                     Pattern pattern3 = Pattern.compile("성북구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify3, pattern3, "https://www.seongbuk.go.kr");
+                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.seongbuk.go.kr",null, mTransform);
 
                 } else if (spinner_selected_gu.equals("송파구")) {
                     songpa = (ScrollView) mInflater.inflate(R.layout.songpa, mRootLinear, false);
                     mRootLinear.addView(songpa);
 
+                    Linkify.TransformFilter mTransform1 = new Linkify.TransformFilter() {
+                        @Override
+                        public String transformUrl(Matcher matcher, String s) {
+                            return "http://www.songpa.go.kr/user.kdf?a=songpa.menu.MenuApp&c=1001&cate_id=AA0605001000";
+                        }
+                    };
                     TextView tvLinkify = (TextView) songpa.findViewById(R.id.textView1);
                     Pattern pattern = Pattern.compile("대형폐기물 품목별 수수료 보기");
-                    Linkify.addLinks(tvLinkify, pattern, "https://www.songpa.go.kr/user.kdf?a=songpa.menu.MenuApp&c=1001&cate_id=AA0605001000");
+                    Linkify.addLinks(tvLinkify, pattern, "",null, mTransform1);
 
+                    Linkify.TransformFilter mTransform2 = new Linkify.TransformFilter() {
+                        @Override
+                        public String transformUrl(Matcher matcher, String s) {
+                            return "http://www.songpa.go.kr/user.kdf?a=songpa.menu.MenuApp&c=1001&cate_id=AA0605002000";
+                        }
+                    };
                     TextView tvLinkify2 = (TextView) songpa.findViewById(R.id.textView2);
                     Pattern pattern2 = Pattern.compile("품목별 수거기준 및 비용 보기");
-                    Linkify.addLinks(tvLinkify2, pattern2, "https://www.songpa.go.kr/user.kdf?a=songpa.menu.MenuApp&c=1001&cate_id=AA0605002000");
+                    Linkify.addLinks(tvLinkify2, pattern2, "",null, mTransform2);
 
                     TextView tvLinkify3 = (TextView) songpa.findViewById(R.id.textView3);
                     Pattern pattern3 = Pattern.compile("송파구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify3, pattern3, "https://www.songpa.go.kr");
+                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.songpa.go.kr",null, mTransform);
 
                 } else if (spinner_selected_gu.equals("양천구")) {
                     yangcheon = (ScrollView) mInflater.inflate(R.layout.yangcheon, mRootLinear, false);
@@ -617,23 +649,29 @@ public class PageTwoFragment extends Fragment {
 
                     TextView tvLinkify = (TextView) yangcheon.findViewById(R.id.textView350) ;
                     Pattern pattern1 = Pattern.compile("[ 대형 폐기물 신청 바로가기 ]");
-                    Linkify.addLinks(tvLinkify, pattern1, "https://www.yangcheon.go.kr/site/yangcheon/05/10504010100002016081013.jsp");
+                    Linkify.addLinks(tvLinkify, pattern1, "http://www.yangcheon.go.kr/site/yangcheon/05/10504010100002016081013.jsp",null, mTransform);
 
                     TextView tvLinkify2 = (TextView) yangcheon.findViewById(R.id.textView351) ;
                     Pattern pattern2 = Pattern.compile("[품목별 수수료 보기]");
-                    Linkify.addLinks(tvLinkify2, pattern2, "https://www.yangcheon.go.kr/site/yangcheon/05/10504010200002016081013.jsp");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.yangcheon.go.kr/site/yangcheon/05/10504010200002016081013.jsp",null, mTransform);
 
+                    Linkify.TransformFilter mTransform1 = new Linkify.TransformFilter() {
+                        @Override
+                        public String transformUrl(Matcher matcher, String s) {
+                            return "http://www.yangcheon.go.kr/common/files/Download.do?cfIdx=CF00003808&cfGroup=COMMON&cfRename=2dc2dce8-68d4-4631-9ecc-9c8507872026.hwp";
+                        }
+                    };
                     TextView tvLinkify3 = (TextView) yangcheon.findViewById(R.id.textView446) ;
                     Pattern pattern3 = Pattern.compile("품목 다운로드");
-                    Linkify.addLinks(tvLinkify3, pattern3, "https://www.yangcheon.go.kr/common/files/Download.do?cfIdx=CF00003808&cfGroup=COMMON&cfRename=2dc2dce8-68d4-4631-9ecc-9c8507872026.hwp");
+                    Linkify.addLinks(tvLinkify3, pattern3, "",null, mTransform1);
 
                     TextView tvLinkify4 = (TextView) yangcheon.findViewById(R.id.textView435) ;
                     Pattern pattern4 = Pattern.compile("수거정보 바로가기");
-                    Linkify.addLinks(tvLinkify4, pattern4, "https://www.yangcheon.go.kr/site/yangcheon/05/10504010100002016081013.jsp");
+                    Linkify.addLinks(tvLinkify4, pattern4, "http://www.yangcheon.go.kr/site/yangcheon/05/10504010100002016081013.jsp",null, mTransform);
 
                     TextView tvLinkify5 = (TextView) yangcheon.findViewById(R.id.textView447) ;
                     Pattern pattern5 = Pattern.compile("양천구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify5, pattern5, "https://www.yangcheon.go.kr");
+                    Linkify.addLinks(tvLinkify5, pattern5, "http://www.yangcheon.go.kr",null, mTransform);
 
                 } else if (spinner_selected_gu.equals("영등포구")) {
                     yeongdeungpo = (ScrollView) mInflater.inflate(R.layout.yeongdeungpo, mRootLinear, false);
@@ -641,11 +679,11 @@ public class PageTwoFragment extends Fragment {
 
                     TextView tvLinkify1 = (TextView) yeongdeungpo.findViewById(R.id.textView1) ;
                     Pattern pattern1 = Pattern.compile("수거 비용 검색 바로가기");
-                    Linkify.addLinks(tvLinkify1, pattern1, "https://www.ydp.go.kr/waste/apply/main.do?op=section&mCode=b010000000&target=self&class1=01");
+                    Linkify.addLinks(tvLinkify1, pattern1, "http://www.ydp.go.kr/waste/apply/main.do?op=section&mCode=b010000000&target=self&class1=01",null, mTransform);
 
                     TextView tvLinkify2 = (TextView) yeongdeungpo.findViewById(R.id.textView2) ;
                     Pattern pattern2 = Pattern.compile("영등포구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.ydp.go.kr/main/page.do?mCode=A030050020");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.ydp.go.kr/main/page.do?mCode=A030050020",null, mTransform);
 
 
                 } else if (spinner_selected_gu.equals("용산구")) {
@@ -654,15 +692,15 @@ public class PageTwoFragment extends Fragment {
 
                     TextView tvLinkify = (TextView) yongsan.findViewById(R.id.textView350) ;
                     Pattern pattern1 = Pattern.compile("[대형 폐기물 신청 바로가기]");
-                    Linkify.addLinks(tvLinkify, pattern1, "http://clean.yongsan.go.kr/index");
+                    Linkify.addLinks(tvLinkify, pattern1, "http://clean.yongsan.go.kr/index",null, mTransform);
 
                     TextView tvLinkify2 = (TextView) yongsan.findViewById(R.id.textView351) ;
                     Pattern pattern2 = Pattern.compile("[품목별 수수료 보기]");
-                    Linkify.addLinks(tvLinkify2, pattern2, "http://clean.yongsan.go.kr/cost");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://clean.yongsan.go.kr/cost",null, mTransform);
 
                     TextView tvLinkify3 = (TextView) yongsan.findViewById(R.id.textView457) ;
                     Pattern pattern3 = Pattern.compile("용산구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.yongsan.go.kr");
+                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.yongsan.go.kr",null, mTransform);
 
                 } else if (spinner_selected_gu.equals("은평구")) {
                     eunpyeong = (ScrollView) mInflater.inflate(R.layout.eunpyeong, mRootLinear, false);
@@ -670,35 +708,60 @@ public class PageTwoFragment extends Fragment {
 
                     TextView tvLinkify = (TextView) eunpyeong.findViewById(R.id.textView350) ;
                     Pattern pattern1 = Pattern.compile("[대형 폐기물 신청 바로가기]");
-                    Linkify.addLinks(tvLinkify, pattern1, "https://ai-waste.ep.go.kr/");
+                    Linkify.addLinks(tvLinkify, pattern1, "http://ai-waste.ep.go.kr/",null, mTransform);
 
+                    Linkify.TransformFilter mTransform1 = new Linkify.TransformFilter() {
+                        @Override
+                        public String transformUrl(Matcher matcher, String s) {
+                            return "http://safecity.ep.go.kr/CmsWeb/viewPage.req?idx=PG0000003991&page=121";
+                        }
+                    };
                     TextView tvLinkify2 = (TextView) eunpyeong.findViewById(R.id.textView351) ;
                     Pattern pattern2 = Pattern.compile("[품목별 수수료 보기]");
-                    Linkify.addLinks(tvLinkify2, pattern2, "https://safecity.ep.go.kr/CmsWeb/viewPage.req?idx=PG0000003991&page=121");
+                    Linkify.addLinks(tvLinkify2, pattern2, "",null, mTransform1);
 
                     TextView tvLinkify3 = (TextView) eunpyeong.findViewById(R.id.textView485) ;
                     Pattern pattern3 = Pattern.compile("은평구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify3, pattern3, " https://safecity.ep.go.kr");
+                    Linkify.addLinks(tvLinkify3, pattern3, "http://m.ep.go.kr/main.do",null, mTransform);
 
                 } else if (spinner_selected_gu.equals("종로구")) {
                     jongno = (ScrollView) mInflater.inflate(R.layout.jongno, mRootLinear, false);
                     mRootLinear.addView(jongno);
 
+                    Linkify.TransformFilter mTransform1 = new Linkify.TransformFilter() {
+                        @Override
+                        public String transformUrl(Matcher matcher, String s) {
+                            return "http://www.jongno.go.kr/portal/garbage/selectWasteEmissionsList.do?menuId=110339&menuNo=110339";
+                        }
+                    };
                     TextView tvLinkify = (TextView) jongno.findViewById(R.id.textView488) ;
                     Pattern pattern = Pattern.compile("배출일시 검색 바로가기");
-                    Linkify.addLinks(tvLinkify, pattern, "http://www.jongno.go.kr/portal/garbage/selectWasteEmissionsList.do?menuId=110339&menuNo=110339");
+                    Linkify.addLinks(tvLinkify, pattern, "",null, mTransform1);
 
+                    Linkify.TransformFilter mTransform2 = new Linkify.TransformFilter() {
+                        @Override
+                        public String transformUrl(Matcher matcher, String s) {
+                            return "http://www.jongno.go.kr/Main.do;jsessionid=2Tm1Gc9M1WO8VmzNIvE05Cmiamp2O8OInacqXrjeF9RGQbGLQrJmeGq56m1mqRZ1.was_servlet_engine1?menuNo=1169";
+                        }
+                    };
                     TextView tvLinkify1 = (TextView) jongno.findViewById(R.id.textView350) ;
                     Pattern pattern1 = Pattern.compile("[대형 폐기물 신청 바로가기]");
-                    Linkify.addLinks(tvLinkify1, pattern1, "http://www.jongno.go.kr/bigclean/");
+                    Linkify.addLinks(tvLinkify1, pattern1, "",null, mTransform2);
 
+                    Linkify.TransformFilter mTransform3 = new Linkify.TransformFilter() {
+                        @Override
+                        public String transformUrl(Matcher matcher, String s) {
+                            return "http://www.jongno.go.kr/bigclean/bcExpense/bcExpense.jsp";
+                        }
+                    };
                     TextView tvLinkify2 = (TextView) jongno.findViewById(R.id.textView351) ;
                     Pattern pattern2 = Pattern.compile("[품목별 수수료 보기]");
-                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.jongno.go.kr/bigclean/bcExpense/bcExpense.jsp");
+                    Linkify.addLinks(tvLinkify2, pattern2, "",null, mTransform3);
+
 
                     TextView tvLinkify3 = (TextView) jongno.findViewById(R.id.textView507) ;
                     Pattern pattern3 = Pattern.compile("종로구청 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.jongno.go.kr");
+                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.jongno.go.kr",null, mTransform);
 
 
 
@@ -708,15 +771,15 @@ public class PageTwoFragment extends Fragment {
 
                     TextView tvLinkify = (TextView) jung.findViewById(R.id.textView350) ;
                     Pattern pattern1 = Pattern.compile("[대형 폐기물 신청 바로가기]");
-                    Linkify.addLinks(tvLinkify, pattern1, "http://www.junggu.seoul.kr/content.do?cmsid=11774");
+                    Linkify.addLinks(tvLinkify, pattern1, "http://www.junggu.seoul.kr/content.do?cmsid=11774",null, mTransform);
 
                     TextView tvLinkify2 = (TextView) jung.findViewById(R.id.textView351) ;
                     Pattern pattern2 = Pattern.compile("[품목별 수수료 보기]");
-                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.junggu.seoul.kr/content.do?cmsid=11772");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.junggu.seoul.kr/content.do?cmsid=11772",null, mTransform);
 
                     TextView tvLinkify3 = (TextView) jung.findViewById(R.id.textView528) ;
                     Pattern pattern3 = Pattern.compile("중구 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.junggu.seoul.kr");
+                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.junggu.seoul.kr",null, mTransform);
 
                 } else if (spinner_selected_gu.equals("중랑구")) {
                     jungnang = (ScrollView) mInflater.inflate(R.layout.jungnang, mRootLinear, false);
@@ -724,15 +787,15 @@ public class PageTwoFragment extends Fragment {
 
                     TextView tvLinkify = (TextView) jungnang.findViewById(R.id.textView350) ;
                     Pattern pattern1 = Pattern.compile("[대형 폐기물 신청 바로가기]");
-                    Linkify.addLinks(tvLinkify, pattern1, "http://www.clean114.org/web/");
+                    Linkify.addLinks(tvLinkify, pattern1, "http://www.clean114.org/web/",null, mTransform);
 
                     TextView tvLinkify2 = (TextView) jungnang.findViewById(R.id.textView351) ;
                     Pattern pattern2 = Pattern.compile("[품목별 수수료 보기]");
-                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.clean114.org/web/price.php");
+                    Linkify.addLinks(tvLinkify2, pattern2, "http://www.clean114.org/web/price.php",null, mTransform);
 
                     TextView tvLinkify3 = (TextView) jungnang.findViewById(R.id.textView528) ;
                     Pattern pattern3 = Pattern.compile("중랑구 홈페이지 바로가기");
-                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.jungnang.go.kr/portal/main.do");
+                    Linkify.addLinks(tvLinkify3, pattern3, "http://www.jungnang.go.kr/portal/main.do",null, mTransform);
                 }
             }
 

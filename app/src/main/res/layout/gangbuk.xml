@@ -1976,7 +1976,7 @@
             android:paddingBottom="2dp"
             android:paddingLeft="55dp"
             android:paddingTop="5dp"
-            android:text="콜 센터 : 1566-0903\n인터넷  : www.15990903.or.kr\n카카오톡 ID : 폐가전무상방문수거"
+            android:text="콜 센터 : 1599-0903\n인터넷  : www.15990903.or.kr\n카카오톡 ID : 폐가전무상방문수거"
             android:textColor="@android:color/black"
             android:textColorLink="@color/blue"
             android:textSize="16sp" />

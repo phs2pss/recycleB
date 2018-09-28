@@ -13,39 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e788ea1-de65-4203-9b91-45a73f73c2fb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a71.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a72.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a73.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a74.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a75.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a76.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a77.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a78.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a79.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a80.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a81.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a82.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a83.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/b0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/c0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/d0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/e0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/f0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/f20.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/f21.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/f22.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/g0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/h0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/i0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/j0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/k0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/k12.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/k13.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/l0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/m0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/m8.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/m9.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/spinner_item1.xml" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
@@ -54,55 +22,33 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageOneFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageOneFragment.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageTwoFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageTwoFragment.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a01.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a01.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a03.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a03.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a04.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a04.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a10.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a10.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a13.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a13.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a43.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a43.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a44.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a44.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a45.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a45.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a46.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a46.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a47.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a47.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a48.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a48.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a64.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a64.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a65.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a65.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a66.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a66.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a67.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a67.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a68.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a68.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a70.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a70.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/e8.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/e8.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/e9.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/e9.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/k2.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/k2.png" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dobong.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dobong.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dongdaemun.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dongdaemun.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dongjak.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dongjak.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a71.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a71.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a72.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a72.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a73.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a73.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a74.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a74.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a75.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a75.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a76.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a76.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a77.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a77.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a78.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a78.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a79.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a79.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a80.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a80.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a81.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a81.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a82.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a82.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/a83.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/a83.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/f10.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/f10.png" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/j11.png" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/j11.png" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/eunpyeong.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/eunpyeong.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_page_two.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_page_two.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/gangbuk.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/gangbuk.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/gangdong.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/gangdong.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/gangnam.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/gangnam.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/gangseo.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/gangseo.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/geumcheon.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/geumcheon.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/guro.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/guro.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/gwanak.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/gwanak.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/gwangjin.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/gwangjin.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/jongno.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/jongno.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/jung.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/jung.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/jungnang.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/jungnang.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/mapo.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/mapo.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/nowon.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nowon.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/seocho.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/seocho.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/seodaemoon.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/seodaemoon.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/seongbuk.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/seongbuk.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/seongdong.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/seongdong.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/songpa.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/songpa.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/spinner_dropdown_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/spinner_dropdown_item.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/yangcheon.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/yangcheon.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/yeongdeungpo.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/yeongdeungpo.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/yongsan.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/yongsan.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -128,28 +74,18 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="107" lean-forward="false" selection-start-line="26" selection-start-column="107" selection-end-line="26" selection-end-column="107" />
+            <state relative-caret-position="532">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="arrays.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/arrays.xml">
+      <file leaf-file-name="songpa.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/songpa.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gangdong.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/gangdong.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="88" column="53" lean-forward="false" selection-start-line="88" selection-start-column="53" selection-end-line="88" selection-end-column="53" />
+            <state relative-caret-position="18981">
+              <caret line="999" column="39" lean-forward="false" selection-start-line="999" selection-start-column="35" selection-end-line="999" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -161,72 +97,64 @@
       <file leaf-file-name="PageTwoFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageTwoFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="132" column="69" lean-forward="false" selection-start-line="132" selection-start-column="69" selection-end-line="132" selection-end-column="69" />
-              <folding>
-                <element signature="e#5854#6045#0" expanded="true" />
-                <element signature="e#6044#6045#0" expanded="true" />
-                <element signature="e#6087#6279#0" expanded="true" />
-                <element signature="e#6278#6279#0" expanded="true" />
-                <element signature="e#6315#6542#0" expanded="true" />
-                <element signature="e#6541#6542#0" expanded="true" />
-                <element signature="e#6581#6806#0" expanded="true" />
-                <element signature="e#6805#6806#0" expanded="true" />
-                <element signature="method#onItemSelected#0;class#6859:38906" expanded="false" />
-                <element signature="e#7477#7689#0" expanded="true" />
-                <element signature="e#7688#7689#0" expanded="true" />
-                <element signature="e#8859#9143#0" expanded="true" />
-                <element signature="e#9142#9143#0" expanded="true" />
-                <element signature="e#9195#9479#0" expanded="true" />
-                <element signature="e#9478#9479#0" expanded="true" />
-                <element signature="e#9525#9803#0" expanded="true" />
-                <element signature="e#9802#9803#0" expanded="true" />
-                <element signature="e#9851#10131#0" expanded="true" />
-                <element signature="e#10130#10131#0" expanded="true" />
-                <element signature="e#11252#11540#0" expanded="true" />
-                <element signature="e#11539#11540#0" expanded="true" />
-                <element signature="e#11592#11880#0" expanded="true" />
-                <element signature="e#11879#11880#0" expanded="true" />
-                <element signature="e#11926#12214#0" expanded="true" />
-                <element signature="e#12213#12214#0" expanded="true" />
-                <element signature="e#12261#12549#0" expanded="true" />
-                <element signature="e#12548#12549#0" expanded="true" />
-                <element signature="e#14747#15031#0" expanded="true" />
-                <element signature="e#15030#15031#0" expanded="true" />
-                <element signature="e#15082#15366#0" expanded="true" />
-                <element signature="e#15365#15366#0" expanded="true" />
-                <element signature="e#15417#15701#0" expanded="true" />
-                <element signature="e#15700#15701#0" expanded="true" />
-                <element signature="e#15752#16036#0" expanded="true" />
-                <element signature="e#16035#16036#0" expanded="true" />
-                <element signature="e#16087#16371#0" expanded="true" />
-                <element signature="e#16370#16371#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="19">
+              <caret line="620" column="0" lean-forward="false" selection-start-line="620" selection-start-column="0" selection-end-line="620" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PageOneFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageOneFragment.java">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1327">
-              <caret line="239" column="55" lean-forward="false" selection-start-line="239" selection-start-column="55" selection-end-line="239" selection-end-column="55" />
-              <folding>
-                <element signature="method#expandAll#0;class#PageOneFragment#0" expanded="false" />
-                <element signature="method#collapseAll#0;class#PageOneFragment#0" expanded="false" />
-                <element signature="method#onClose#0;class#PageOneFragment#0" expanded="false" />
-                <element signature="method#onQueryTextChange#0;class#PageOneFragment#0" expanded="false" />
-                <element signature="method#onQueryTextSubmit#0;class#PageOneFragment#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="320">
+              <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spinner_dropdown_item.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_dropdown_item.xml">
+      <file leaf-file-name="arrays.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/arrays.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+            <state relative-caret-position="133">
+              <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gangdong.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/gangdong.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1330">
+              <caret line="70" column="52" lean-forward="false" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spinner_item.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_page_two.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_page_two.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1197">
+              <caret line="63" column="40" lean-forward="false" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -243,14 +171,13 @@
         <option value="Class" />
         <option value="resourceFile" />
         <option value="layoutResourceFile_vertical" />
+        <option value="valueResourceFile" />
         <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>stack</find>
-      <find>onAtt</find>
       <find>findView</find>
       <find>toast</find>
       <find>createFragment</find>
@@ -279,6 +206,8 @@
       <find>신문지</find>
       <find>모니터</find>
       <find>코코넛</find>
+      <find>collapseAll</find>
+      <find>touch</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -2325,10 +2254,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/FragmentInfo.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/ViewPagerAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageFourFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_page_four.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_dialog.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_page_one.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/notshowagain.xml" />
@@ -2348,40 +2273,44 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/MyListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/GpsInfo.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/gangnam.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/gangdong.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/guro.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/gwanak.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/gwangjin.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/button_background.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/dobong.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageThreeFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_page_three.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_shop_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/geumcheon.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_page_two.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/mapo.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/seongdong.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/songpa.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/yeongdungpo.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/yeongdeungpo.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/eunpyeong.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageOneFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageTwoFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/planets_array.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/spinner_item1.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/spinner_dropdown_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/gangbuk.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/seongdong.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/songpa.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/eunpyeong.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_page_two.xml" />
+        <option value="$PROJECT_DIR$/../platforms/android-26/data/res/layout/simple_spinner_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/gangdong.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageTwoFragment.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1788" />
-    <option name="y" value="56" />
+    <option name="x" value="121" />
+    <option name="y" value="66" />
     <option name="width" value="974" />
     <option name="height" value="1057" />
   </component>
@@ -2432,42 +2361,12 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
-            <path>
-              <item name="Banana3" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="Banana3" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="Banana3" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="banana2" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Banana3" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="Banana3" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="Banana3" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
             <path>
               <item name="Banana3" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
@@ -2476,19 +2375,17 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$PROJECT_DIR$/.." />
     <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../recycleB-master" />
-    <property name="device.picker.selection" value="ce11160b7584740504" />
+    <property name="device.picker.selection" value="21d4f22b0b037ece" />
     <property name="android.profiler.active" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="ToolWindowBuild.ShowToolbar" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="heading&#9;PSI&#9;JAVA://com.selecto.banana2.R.id#heading&#10;Log&#9;ACTION&#9;Log.KeymapGroup&#10;toast&#9;PSI&#9;JAVA://com.selecto.banana2.BackPressCloseHandler#toast&#10;pager&#9;PSI&#9;JAVA://com.selecto.banana2.R.id#viewpager&#10;ImageView&#9;PSI&#9;JAVA://com.selecto.banana2.GroupTipFragment#imageView&#10;add&#9;PSI&#9;JAVA://com.selecto.banana2.R.id#add&#10;papertip&#9;PSI&#9;JAVA://com.selecto.banana2.R.drawable#papertip&#10;expandAll&#9;PSI&#9;JAVA://com.selecto.banana2.PageOneFragment#expandAll" />
+    <property name="SearchEverywhereHistoryKey" value="simple_spinner_item&#9;FILE&#9;jar://C:/Users/Public/Android/platforms/android-26/android.jar!/res/layout/simple_spinner_item.xml&#10;onPa&#9;PSI&#9;JAVA://android.support.v4.view.ViewPager.OnPageChangeListener&#10;CollapseAll&#9;PSI&#9;JAVA://com.selecto.banana2.PageOneFragment#collapseAll&#10;all&#9;ACTION&#9;CollapseAllRegions&#10;heading&#9;PSI&#9;JAVA://com.selecto.banana2.R.id#heading&#10;Log&#9;ACTION&#9;Log.KeymapGroup&#10;toast&#9;PSI&#9;JAVA://com.selecto.banana2.BackPressCloseHandler#toast&#10;pager&#9;PSI&#9;JAVA://com.selecto.banana2.R.id#viewpager&#10;ImageView&#9;PSI&#9;JAVA://com.selecto.banana2.GroupTipFragment#imageView&#10;add&#9;PSI&#9;JAVA://com.selecto.banana2.R.id#add&#10;papertip&#9;PSI&#9;JAVA://com.selecto.banana2.R.drawable#papertip&#10;expandAll&#9;PSI&#9;JAVA://com.selecto.banana2.PageOneFragment#expandAll" />
     <property name="ExportApk.ApkPath" value="C:\Users\Public\Android\Banana3\app" />
     <property name="ExportApk.Flavors" value="" />
     <property name="ExportApk.BuildType" value="release" />
@@ -2498,20 +2395,20 @@
     <property name="android.project.structure.proportion" value="0.15" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Public\Android\Banana3\app\src\main\java\com\selecto\banana2" />
-      <recent name="C:\Users\Public\Android\Banana3\app\src\main\res\layout" />
-      <recent name="C:\Users\Public\Android\Banana3\app\src\main\res\drawable" />
-      <recent name="C:\Users\Public\Android\Banana3\app\src\main\res\font" />
-      <recent name="C:\Users\Public\Android\Banana3\app\src\main\assets" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.selecto.banana2" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Public\Android\Banana3\app\src\main\res" />
       <recent name="C:\Users\Public\Android\Banana3\app\src\main\assets\fonts" />
       <recent name="C:\Users\Public\Android\Banana3\app\src\main\res\drawable" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.selecto.banana2" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Public\Android\Banana3\app\src\main\res\drawable" />
+      <recent name="C:\Users\Public\Android\Banana3\app\src\main\java\com\selecto\banana2" />
+      <recent name="C:\Users\Public\Android\Banana3\app\src\main\res\layout" />
+      <recent name="C:\Users\Public\Android\Banana3\app\src\main\res\font" />
+      <recent name="C:\Users\Public\Android\Banana3\app\src\main\assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -2767,7 +2664,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537989316280</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="image, gu xml update">
+      <created>1538070219757</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1538070219757</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2780,31 +2684,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.4936034" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32976446" sideWeight="0.4936034" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5074627" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28837952" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.4978678" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30546623" sideWeight="0.48933902" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21329047" sideWeight="0.48933902" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19989339" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15969989" sideWeight="0.4978678" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4415863" sideWeight="0.4978678" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2813,6 +2716,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49303323" sideWeight="0.49253732" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22921109" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2849,182 +2753,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_page_four.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_group_tip.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="46" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_dialog.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="51" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_page_one.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/GeoPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/GeoTrans.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/GroupTipFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/MyListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2192">
-          <caret line="96" column="45" lean-forward="false" selection-start-line="96" selection-start-column="45" selection-end-line="96" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_location.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/custom_dialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/gangnam.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="484" column="12" lean-forward="false" selection-start-line="484" selection-start-column="12" selection-end-line="513" selection-end-column="27" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/GpsInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-836">
-          <caret line="102" column="63" lean-forward="false" selection-start-line="102" selection-start-column="32" selection-end-line="102" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/round_background.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/guro.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="133" column="41" lean-forward="false" selection-start-line="133" selection-start-column="41" selection-end-line="133" selection-end-column="41" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/gwanak.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="1515" column="26" lean-forward="false" selection-start-line="1515" selection-start-column="26" selection-end-line="1515" selection-end-column="27" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/button_background.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="40" lean-forward="false" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="30" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nowon.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/gangbuk.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/gangseo.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -3056,13 +2784,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageThreeFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5111">
-          <caret line="312" column="0" lean-forward="false" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_page_three.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1064">
@@ -3083,22 +2804,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dobong.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="739">
           <caret line="43" column="46" lean-forward="true" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
@@ -3113,25 +2822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_page_two.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="61" column="48" lean-forward="false" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.github.chrisbanes/PhotoView/2.0.0/5687af2a944cf6f6d0bdf209cdf6a535d871aa9c/PhotoView-2.0.0-sources.jar!/com/github/chrisbanes/photoview/PhotoView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -3143,37 +2833,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="1922" column="8" lean-forward="false" selection-start-line="1922" selection-start-column="8" selection-end-line="1931" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="47" lean-forward="false" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/mapo.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="1099" column="41" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1330" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/songpa.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="1541" column="36" lean-forward="false" selection-start-line="1541" selection-start-column="36" selection-end-line="1541" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3184,35 +2853,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
           <caret line="576" column="36" lean-forward="false" selection-start-line="576" selection-start-column="36" selection-end-line="576" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/seongdong.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="1030" column="35" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1113" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="81" column="8" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
-          <folding>
-            <element signature="method#loadJSONFromAsset#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onBackPressed#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getData#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#callShop#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/a1.png" />
@@ -3221,18 +2865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/eunpyeong.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11970">
-          <caret line="630" column="25" lean-forward="false" selection-start-line="630" selection-start-column="25" selection-end-line="630" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3249,10 +2881,271 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="40" column="48" lean-forward="false" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/planets_array.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/Continent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/Country.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageThreeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-836">
+          <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/FragmentInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/custom_dialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/GroupTipFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/MyListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2708">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/noticeDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/LocationFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageFourFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.android.support/support-core-ui/26.1.0/4d52cef4a24bf9939de1d256ca9f0974c6e636a4/support-core-ui-26.1.0-sources.jar!/android/support/v4/view/ViewPager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="275" column="41" lean-forward="false" selection-start-line="275" selection-start-column="21" selection-end-line="275" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1463">
+          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+          <folding>
+            <element signature="method#loadJSONFromAsset#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#getData#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#callShop#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/ViewPagerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="30" column="54" lean-forward="false" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/CustomViewPager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageOneFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="77" column="48" lean-forward="false" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/gangbuk.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="1978" column="37" lean-forward="false" selection-start-line="1978" selection-start-column="37" selection-end-line="1978" selection-end-column="37" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/seongdong.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="914" column="35" lean-forward="false" selection-start-line="914" selection-start-column="35" selection-end-line="914" selection-end-column="60" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/eunpyeong.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="719" column="62" lean-forward="false" selection-start-line="719" selection-start-column="62" selection-end-line="719" selection-end-column="62" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_item1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_dropdown_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.android.support/support-fragment/26.1.0/8279b00f5194701ff18363fa2958c5a26670b0ef/support-fragment-26.1.0-sources.jar!/android/support/v4/app/Fragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="1472" column="16" lean-forward="false" selection-start-line="1472" selection-start-column="16" selection-end-line="1472" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../platforms/android-26/android.jar!/res/layout/simple_spinner_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../platforms/android-26/data/res/layout/simple_spinner_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="27" selection-end-column="6" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/arrays.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/gangdong.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="88" column="53" lean-forward="false" selection-start-line="88" selection-start-column="53" selection-end-line="88" selection-end-column="53" />
+        <state relative-caret-position="1330">
+          <caret line="70" column="52" lean-forward="false" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_page_two.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="63" column="40" lean-forward="false" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/songpa.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18981">
+          <caret line="999" column="39" lean-forward="false" selection-start-line="999" selection-start-column="35" selection-end-line="999" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -3262,89 +3155,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="107" lean-forward="false" selection-start-line="26" selection-start-column="107" selection-end-line="26" selection-end-column="107" />
+        <state relative-caret-position="532">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/arrays.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageOneFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1327">
-          <caret line="239" column="55" lean-forward="false" selection-start-line="239" selection-start-column="55" selection-end-line="239" selection-end-column="55" />
-          <folding>
-            <element signature="method#expandAll#0;class#PageOneFragment#0" expanded="false" />
-            <element signature="method#collapseAll#0;class#PageOneFragment#0" expanded="false" />
-            <element signature="method#onClose#0;class#PageOneFragment#0" expanded="false" />
-            <element signature="method#onQueryTextChange#0;class#PageOneFragment#0" expanded="false" />
-            <element signature="method#onQueryTextSubmit#0;class#PageOneFragment#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/selecto/banana2/PageTwoFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="132" column="69" lean-forward="false" selection-start-line="132" selection-start-column="69" selection-end-line="132" selection-end-column="69" />
-          <folding>
-            <element signature="e#5854#6045#0" expanded="true" />
-            <element signature="e#6044#6045#0" expanded="true" />
-            <element signature="e#6087#6279#0" expanded="true" />
-            <element signature="e#6278#6279#0" expanded="true" />
-            <element signature="e#6315#6542#0" expanded="true" />
-            <element signature="e#6541#6542#0" expanded="true" />
-            <element signature="e#6581#6806#0" expanded="true" />
-            <element signature="e#6805#6806#0" expanded="true" />
-            <element signature="method#onItemSelected#0;class#6859:38906" expanded="false" />
-            <element signature="e#7477#7689#0" expanded="true" />
-            <element signature="e#7688#7689#0" expanded="true" />
-            <element signature="e#8859#9143#0" expanded="true" />
-            <element signature="e#9142#9143#0" expanded="true" />
-            <element signature="e#9195#9479#0" expanded="true" />
-            <element signature="e#9478#9479#0" expanded="true" />
-            <element signature="e#9525#9803#0" expanded="true" />
-            <element signature="e#9802#9803#0" expanded="true" />
-            <element signature="e#9851#10131#0" expanded="true" />
-            <element signature="e#10130#10131#0" expanded="true" />
-            <element signature="e#11252#11540#0" expanded="true" />
-            <element signature="e#11539#11540#0" expanded="true" />
-            <element signature="e#11592#11880#0" expanded="true" />
-            <element signature="e#11879#11880#0" expanded="true" />
-            <element signature="e#11926#12214#0" expanded="true" />
-            <element signature="e#12213#12214#0" expanded="true" />
-            <element signature="e#12261#12549#0" expanded="true" />
-            <element signature="e#12548#12549#0" expanded="true" />
-            <element signature="e#14747#15031#0" expanded="true" />
-            <element signature="e#15030#15031#0" expanded="true" />
-            <element signature="e#15082#15366#0" expanded="true" />
-            <element signature="e#15365#15366#0" expanded="true" />
-            <element signature="e#15417#15701#0" expanded="true" />
-            <element signature="e#15700#15701#0" expanded="true" />
-            <element signature="e#15752#16036#0" expanded="true" />
-            <element signature="e#16035#16036#0" expanded="true" />
-            <element signature="e#16087#16371#0" expanded="true" />
-            <element signature="e#16370#16371#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_dropdown_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        <state relative-caret-position="19">
+          <caret line="620" column="0" lean-forward="false" selection-start-line="620" selection-start-column="0" selection-end-line="620" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

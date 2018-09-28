@@ -57,9 +57,11 @@
             android:textColor="@color/dark_slate_gray"/>
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/mySpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:spinnerMode="dialog"
             />
 
         <TextView

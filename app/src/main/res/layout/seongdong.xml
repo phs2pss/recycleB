@@ -912,7 +912,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="인터넷 문의 : http://www.sd.go.kr/jsp/pop/pop_waste.jsp"
+            android:text="인터넷 문의 : http://www.15990903.or.kr"
             android:textColor="@color/black"
             android:textSize="21sp"
             android:padding="5dp"
