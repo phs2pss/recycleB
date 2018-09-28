@@ -10,6 +10,8 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,8 +51,8 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
     MapView mapView;
     Button button;
     StringBuilder sb;
-    double latitude;
-    double longitude;
+    double latitude = 37.543489;
+    double longitude = 126.995717;
     String NM = null, ADDR_OLD = null, ADDR = null, TEL = null, XCODE = null, YCODE = null;
     Marker mypos;
     CameraPosition cp;
@@ -58,6 +60,8 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
     ArrayList<Shoplistitem> data;
     ImageView btn_refresh;
     int tg_mapReady = 0;
+    ViewPager customViewPager;
+    boolean pageFocus;
 
     public PageThreeFragment() {
 
@@ -74,9 +78,10 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
         }
 
         gps = new GpsInfo(getActivity());
-
-        this.latitude = gps.getLatitude();
-        this.longitude = gps.getLongitude();
+        if(gps.isGetLocation) {
+            this.latitude = gps.getLatitude();
+            this.longitude = gps.getLongitude();
+        }
 
         mapView = (MapView) view.findViewById(R.id.map);
         mapView.onCreate(savedInstanceState);
@@ -88,16 +93,28 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
             @Override
             public void onClick(View view) {
 
-                if(data.isEmpty()) {
-                    Toast.makeText(getContext().getApplicationContext(), "검색된 주변 판매소가 없습니다.", Toast.LENGTH_LONG).show();
-                }
+                if(tg_mapReady == 1) {
+                    try {
+                        jsonTest();
+                    } catch (JSONException e) {
+                        Toast.makeText(getContext(), "파싱에러(1)", Toast.LENGTH_LONG).show();
+                        e.printStackTrace();
+                    }
 
-                FragmentManager fm = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fm.beginTransaction();
-                fragmentTransaction.hide(PageThreeFragment.this);
-                fragmentTransaction.add(R.id.fragment_shop_list, new ShopListFragment());
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                    if (data.isEmpty()) {
+                        Toast.makeText(getContext().getApplicationContext(), "검색된 주변 판매소가 없습니다.", Toast.LENGTH_LONG).show();
+                    }
+
+                    FragmentManager fm = getFragmentManager();
+                    FragmentTransaction fragmentTransaction = fm.beginTransaction();
+                    fragmentTransaction.hide(PageThreeFragment.this);
+                    fragmentTransaction.add(R.id.fragment_shop_list, new ShopListFragment());
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                }
+                else{
+                    Toast.makeText(getContext().getApplicationContext(), "좌측 상단버튼을 통해 위치를 갱신해 주세요.", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -109,6 +126,7 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
 
                 if(!gps.isGetLocation)
                 {
+                    //Log.d("kdh : Test", "gps ok / tg_mapReady 1");
                     tg_mapReady = 0;
                     gps.showSettingsAlert();
                     Toast.makeText(getContext().getApplicationContext(), "GPS 설정후 '내 위치' 버튼을 누르세요.", Toast.LENGTH_LONG).show();
@@ -117,15 +135,40 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
                     latitude = gps.getLatitude();
                     longitude = gps.getLongitude();
                     LatLng latLng = new LatLng(latitude, longitude);
+
                     if(tg_mapReady == 1) {
                         onMapClick(latLng);
                         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
                     }
                     else{
                         onMapReady(mMap);
-                        onMapClick(latLng);
+                        //onMapClick(latLng);
+                        Toast.makeText(getContext().getApplicationContext(), "GPS 위치 수신속도에 따라 화면이 나오지 않을 수 있습니다. 그럴 경우 다시시도해 주세요.", Toast.LENGTH_LONG).show();
                     }
                 }
+            }
+        });
+
+        customViewPager = ((MainActivity)getActivity()).mViewPager;
+
+        customViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if(position == 3) {
+                    Toast.makeText(getContext().getApplicationContext(), "주변판매소 위치정보를 조회합니다. 좌측 상단 버튼을 클릭해주세요.", Toast.LENGTH_LONG).show();
+                    pageFocus = true;
+                }
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
             }
         });
 
@@ -214,39 +257,31 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
     @Override
     public void onMapReady(final GoogleMap googleMap)
     {
-        LatLng latLng;
         MapsInitializer.initialize(this.getActivity());
         mMap = googleMap;
 
         if(!gps.isGetLocation) {
-            gps.showSettingsAlert();
-            Toast.makeText(getContext().getApplicationContext(), "GPS 설정후 '내 위치' 버튼을 누르세요._MapReady", Toast.LENGTH_LONG).show();
             tg_mapReady = 0;    //GPS 기능 꺼짐
         }
         else{
             tg_mapReady = 1;    //GPS 기능과 함께 onMapReady실행
         }
 
-        /*카메라 초기위치*/
-        latLng = new LatLng(latitude, longitude);   //기준좌표
-        //cp = new CameraPosition.Builder().target(latLng).zoom(15).build();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
-        // mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cp));
-        mMap.addCircle(new CircleOptions().center(latLng).radius(1000).strokeColor(Color.parseColor("#884169e1")).fillColor(Color.parseColor("#5587cefa")));
         mMap.setOnMapClickListener(this);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), 15));
 
-        BitmapDrawable bitmapDrawable = (BitmapDrawable)getResources().getDrawable(R.drawable.myposition2);
-        Bitmap b=bitmapDrawable.getBitmap();
-        Bitmap smallMarker = Bitmap.createScaledBitmap(b, 100, 100, false);
+        if((pageFocus == true)&&(tg_mapReady==1)) {
+            /*카메라 초기위치*/
+            LatLng latLng = new LatLng(latitude, longitude);   //기준좌표
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
+            mMap.addCircle(new CircleOptions().center(latLng).radius(1000).strokeColor(Color.parseColor("#884169e1")).fillColor(Color.parseColor("#5587cefa")));
 
-        mypos = mMap.addMarker(new MarkerOptions().position(latLng).title("사용자 지정위치")
-                .icon(BitmapDescriptorFactory.fromBitmap(smallMarker)));
+            BitmapDrawable bitmapDrawable = (BitmapDrawable) getResources().getDrawable(R.drawable.myposition2);
+            Bitmap b = bitmapDrawable.getBitmap();
+            Bitmap smallMarker = Bitmap.createScaledBitmap(b, 100, 100, false);
 
-        try {
-            jsonTest();
-        } catch (JSONException e) {
-            Toast.makeText(getContext(), "파싱에러(1)", Toast.LENGTH_LONG).show();
-            e.printStackTrace();
+            mypos = mMap.addMarker(new MarkerOptions().position(latLng).title("사용자 지정위치")
+                    .icon(BitmapDescriptorFactory.fromBitmap(smallMarker)));
         }
     }
 
@@ -254,7 +289,8 @@ public class PageThreeFragment extends Fragment implements OnMapReadyCallback, G
     public void onMapClick(LatLng latLng) {
 
         mMap.clear();
-        mypos.remove();
+        if((pageFocus==true)&&(tg_mapReady==1)&&(mypos!=null))
+            mypos.remove();
 
         BitmapDrawable bitmapDrawable = (BitmapDrawable)getResources().getDrawable(R.drawable.myposition2);
         Bitmap b=bitmapDrawable.getBitmap();

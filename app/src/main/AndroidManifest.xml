@@ -26,23 +26,11 @@
 
         </activity>
 
-        <!-- 개발용-->
-                <meta-data
-                    android:name="com.google.android.geo.API_KEY"
-                    android:value="AIzaSyBDOp_My3TH7nNe2qH1KfRALNqI58Ksy2A"
-                    />
 
-        <!-- 배포용
         <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBdacuxZq3R_y8szmvgt_nLoFBUFEVJl_s" />
-        -->
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_api_key"/>
 
-        <!--
-                <meta-data
-                    android:name="com.google.android.maps.v2.API_KEY"
-                    android:value="@string/google_maps_api_key"/>
-        -->
         <activity android:name=".MainActivity"
             >
         </activity>

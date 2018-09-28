@@ -49,12 +49,24 @@ public class ShoplistAdapter extends BaseAdapter {
 
         TextView name = (TextView)convertView.findViewById(R.id.nm);
         name.setText(listviewitem.getNM());
+
         TextView address_old = (TextView)convertView.findViewById(R.id.addr_old);
-        address_old.setText("소재지주소 : " + listviewitem.getADDR_OLD());
+        if(listviewitem.getADDR_OLD() == "null")
+            address_old.setText("소재지주소 : (정보없음)");
+        else
+            address_old.setText("소재지주소 : " + listviewitem.getADDR_OLD());
+
         TextView address = (TextView)convertView.findViewById(R.id.addr);
-        address.setText("도로명주소 : " + listviewitem.getADDR());
+        if(listviewitem.getADDR() == "null")
+            address.setText("도로명주소 : (정보없음)");
+        else
+            address.setText("도로명주소 : " + listviewitem.getADDR());
+
         TextView tel = (TextView)convertView.findViewById(R.id.tel);
-        tel.setText("TEL : " +listviewitem.getTEL());
+        if(listviewitem.getTEL() == "null")
+            tel.setText("TEL : (정보없음)");
+        else
+            tel.setText("TEL : " + listviewitem.getTEL());
 
         /*
         convertView.setOnClickListener(new View.OnClickListener() {
